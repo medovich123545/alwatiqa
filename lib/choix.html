@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المستويات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+/* Global Styles */
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #102a2d;
+  color: #e1e1e1;
+}
+
+header {
+  background: #0d2023;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #f0f8ff;
+}
+
+.header-description {
+  font-size: 18px;
+  color: #a0c4c8;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header-description p {
+  margin-top: 10px;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #0d2023;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.level-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.level {
+  background: #183c40;
+  border: 1px solid #a0c4c8;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.level:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.level button {
+  background: #183c40;
+  color: #a0c4c8;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.level button:hover {
+  background: #0d2023;
+  color: #e1e1e1;
+}
+
+.dropdown {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.dropdown a {
+  display: block;
+  background: #102a2d;
+  color: #a0c4c8;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown a:hover {
+  background: #183c40;
+  color: #e1e1e1;
+}
+
+footer {
+  background: #0d2023;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+/* Logo flottant */
+.floating-logo {
+  position: fixed;
+  top: -5px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.floating-logo img {
+  height: 600px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .floating-logo {
+    bottom: 50px; /* Placer le logo en bas */
+    top: auto;    /* Annuler la position top */
+    right: 10px;  /* Garder la distance à droite */
+  }
+
+  .floating-logo img {
+    height: 150px; /* Réduire la taille du logo sur mobile */
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .floating-logo {
+    top: 10px; /* Remonter le logo sur desktop */
+  }
+}
+
+  .header-description {
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .level button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .floating-logo img {
+    height: 150px; /* Réduire la taille du logo sur mobile */
+  }
+
+
+/* Amélioration de la position du logo pour la version desktop */
+@media screen and (min-width: 769px) {
+  .floating-logo {
+    top: 10px; /* Remonter le logo sur desktop */
+  }
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">وثائق وموارد تربوية لكل المستويات</div>
+        <div class="header-description">
+            تجد هنا جميع الوثائق التعليمية اللازمة من التقويم التشخيصي إلى المراقبة المستمرة، مرتبة حسب المستوى الدراسي.
+        </div>
+    </header>
+    
+  <!-- Logo flottant, placé indépendamment du flux principal de la page -->
+  <div class="floating-logo">
+    <img src="images/icon5.png" alt="شعار الموقع">
+  </div>
+
+    <div class="content">
+        <div class="level-container">
+            <div class="level">
+                <button>المستوى الأول</button>
+                <div class="dropdown">
+                    <a href="tachkhisi1.html">تقويم تشخيصي</a>
+                    <a href="emploi1.html">استعمالات الزمن</a>
+                    <a href="tawazi31.html">توازيع سنوية</a>
+                    <a href="examen1.html">مراقبة مستمرة</a>
+                </div>
+            </div>
+            <div class="level">
+                <button>المستوى الثاني</button>
+                <div class="dropdown">
+                    <a href="tachkhisi2.html">تقويم تشخيصي</a>
+                    <a href="emploi2.html">استعمالات الزمن</a>
+                    <a href="tawazi32.html">توازيع سنوية</a>
+                    <a href="examen2.html">مراقبة مستمرة</a>
+                </div>
+            </div>
+            <div class="level">
+                <button>المستوى الثالث</button>
+                <div class="dropdown">
+                    <a href="tachkhisi3.html">تقويم تشخيصي</a>
+                    <a href="emploi3.html">استعمالات الزمن</a>
+                    <a href="tawazi33.html">توازيع سنوية</a>
+                    <a href="examen3.html">مراقبة مستمرة</a>
+                </div>
+            </div>
+            <div class="level">
+                <button>المستوى الرابع</button>
+                <div class="dropdown">
+                    <a href="tachkhisi4.html">تقويم تشخيصي</a>
+                    <a href="emploi4.html">استعمالات الزمن</a>
+                    <a href="tawazi34.html">توازيع سنوية</a>
+                    <a href="examen4.html">مراقبة مستمرة</a>
+                </div>
+            </div>
+            <div class="level">
+                <button>المستوى الخامس</button>
+                <div class="dropdown">
+                    <a href="tachkhisi5.html">تقويم تشخيصي</a>
+                    <a href="emploi5.html">استعمالات الزمن</a>
+                    <a href="tawazi35.html">توازيع سنوية</a>
+                    <a href="examen5.html">مراقبة مستمرة</a>
+                </div>
+            </div>
+            <div class="level">
+                <button>المستوى السادس</button>
+                <div class="dropdown">
+                    <a href="tachkhisi6.html">تقويم تشخيصي</a>
+                    <a href="emploi6.html">استعمالات الزمن</a>
+                    <a href="tawazi36.html">توازيع سنوية</a>
+                    <a href="examen6.html">مراقبة مستمرة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        جميع الحقوق محفوظة لـموقع الوثيقة التربوية 2014-2030
+    </footer>
+</body>
+</html>
+
