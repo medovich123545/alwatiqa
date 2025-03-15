@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن - كنز الوثائق التربوية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- On peut continuer à utiliser le fichier global ou intégrer ici les styles -->
+  <style>
+    :root {
+      --primary-color: #102a2d;
+      --secondary-color: #0d2023;
+      --accent-color: #ecc94b;
+      --text-color: #e1e1e1;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      direction: rtl;
+    }
+    
+    /* Header avec réorganisation des éléments :
+       - Les boutons (navigation) en haut à droite 
+       - Le logo en bas à gauche */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--secondary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      height: 80px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    /* On force l'ordre : nav (boutons) en premier, logo ensuite */
+    nav {
+      order: 1;
+    }
+    .logo {
+      order: 2;
+    }
+    
+    .logo img {
+      height: 200px;
+      width: auto;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Boutons plus fins : réduction du padding et de la taille de police */
+    nav ul li a {
+      color: var(--text-color);
+      font-size: 0.9rem;
+      padding: 0.3rem 0.6rem;
+      transition: background 0.3s;
+      border-radius: 5px;
+    }
+    
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      margin: 4px 0;
+    }
+    
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 100%;
+      background-color: var(--secondary-color);
+      padding: 2rem;
+      z-index: 999;
+    }
+    
+    .mobile-menu.active {
+      display: block;
+      animation: slideIn 0.3s forwards;
+    }
+    
+    @keyframes slideIn {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+    }
+    
+    /* Section Hero inspirée d'Amazon */
+    .hero {
+      background-image: url('images/amazon-style-hero.jpg'); /* Remplacez par votre image */
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      margin-top: 80px; /* Pour tenir compte du header fixe */
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(16,42,45,0.5);
+    }
+    
+    .hero .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 1rem;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+    
+    /* Sections de contenu avec textes plus longs */
+    .content-section {
+      padding: 4rem 2rem;
+      background-color: var(--primary-color);
+      text-align: center;
+    }
+    
+    .content-section:nth-of-type(even) {
+      background-color: var(--secondary-color);
+    }
+    
+    .content-section .content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+    
+    .content-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .content-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    footer {
+      background-color: var(--secondary-color);
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-color);
+      font-size: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+  /* Réduction de la hauteur du header */
+  header {
+    height: 55px;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Ajustement du logo */
+  .logo {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 150px; /* Agrandir la taille du logo */
+    width: auto;
+  }
+
+  /* Cacher la navigation principale */
+  nav ul {
+    display: none;
+  }
+
+  /* Afficher le menu hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger div {
+    width: 22px;
+    height: 2.5px;
+    background-color: var(--text-color);
+    margin: 4px 0;
+  }
+
+  /* Ajustement du menu mobile */
+  .mobile-menu {
+    width: 55%;
+    padding: 1rem;
+  }
+
+  /* Ajustement de la section "من نحن" */
+  .hero {
+    min-height: 30vh; /* Hauteur minimale pour éviter une section trop grande */
+    height: auto; /* Ajustement automatique */
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero .hero-content {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Réduction du titre */
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0 auto;
+  }
+
+  /* Ajustement des sections de contenu */
+  .content-section {
+    padding: 2rem 1rem;
+  }
+
+  .content-section h2 {
+    font-size: 2rem; /* Réduction des titres */
+  }
+
+  .content-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Ajustement du footer */
+  footer {
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html" class="active">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <img src="images/icon5.png" alt="شعار الموقع">
+    </div>
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+  
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html" class="active">من نحن</a></li>
+      <li><a href="services.html">الخدمات</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="privacy.html">سياسة الخصوصية</a></li>
+    </ul>
+  </div>
+  
+  <!-- Section Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>من نحن</h1>
+      <p>
+        
+      </p>
+    </div>
+  </section>
+  
+  <!-- Sections de contenu avec descriptions détaillées -->
+  <section class="content-section">
+    <div class="content">
+      <h2>قصتنا</h2>
+      <p>
+        بدأت رحلتنا منذ أكثر من عقد من الزمن بهدف تمكين المعلمين وتزويدهم بالأدوات والوثائق التي تسهم في تحسين العملية التعليمية. من خلال العمل الدؤوب والتزامنا بالجودة، قمنا بتجميع مجموعة ضخمة من الوثائق التي تغطي جميع الجوانب التربوية والإدارية. 
+        بفضل فريق متفاني من الخبراء والمختصين، استطعنا أن نكون في طليعة الحلول التعليمية التي تعتمد على الابتكار والتكنولوجيا الحديثة. قصتنا هي قصة شغف بالتعلم والرغبة في إحداث تغيير إيجابي ملموس يؤثر على المدارس والمجتمع بأكمله.
+      </p>
+    </div>
+  </section>
+  
+  <section class="content-section">
+    <div class="content">
+      <h2>قيمنا</h2>
+      <p>
+        نؤمن أن الابتكار والاحترافية هما المفتاح لتقديم خدمة متميزة في مجال التعليم. قيمنا تتجسد في الالتزام بالجودة، النزاهة، والتفاني في تقديم أفضل الحلول للمعلمين والمؤسسات التعليمية. نسعى دائمًا إلى تحقيق التوازن بين التطور التكنولوجي والتقليدي، مما يجعلنا نركز على الحلول العملية التي تُحدث فرقًا حقيقيًا.
+        هذه القيم ليست مجرد شعارات، بل هي المبادئ التي توجه كل خطوة نخطوها في رحلتنا نحو تحسين العملية التعليمية وخدمة المجتمع.
+      </p>
+    </div>
+  </section>
+  
+  <section class="content-section">
+    <div class="content">
+      <h2>رؤيتنا</h2>
+      <p>
+        تطمح رؤيتنا إلى أن نصبح الشريك الاستراتيجي الأول للمعلمين والمؤسسات التعليمية في العالم العربي. نحن نسعى لتوسيع خدماتنا عالميًا مع الحفاظ على جودة عالية وابتكار مستمر في كل ما نقدمه. رؤيتنا تتجاوز مجرد تقديم الوثائق؛ إنها رؤية متكاملة تهدف إلى خلق بيئة تعليمية متطورة تعتمد على التكنولوجيا والابتكار لتعزيز فرص التعلم وتحقيق النجاح لكل فرد.
+        نحن نطمح إلى مستقبل يكون فيه التعليم أكثر سهولة، وصولاً، وفعالية بفضل الحلول الذكية التي نوفرها.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Pied de page -->
+  <footer>
+    <p>حقوق النشر &copy; جميع الحقوق محفوظة لـموقع الوثيقة التربوية 2014-2030.</p>
+  </footer>
+  
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
