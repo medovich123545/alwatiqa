@@ -1,169 +1,414 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alwatika.ma - المنصة التعليمية</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Cairo', sans-serif;
-            direction: rtl;
-            background-color: #102a2d; /* Couleur de fond similaire à la page précédente */
-            color: #e1e1e1; /* Couleur du texte similaire à la page précédente */
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 85%;
-            margin: 30px auto;
-            background: #0d2023; /* Fond sombre pour correspondre à la page précédente */
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .container:hover {
-            transform: translateY(-5px);
-        }
-
-        h1, h2 {
-            font-family: 'Cairo', sans-serif;
-            color: #f0f8ff; /* Titre dans la couleur claire comme sur la page précédente */
-            border-bottom: 3px solid #f0f8ff; /* Ligne de séparation */
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 32px;
-        }
-
-        h2 {
-            font-size: 24px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        ul li {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 15px;
-            background: #0d2023; /* Fond du footer en accord avec la page précédente */
-            color: #a0c4c8; /* Texte en couleur claire */
-            margin-top: 30px;
-        }
-
-        .contact-info, .social-media {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .social-media a {
-            text-decoration: none;
-            color: #f0f8ff; /* Lien en couleur claire */
-            margin-right: 15px;
-        }
-
-        .social-media a:hover {
-            text-decoration: underline;
-        }
-
-        .icon {
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-
-        .floating-logo {
-        top: 0;
-        left: 0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سياسة الخصوصية -  الوثيقة التربوية </title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Réinitialisation globale */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
-        .floating-logo img {
-            height: 300px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .floating-logo {
-        top: 0;
-        left: 0;
+    :root {
+      --primary-color: #102a2d;
+      --secondary-color: #0d2023;
+      --accent-color: #ecc94b;
+      --text-color: #e1e1e1;
+      --base-font-size: 16px;
     }
-
-            .floating-logo img {
-                height: 150px; /* Réduire la taille du logo sur mobile */
-            }
-
-            .container {
-                padding: 20px; /* Réduire l'espace intérieur sur mobile */
-            }
-
-            h1 {
-                font-size: 24px; /* Taille de police ajustée pour le titre */
-            }
-
-            h2 {
-                font-size: 20px; /* Taille de police ajustée pour les sous-titres */
-            }
-
-            p, ul li {
-                font-size: 16px; /* Taille du texte réduite pour la version mobile */
-            }
-        }
-    </style>
+    
+    html {
+      font-size: var(--base-font-size);
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      direction: rtl;
+      line-height: 1.6;
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--secondary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      height: 80px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Réordonner pour une meilleure intégration dans l'app bar */
+    .logo {
+      order: 1;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 120px;
+      width: auto;
+      max-width: 100%;
+    }
+    
+    nav {
+      order: 2;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li a {
+      color: var(--text-color);
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      transition: background 0.3s;
+      border-radius: 5px;
+    }
+    
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+    
+    .hamburger {
+      order: 3;
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      margin: 4px 0;
+    }
+    
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      height: 100%;
+      background-color: var(--secondary-color);
+      padding: 1.5rem;
+      z-index: 999;
+      transition: right 0.3s ease-in-out;
+      overflow-y: auto;
+    }
+    
+    .mobile-menu.active {
+      right: 0;
+    }
+    
+    .mobile-menu .close-btn {
+      font-size: 2rem;
+      color: var(--text-color);
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+    }
+    
+    .mobile-menu ul {
+      list-style: none;
+      padding: 4rem 0 0 0;
+      margin: 0;
+    }
+    
+    .mobile-menu ul li {
+      margin-bottom: 1rem;
+    }
+    
+    .mobile-menu ul li a {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      padding: 0.5rem 0.8rem;
+      display: block;
+      border-radius: 3px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    
+    .mobile-menu ul li a:hover,
+    .mobile-menu ul li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+    
+    .hero {
+      background-image: url('images/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      margin-top: 80px;
+      padding: 2rem 1rem;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(16, 42, 45, 0.5);
+    }
+    
+    .hero .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 90%;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      word-wrap: break-word;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    .hero h2 {
+      font-size: 2rem;
+      margin: 1rem 0;
+      word-wrap: break-word;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    .content-section {
+      padding: 4rem 2rem;
+      background-color: var(--primary-color);
+      text-align: center;
+    }
+    
+    .content-section:nth-of-type(even) {
+      background-color: var(--secondary-color);
+    }
+    
+    .content-section .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      text-align: justify;
+      word-wrap: break-word;
+    }
+    
+    .content-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    .content-section p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    footer {
+      background-color: var(--secondary-color);
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-color);
+      font-size: 1rem;
+      margin-top: 2rem;
+      width: 100%;
+    }
+    
+    /* Ajustements pour la version mobile */
+    @media (max-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+    
+      header {
+        padding: 0 1rem;
+        height: 60px;
+      }
+    
+      .logo img {
+        height: 80px;
+      }
+    
+      nav ul {
+        display: none;
+      }
+    
+      .hamburger {
+        display: flex;
+      }
+    
+      .hero {
+        margin-top: 60px;
+        padding: 1rem;
+        height: auto;
+      }
+    
+      .hero .hero-content {
+        padding: 1rem;
+      }
+    
+      .hero h1 {
+        font-size: 2rem;
+      }
+    
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    
+      .hero p {
+        font-size: 1rem;
+      }
+    
+      .content-section {
+        padding: 2rem 1rem;
+      }
+    
+      .content-section h2 {
+        font-size: 2rem;
+      }
+    
+      .content-section p {
+        font-size: 1rem;
+      }
+      
+      .mobile-menu {
+        width: 80%;
+        padding: 1.5rem;
+      }
+    
+      .mobile-menu ul {
+        padding: 3rem 0 0 0;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Logo flottant -->
-    <div class="floating-logo">
-        <img src="images/icon5.png" alt="Logo">
+  <!-- En-tête -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="privacy.html" class="active">سياسة الخصوصية</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <img src="images/icon5.png" alt="شعار الموقع">
     </div>
-
-    
-
-    <!-- Section 'سياسة الخصوصية' -->
-    <div class="container">
-        <h1>سياسة الخصوصية</h1>
-        <p>نحن في <strong>Alwatika.ma</strong> نولي أهمية كبيرة لحماية خصوصية المستخدمين، ونتبع ممارسات صارمة لضمان سلامة البيانات الشخصية. جميع البيانات التي يتم جمعها يتم استخدامها فقط لأغراض تحسين تجربة المستخدم ولا يتم مشاركتها مع أطراف ثالثة بدون إذن مسبق من المستخدم.</p>
-        <h2>جمع المعلومات</h2>
-        <p>نقوم بجمع بعض المعلومات الشخصية مثل البريد الإلكتروني عند التسجيل أو عند تقديم الاستفسارات. هذه المعلومات تساعدنا في تخصيص تجربتك وتقديم الدعم المناسب في حال كنت بحاجة إليه.</p>
-        <h2>استخدام المعلومات</h2>
-        <p>نستخدم البيانات التي نجمعها لتقديم محتوى تعليمي مخصص وتحسين أداء المنصة. كما نستخدمها لضمان تقديم تجربة تصفح آمنة وفعّالة لكافة المستخدمين.</p>
-        <h2>ملفات تعريف الارتباط (Cookies)</h2>
-        <p>نحن نستخدم ملفات تعريف الارتباط (كوكيز) لتحسين الأداء وتجربة المستخدم. تسمح هذه الملفات بتخزين المعلومات بشكل مؤقت مثل تفضيلات اللغة والإعدادات الشخصية لضمان تصفح سلس. يمكنك تعطيل هذه الملفات من خلال إعدادات المتصفح في أي وقت.</p>
+    <div class="hamburger" onclick="toggleMobileMenu(event)">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-
-    <!-- Section 'اتصل بنا' -->
-    <div class="container">
-        <h1>اتصل بنا</h1>
-        <p>إذا كنت ترغب في التواصل معنا لأي سبب كان، سواء للاستفسار، تقديم ملاحظات، أو التعاون في مشاريع تعليمية، لا تتردد في التواصل مع فريقنا عبر القنوات التالية:</p>
-        <div class="contact-info">
-            <p><strong>البريد الإلكتروني:</strong> alwatiqa@outlook.com</p>
-            <p><strong>رقم الهاتف:</strong>   18706526 212+</p>
-            <p><strong>العنوان:</strong> شارع محمد الخامس، الرباط، المغرب</p>
-        </div>
-      
+  </header>
+  
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" onclick="toggleMobileMenu(event)">&times;</div>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="privacy.html" class="active">سياسة الخصوصية</a></li>
+      <li><a href="services.html">الخدمات</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+  </div>
+  
+  <!-- Section Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>سياسة الخصوصية</h1>
+      <p>نلتزم بحماية خصوصيتك والحفاظ على معلوماتك الشخصية بأعلى معايير الأمان.</p>
+    </div>
+  </section>
+  
+  <!-- Section : مقدمة -->
+  <section class="content-section">
+    <div class="content">
+      <h2>مقدمة</h2>
+      <p>
+        في موقع   الوثيقة التربوية ، نحن ملتزمون بحماية خصوصيتك وضمان سرية معلوماتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمعنا واستخدامنا وحمايتنا للبيانات التي تقدمها أثناء استخدام موقعنا لتحميل الوثائق التعليمية.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Section : جمع واستخدام المعلومات -->
+  <section class="content-section">
+    <div class="content">
+      <h2>جمع واستخدام المعلومات</h2>
+      <p>
+        نقوم بجمع المعلومات الشخصية مثل الاسم، البريد الإلكتروني، وأي بيانات أخرى تقدمها طوعًا عند التسجيل أو تحميل الوثائق. تُستخدم هذه المعلومات لتحسين خدماتنا، تقديم المحتوى المناسب، والتواصل معك بشأن التحديثات والعروض الخاصة.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Section : حماية المعلومات والتغييرات -->
+  <section class="content-section">
+    <div class="content">
+      <h2>حماية المعلومات </h2>
+      <p>
+        نتخذ إجراءات أمنية تقنية وتنظيمية لحماية معلوماتك من الوصول غير المصرح به، التعديل أو النشر. نحتفظ بحق تعديل سياسة الخصوصية هذه في أي وقت، وسيتم إشعار المستخدمين بأي تغييرات هامة عبر الموقع.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Pied de page -->
+  <footer>
+    <p>حقوق النشر &copy; جميع الحقوق محفوظة لـموقع الوثيقة التربوية 2014-2030.</p>
+  </footer>
+  
+  <script>
+    // Fonction d'ouverture/fermeture du menu mobile
+    function toggleMobileMenu(event) {
+      event.stopPropagation();
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
     
-
-    <div class="footer">&copy; 2024 Alwatika.ma - جميع الحقوق محفوظة</div>
+    // Fermer le menu mobile si l'utilisateur clique en dehors
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.hamburger');
+      if (menu.classList.contains('active') && !menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
+  </script>
 </body>
-</html> 
+</html>
