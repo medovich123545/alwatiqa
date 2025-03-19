@@ -6,19 +6,39 @@
   <title>من نحن - كنز الوثائق التربوية</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Réinitialisation globale */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     :root {
       --primary-color: #102a2d;
       --secondary-color: #0d2023;
       --accent-color: #ecc94b;
       --text-color: #e1e1e1;
+      --base-font-size: 16px;
+      --header-height: 80px; /* Hauteur de l'en-tête */
     }
     
+    html {
+      font-size: var(--base-font-size);
+    }
+    
+    /* On n'ajoute plus de padding-top au body, on insère plutôt un spacer */
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
       background-color: var(--primary-color);
       color: var(--text-color);
       direction: rtl;
+      line-height: 1.6;
     }
     
     header {
@@ -30,22 +50,31 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 2rem;
-      height: 80px;
+      height: var(--header-height);
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
     
-    nav {
-      order: 1;
+    /* Un spacer qui déplace le contenu en dessous de l'en-tête fixe */
+    .header-spacer {
+      height: var(--header-height);
     }
     
+    /* Réordonner pour une meilleure intégration dans l'app bar */
     .logo {
-      order: 2;
+      order: 1;
+      display: flex;
+      align-items: center;
     }
     
     .logo img {
-      height: 200px;
+      height: 120px;
       width: auto;
+      max-width: 100%;
+    }
+    
+    nav {
+      order: 2;
     }
     
     nav ul {
@@ -59,10 +88,11 @@
     
     nav ul li a {
       color: var(--text-color);
-      font-size: 0.9rem;
+      font-size: 1rem;
       padding: 0.3rem 0.6rem;
       transition: background 0.3s;
       border-radius: 5px;
+      text-decoration: none;
     }
     
     nav ul li a:hover,
@@ -72,6 +102,7 @@
     }
     
     .hamburger {
+      order: 3;
       display: none;
       flex-direction: column;
       cursor: pointer;
@@ -85,21 +116,20 @@
     }
     
     .mobile-menu {
-      display: none;
       position: fixed;
       top: 0;
       right: -100%;
-      width: 60%; /* largeur réduite */
+      width: 80%;
       height: 100%;
       background-color: var(--secondary-color);
-      padding: 1rem; /* padding réduit */
+      padding: 1.5rem;
       z-index: 999;
       transition: right 0.3s ease-in-out;
+      overflow-y: auto;
     }
     
     .mobile-menu.active {
       right: 0;
-      display: block;
     }
     
     .mobile-menu .close-btn {
@@ -113,7 +143,7 @@
     
     .mobile-menu ul {
       list-style: none;
-      padding: 3rem 0 0 0;
+      padding: 4rem 0 0 0;
       margin: 0;
     }
     
@@ -122,14 +152,14 @@
     }
     
     .mobile-menu ul li a {
-  color: var(--text-color);
-  font-size: 1rem;         /* taille de police réduite */
-  padding: 0.3rem 0.8rem;   /* padding plus fin */
-  display: block;
-  border-radius: 3px;       /* coins légèrement arrondis */
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
+      color: var(--text-color);
+      font-size: 1.2rem;
+      padding: 0.5rem 0.8rem;
+      display: block;
+      border-radius: 3px;
+      transition: background 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+    }
     
     .mobile-menu ul li a:hover,
     .mobile-menu ul li a.active {
@@ -147,7 +177,7 @@
       align-items: center;
       text-align: center;
       position: relative;
-      margin-top: 80px; /* pour bureau */
+      padding: 2rem 1rem;
     }
     
     .hero::after {
@@ -157,33 +187,35 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(16,42,45,0.5);
+      background-color: rgba(16, 42, 45, 0.5);
     }
     
     .hero .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 800px;
-      padding: 1rem;
+      max-width: 90%;
+      padding: 1.5rem;
       background: rgba(0, 0, 0, 0.4);
       border-radius: 8px;
+      word-wrap: break-word;
     }
     
     .hero h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-    }
-    
-    .hero p {
-      font-size: 1.2rem;
-      line-height: 1.5;
-      margin-bottom: 1rem;
+      word-wrap: break-word;
     }
     
     .hero h2 {
       font-size: 2rem;
-      margin-top: 1.5rem;
+      margin: 1rem 0;
+      word-wrap: break-word;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
       margin-bottom: 1rem;
+      word-wrap: break-word;
     }
     
     .content-section {
@@ -199,17 +231,21 @@
     .content-section .content {
       max-width: 900px;
       margin: 0 auto;
+      padding: 0 1rem;
       text-align: justify;
+      word-wrap: break-word;
     }
     
     .content-section h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+      word-wrap: break-word;
     }
     
     .content-section p {
       font-size: 1.1rem;
-      line-height: 1.8;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
     }
     
     footer {
@@ -218,54 +254,92 @@
       padding: 2rem;
       color: var(--text-color);
       font-size: 1rem;
+      margin-top: 2rem;
+      width: 100%;
     }
     
     /* Ajustements pour la version mobile */
     @media (max-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+    
       header {
         padding: 0 1rem;
-        padding-left: 0;
         height: 60px;
       }
-      
+    
       .logo img {
-        height: 150px;
+        height: 80px;
       }
-      
+    
       nav ul {
         display: none;
       }
-      
+    
       .hamburger {
         display: flex;
       }
-      
+    
       .hero {
-        margin-top: 60px; /* correspond à la hauteur du header mobile */
+        padding: 1rem;
+        height: auto;
       }
-      
+    
+      .hero .hero-content {
+        padding: 1rem;
+      }
+    
       .hero h1 {
         font-size: 2rem;
       }
-      
-      .hero p, 
+    
       .hero h2 {
+        font-size: 1.5rem;
+      }
+    
+      .hero p {
         font-size: 1rem;
       }
-      
+    
       .content-section {
         padding: 2rem 1rem;
       }
-      
+    
       .content-section h2 {
         font-size: 2rem;
       }
-      
+    
       .content-section p {
         font-size: 1rem;
       }
+      
+      .mobile-menu {
+        width: 80%;
+        padding: 1.5rem;
+      }
+    
+      .mobile-menu ul {
+        padding: 3rem 0 0 0;
+      }
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Récupérer le chemin de la page actuelle
+      const currentPath = window.location.pathname.split("/").pop();
+      // Sélectionner tous les liens du menu
+      const menuLinks = document.querySelectorAll("nav ul li a, .mobile-menu ul li a");
+      // Parcourir les liens et ajouter la classe "active" uniquement au lien correspondant à la page actuelle
+      menuLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPath) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+  </script>
 </head>
 <body>
   <!-- En-tête -->
@@ -288,6 +362,9 @@
       <div></div>
     </div>
   </header>
+
+  <!-- Spacer pour compenser l'en-tête fixe -->
+  <div class="header-spacer"></div>
   
   <!-- Menu mobile avec bouton de fermeture -->
   <div class="mobile-menu" id="mobileMenu">
@@ -304,49 +381,45 @@
   <!-- Section Hero -->
   <section class="hero">
     <div class="hero-content">
-      <h1>من نحن</h1>
+    
+
+      <h2>لماذا الوثيقة التربوية؟</h2>
       <p>
-        مرحبًا بكم في <strong>كنز الوثائق التربوية</strong>، المنصة التعليمية الرائدة التي تهدف إلى تقديم محتوى تعليمي مبتكر وموارد شاملة لتطوير العملية التعليمية في المملكة المغربية والعالم العربي. نقدم مجموعة واسعة من الملفات التعليمية التي تغطي جميع مستويات التعليم بما في ذلك الأساتذة، التلاميذ والإداريين.
+        لأننا نؤمن بأن المعرفة قوة، ونجاح أي مجتمع يبدأ من جودة تعليمه، فإننا نسعى جاهدين إلى تقديم محتوى تعليمي متميز، 
+        مدعوم بأحدث الأبحاث التربوية وأفضل الممارسات التعليمية. كما نحرص على تحديث المحتوى بشكل مستمر لضمان دقته وملاءمته 
+        للمتغيرات التربوية الحديثة.
       </p>
+
+      <h2>رسالتنا</h2>
       <p>
-        هدفنا الرئيسي هو تسهيل الوصول إلى التعليم من خلال تقديم محتوى عالي الجودة يساعد في تسريع التعلم وتحقيق الفائدة القصوى. نقوم بمراجعة وتحديث المحتوى بشكل دوري لضمان توافقه مع أحدث المنهجيات التربوية.
+        تتمثل رسالتنا في تمكين المتعلمين والمعلمين من أدوات وموارد تعليمية متطورة تساعدهم على تحقيق أهدافهم الأكاديمية والمهنية. 
+        نحن هنا لنجعل التعلم أكثر سهولة، تفاعلية، وإلهامًا، مع التركيز على الجودة والابتكار في تقديم المعرفة.
       </p>
-      <h2>لماذا كنز الوثائق التربوية؟</h2>
+
+      <h2>رؤيتنا</h2>
       <p>
-        نؤمن بأن التعليم هو أساس النجاح المستدام في أي مجتمع. لهذا السبب، نحرص على تقديم محتوى ذو جودة عالية، مدعوم من متخصصين في المجال التربوي، لضمان تحسين أداء الطلاب والمعلمين على حد سواء. كما نحرص على أن يكون المحتوى سهل الوصول والفهم ليخدم جميع شرائح المجتمع التعليمي.
-      </p>
-    </div>
-  </section>
-  
-  <!-- Section supplémentaire pour détailler les services -->
-  <section class="content-section">
-    <div class="content">
-      <h2>خدماتنا</h2>
-      <p>
-        نقدم في <strong>كنز الوثائق التربوية</strong> مجموعة متنوعة من الخدمات التعليمية التي تهدف إلى تحسين جودة التعليم ودعم كافة مراحل العملية التعليمية. تشمل خدماتنا:
-      </p>
-      <ul>
-        <li>توفير ملفات تعليمية شاملة ومحدثة لجميع المراحل الدراسية.</li>
-        <li>دورات تدريبية وورش عمل للمعلمين لتعزيز مهاراتهم التربوية.</li>
-        <li>منصات تفاعلية لتسهيل عملية التعلم عن بعد.</li>
-        <li>مواد تعليمية متعددة الوسائط لتلبية احتياجات التلاميذ المختلفة.</li>
-      </ul>
-      <p>
-        نحن نلتزم بتقديم خدمات عالية الجودة تعكس أحدث التطورات في مجال التعليم، مع الحرص على أن تكون جميع الموارد متاحة وسهلة الاستخدام لجميع الفئات. كما نعمل على توفير الدعم الفني والتعليمي المستمر لضمان تحقيق أقصى استفادة من محتوياتنا.
+        أن نصبح المرجع الأول في المجال التربوي على مستوى العالم العربي، من خلال تقديم محتوى تعليمي متجدد، موثوق، ومتطور 
+        يساهم في بناء أجيال قادرة على التفكير النقدي والإبداع وتحقيق التميز الأكاديمي.
       </p>
     </div>
   </section>
-  
-  <!-- Pied de page -->
-  <footer>
-    <p>حقوق النشر &copy; جميع الحقوق محفوظة لموقع كنز الوثائق التربوية 2014-2030.</p>
-  </footer>
   
   <script>
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
       menu.classList.toggle('active');
     }
+    
+    // Fermer automatiquement le menu mobile en cliquant en dehors de celui-ci
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.hamburger');
+      if (menu.classList.contains('active') && 
+          !menu.contains(event.target) && 
+          !hamburger.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
   </script>
 </body>
 </html>
