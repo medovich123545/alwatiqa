@@ -108,17 +108,18 @@
     }
     
     .mobile-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 80%;
-      height: 100%;
-      background-color: var(--secondary-color);
-      padding: 1.5rem;
-      z-index: 999;
-      transition: right 0.3s ease-in-out;
-      overflow-y: auto;
-    }
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  z-index: 1001; /* z-index augmenté pour passer devant l'en-tête */
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
     
     .mobile-menu.active {
       right: 0;
