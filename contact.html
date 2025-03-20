@@ -1,236 +1,405 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="جميع دلائل أستاذ التعليم الابتدائي حسب المستوى المدرس، مع روابط لتحميل الموارد التعليمية والمناهج الدراسية.">
-  <meta name="keywords" content="دلائل الأستاذ, تعليم ابتدائي, موارد تعليمية, مناهج دراسية, تعليم فعّال">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="دلائل الأستاذ : خارطة طريق للتعليم الفعال">
-  <meta property="og:description" content="جميع دلائل أستاذ التعليم الابتدائي حسب المستوى المدرس.">
-  <meta property="og:image" content="path_to_image.png"> <!-- Ajouter l'URL de l'image -->
-  <meta property="og:url" content="https://www.votre-url.com">
-  
-  <meta name="twitter:title" content="دلائل الأستاذ : خارطة طريق للتعليم الفعال">
-  <meta name="twitter:description" content="جميع دلائل أستاذ التعليم الابتدائي حسب المستوى المدرس.">
-  <meta name="twitter:image" content="path_to_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <title>دلائل الأستاذ : خارطة طريق للتعليم الفعال</title>
-  
+  <title>اتصل بنا - كنز الوثائق التربوية</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-/* Global Styles */
-body {
-  font-family: 'Cairo', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to right, #2e3b4e, #3b4f7f); /* Couleurs ajustées */
-  color: #ffffff;
-  text-align: center;
-}
+    /* Réinitialisation globale */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
-/* Header */
-header {
-  background: #0d2023;
-  backdrop-filter: blur(10px);
-  padding: 40px 20px;
-  font-size: 28px;
-  font-weight: bold;
-  box-shadow:  0 4px 10px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(65, 49, 49, 0.2);
-}
-
-.header-title {
-  font-size: 19px;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.header-description {
-  font-size: 15px;
-  color: 0 4px 10px rgba(0, 0, 0, 0.1);
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Conteneur principal */
-.content {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-/* Style des boutons des niveaux */
-.level-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  justify-content: center;
-}
-
-.level {
-  background: #0d2023;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.level:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
-}
-
-.level button {
-  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Ajustement du gradient pour le bouton */
-  color: #ffffff;
-  border: none;
-  padding: 15px 25px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: 0.3s ease-in-out;
-  width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-}
-
-.level button:hover {
-  background: linear-gradient(135deg, #2a5298, #1e3c72); /* Changement du gradient au survol */
-  transform: scale(1.08);
-}
-
-/* Bouton flottant */
-.floating-button {
+    :root {
+      --primary-color: #102a2d;
+      --secondary-color: #0d2023;
+      --accent-color: #ecc94b;
+      --text-color: #e1e1e1;
+      --base-font-size: 16px;
+    }
+    
+    html {
+      font-size: var(--base-font-size);
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      direction: rtl;
+      line-height: 1.6;
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--secondary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      height: 80px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Réordonner pour une meilleure intégration dans l'app bar */
+    .logo {
+      order: 1;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 250px;
+      width: auto;
+      max-width: 100%;
+    }
+    
+    nav {
+      order: 2;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li a {
+      color: var(--text-color);
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      transition: background 0.3s;
+      border-radius: 5px;
+    }
+    
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+    
+    .hamburger {
+      order: 3;
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      margin: 4px 0;
+    }
+    
+    .mobile-menu {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: #ff9800;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  z-index: 1001; /* z-index augmenté pour passer devant l'en-tête */
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
 }
 
-.floating-button:hover {
-  background: #e68900;
-  transform: scale(1.1);
-}
-
-.floating-button i {
-  font-size: 24px;
-}
-
-/* Logo flottant */
-.floating-logo {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.floating-logo img {
-  height: 120px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* Footer */
-footer {
-  margin-top: 50px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 16px;
-  color: #d1ecf1;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .floating-logo {
-    display: none;
-  }
-
-  .header-description {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  .level-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .level {
-    width: 90%;
-  }
-
-  .level button {
-    font-size: 16px;
-    padding: 12px 18px;
-  }
-
-  .floating-button {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
+    .mobile-menu.active {
+      right: 0;
+    }
+    
+    .mobile-menu .close-btn {
+      font-size: 2rem;
+      color: var(--text-color);
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+    }
+    
+    .mobile-menu ul {
+      list-style: none;
+      padding: 4rem 0 0 0;
+      margin: 0;
+    }
+    
+    .mobile-menu ul li {
+      margin-bottom: 1rem;
+    }
+    
+    .mobile-menu ul li a {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      padding: 0.5rem 0.8rem;
+      display: block;
+      border-radius: 3px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    
+    .mobile-menu ul li a:hover,
+    .mobile-menu ul li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+    
+    .hero {
+      background-image: url('images/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      margin-top: 80px;
+      padding: 2rem 1rem;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(16, 42, 45, 0.5);
+    }
+    
+    .hero .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 90%;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      word-wrap: break-word;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    .hero h2 {
+      font-size: 2rem;
+      margin: 1rem 0;
+      word-wrap: break-word;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    .content-section {
+      padding: 4rem 2rem;
+      background-color: var(--primary-color);
+      text-align: center;
+    }
+    
+    .content-section:nth-of-type(even) {
+      background-color: var(--secondary-color);
+    }
+    
+    .content-section .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      text-align: justify;
+      word-wrap: break-word;
+    }
+    
+    .content-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    .content-section p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    footer {
+      background-color: var(--secondary-color);
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-color);
+      font-size: 1rem;
+      margin-top: 2rem;
+      width: 100%;
+    }
+    
+    /* Ajustements pour la version mobile */
+    @media (max-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+    
+      header {
+        padding: 0 1rem;
+        height: 60px;
+      }
+    
+      .logo img {
+        height: 150px;
+      }
+    
+      nav ul {
+        display: none;
+      }
+    
+      .hamburger {
+        display: flex;
+      }
+    
+      .hero {
+        margin-top: 60px;
+        padding: 1rem;
+        height: auto;
+      }
+    
+      .hero .hero-content {
+        padding: 1rem;
+      }
+    
+      .hero h1 {
+        font-size: 2rem;
+      }
+    
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    
+      .hero p {
+        font-size: 1rem;
+      }
+    
+      .content-section {
+        padding: 2rem 1rem;
+      }
+    
+      .content-section h2 {
+        font-size: 2rem;
+      }
+    
+      .content-section p {
+        font-size: 1rem;
+      }
+      
+      .mobile-menu {
+        width: 80%;
+        padding: 1.5rem;
+      }
+    
+      .mobile-menu ul {
+        padding: 3rem 0 0 0;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- En-tête -->
   <header>
-    <div class="header-title"><h1>دلائل الأستاذ : خارطة طريق للتعليم الفعال</h1></div>
-    <div class="header-description">
-      <p>جميع دلائل أستاذ التعليم الابتدائي حسب المستوى المدرس.</p>
+    <div class="logo">
+      <img src="images/icon5.png" alt="شعار الموقع">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html" class="active">اتصل بنا</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMobileMenu(event)">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </header>
   
-  <!-- Logo flottant -->
-  <div class="floating-logo">
-    <img src="images/icon5.png" alt="شعار الموقع">
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" onclick="toggleMobileMenu(event)">&times;</div>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="services.html">الخدمات</a></li>
+      <li><a href="contact.html" class="active">اتصل بنا</a></li>
+      <li><a href="privacy.html">سياسة الخصوصية</a></li>
+    </ul>
   </div>
 
-  <div class="content">
-    <div class="level-container">
-      <div class="level">
-        <button onclick="window.location.href='dalil1.html'">المستوى الأول</button>
-      </div>
-      <div class="level">
-        <button onclick="window.location.href='dalil2.html'">المستوى الثاني</button>
-      </div>
-      <div class="level">
-        <button onclick="window.location.href='dalil3.html'">المستوى الثالث</button>
-      </div>
-      <div class="level">
-        <button onclick="window.location.href='dalil4.html'">المستوى الرابع</button>
-      </div>
-      <div class="level">
-        <button onclick="window.location.href='dalil5.html'">المستوى الخامس</button>
-      </div>
-      <div class="level">
-        <button onclick="window.location.href='dalil6.html'">المستوى السادس</button>
-      </div>
+  <section class="content-section">
+    <div class="content">
+      <h2>اتصل بنا</h2>
+      <p>نحن هنا لمساعدتك! إذا كان لديك أي استفسارات أو تحتاج إلى مزيد من المعلومات، لا تتردد في التواصل معنا عبر الوسائل التالية. فريقنا جاهز للرد على استفساراتك بكل اهتمام واحترافية. سواء كنت بحاجة إلى مساعدة في استخدام موقعنا أو ترغب في الحصول على معلومات إضافية حول خدماتنا، نحن هنا من أجلك.</p>
+      
+      <h3>العنوان</h3>
+      <p>شارع محمد الخامس، إقامة لبنى، الرباط</p>
+      
+      <h3>الهاتف</h3>
+      <p>782 062 606 212+</p>
+      <p>لمزيد من المعلومات أو للتواصل مع فريق الدعم، لا تتردد في الاتصال على الرقم المذكور. نحن متاحون للرد على مكالماتك في أوقات العمل الرسمية من الساعة 9 صباحًا وحتى الساعة 6 مساءً، من الأحد إلى الخميس.</p>
+      
+      <h3>البريد الإلكتروني</h3>
+      <p><a href="mailto:alwatiqa@otlook.com">alwatiqa@otlook.com</a></p>
+      <p>إذا كنت تفضل التواصل عبر البريد الإلكتروني، يمكنك إرسال رسالة إلى عنواننا المذكور. سنقوم بالرد عليك في أسرع وقت ممكن، عادةً خلال 24 ساعة. لا تتردد في إرسال استفساراتك أو اقتراحاتك.</p>
+      
+      <h3>صفحة الفيسبوك</h3>
+      <p><a href="https://www.facebook.com/الوثيقة-التربوية" target="_blank">الوثيقة التربوية</a></p>
+      <p>تابعنا على صفحة الفيسبوك للحصول على آخر الأخبار والتحديثات حول خدماتنا. نحن نشجعك على المشاركة في المحادثات والتفاعل معنا عبر صفحتنا لمزيد من الدعم والمعلومات القيمة التي نشاركها بانتظام.</p>
+
+      <h3>ملاحظات</h3>
+      <p>إذا كنت بحاجة إلى مساعدة إضافية أو لديك ملاحظات حول خدماتنا، لا تتردد في إرسال رسالة أو الاتصال بنا. نقدر كل ملاحظاتك لأنها تساعدنا في تحسين خدماتنا باستمرار. نحن نؤمن بأن التواصل هو المفتاح لتقديم أفضل تجربة لعملائنا.</p>
     </div>
-  </div>
+</section>
 
-  <!-- Bouton flottant -->
-  <div class="floating-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-    <i class="fas fa-arrow-up"></i>
-  </div>
 
+
+  <!-- Pied de page -->
   <footer>
-    جميع الحقوق محفوظة لـموقع الوثيقة التربوية 2014-2030
+    <p>حقوق النشر &copy; جميع الحقوق محفوظة لـموقع الوثيقة التربوية 2014-2030.</p>
   </footer>
+
+  <script>
+    // Fonction pour ouvrir/fermer le menu mobile
+    function toggleMobileMenu(event) {
+      event.stopPropagation();
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+    
+    // Fermer le menu mobile si l'utilisateur clique en dehors
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.hamburger');
+      if (menu.classList.contains('active') && !menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
