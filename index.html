@@ -3,251 +3,558 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> موقع الوثيقة التربوية </title>
+  <title>  موقع الوثيقة التربوية    </title>
+
+  <!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع الوثيقة التربوية</title>
+  
+  <!-- SEO: Meta Description -->
+  <meta name="description" content="موقع يقدم جميع الوثائق التربوية، الإدارية، والشخصية التي يحتاجها أساتذة التعليم الإبتدائي .">
+  
+  <!-- SEO: Meta Keywords -->
+  <meta name="keywords" content="وثائق تربوية, watha2iq tarbawiya, وثائق إدارية, watha2iq idariya, وثائق شخصية, watha2iq shakhsiya, امتحان الكفاءة المهنية, imtihan al-kafa'a al-mihaniya, معلمون, muallimun, موارد تعليمية, mawared ta3limiya, جودات, jodadat, توزيع سنوي, tawazi3 sanawiya, توزيع شهري, tawazi3 chahriya, امتحان مهني, imtihan mihani">
+  
+  <!-- SEO: Open Graph Tags for better sharing on social media -->
+  <meta property="og:title" content="موقع الوثيقة التربوية">
+  <meta property="og:description" content="موقع يقدم جميع الوثائق التربوية، الإدارية، والشخصية التي يحتاجها أساتذة التعليم الإبتدائي .">
+ 
+  <meta property="og:image" content="https://raw.githubusercontent.com/medovich123545/watiqa/main/images/prof.png">
+
+  <meta property="og:url" content="https://alwatiqa.ma/">
+
+  
+  <!-- SEO: Twitter Card for better sharing on Twitter -->
+  <meta name="twitter:title" content="موقع الوثيقة التربوية">
+  <meta name="twitter:description" content="موقع يقدم جميع الوثائق التربوية، الإدارية، والشخصية التي يحتاجها أساتذة التعليم الإبتدائي .">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/medovich123545/watiqa/main/images/prof.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- Script Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2507602399790242"
-          crossorigin="anonymous"></script>
-  
   <style>
     :root {
-      --primary-color: #102a2d;
-      --secondary-color: #0d2023;
-      --accent-color: #ecc94b;
-      --text-color: #e1e1e1;
-      --light-bg: #f4f4f4;
+        --primary-color: #102a2d;
+        --secondary-color: #0d2023;
+        --accent-color: #ecc94b;
+        --text-color: #e1e1e1;
+        --light-bg: #f4f4f4;
     }
 
     /* Global styles */
     body {
-      margin: 0;
-      font-family: 'Cairo', sans-serif;
-      color: var(--text-color);
-      background-color: var(--primary-color);
-      direction: rtl;
+        margin: 0;
+        font-family: 'Cairo', sans-serif;
+        color: var(--text-color);
+        background-color: var(--primary-color);
+        direction: rtl;
     }
 
     a {
-      text-decoration: none;
-      color: inherit;
+        text-decoration: none;
+        color: inherit;
     }
 
     /* Header */
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; /* Assure un bon alignement */
-      height: 80px; /* Hauteur fixe pour éviter l'agrandissement */
-      padding: 0 2rem; /* Ajustement de l'espacement */
-      background-color: var(--secondary-color);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      overflow: hidden; /* Empêche le contenu (logo) de dépasser */
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Assure un bon alignement */
+        height: 80px; /* Hauteur fixe pour éviter l'agrandissement */
+        padding: 0 2rem; /* Ajustement de l'espacement */
+        background-color: var(--secondary-color);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden; /* Empêche le contenu (logo) de dépasser */
     }
 
     /* Logo */
     .logo img {
-      height: 300px; /* Taille du logo */
-      width: auto;
-      max-width: 100%;
-      object-fit: contain;
-      margin-top: 15px; /* Décale le logo vers le bas */
-    }
-
-    @media (max-width: 768px) {
-      .logo img {
-        height: 300px;
+        height: 300px; /* Taille du logo */
         width: auto;
         max-width: 100%;
         object-fit: contain;
-        transform: translate(30px, 20px); /* X: décalage à droite, Y: décalage vers le bas */
-      }
+        margin-top: 15px; /* Décale le logo vers le bas */
     }
 
     /* Navigation */
     header nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
     }
 
     header nav ul li {
-      color: #a0c4c8;
-      cursor: pointer;
-      transition: color 0.3s;
+        color: #a0c4c8;
+        cursor: pointer;
+        transition: color 0.3s;
     }
 
     header nav ul li:hover {
-      color: var(--text-color);
+        color: var(--text-color);
     }
 
     /* Hero section */
     .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(135deg, var(--secondary-color), #183c40);
-      color: var(--text-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem 2rem;
+        background: linear-gradient(135deg, var(--secondary-color), #183c40);
+        color: var(--text-color);
     }
 
     .hero-text {
-      max-width: 50%;
-      animation: fadeIn 2s ease-in-out;
+        max-width: 50%;
+        animation: fadeIn 2s ease-in-out;
     }
 
     .hero-text h1 {
-      font-size: 3.5rem;
-      margin: 0;
-      color: var(--text-color);
+        font-size: 3.5rem;
+        margin: 0;
+        color: var(--text-color);
     }
 
     .hero-text p {
-      max-width: 700px;
-      font-size: 1.3rem;
-      margin-top: 1rem;
-      line-height: 1.8;
+        max-width: 700px;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        line-height: 1.8;
     }
 
     .hero img {
-      max-width: 40%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        max-width: 40%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     /* Services section */
     .services {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 3rem;
-      flex-wrap: wrap;
-      background-color: var(--light-bg);
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 3rem;
+        flex-wrap: wrap;
+        background-color: var(--light-bg);
     }
 
     .service {
-      background-color: var(--secondary-color);
-      padding: 1.5rem;
-      border-radius: 10px;
-      width: 300px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
+        background-color: var(--secondary-color);
+        padding: 1.5rem;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .service:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     }
 
     /* Footer */
     .footer {
-      background-color: var(--secondary-color);
-      color: var(--text-color);
-      padding: 2rem;
-      text-align: center;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        padding: 2rem;
+        text-align: center;
     }
 
     .footer p {
-      font-size: 1.2rem;
-      line-height: 1.8;
+        font-size: 1.2rem;
+        line-height: 1.8;
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     /* Bouton flottant "جميع دلائل الأستاذ " */
     .sync-button {
-      display: flex;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: var(--accent-color);
-      padding: 12px 18px;
-      border-radius: 30px;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      color: #000;
-      font-size: 1rem;
-      font-weight: bold;
-      text-decoration: none;
-      transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--accent-color);
+        padding: 12px 18px;
+        border-radius: 30px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        color: #000;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    /* Effet au survol */
     .sync-button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Masquer le menu mobile par défaut (version PC) */
-    .mobile-menu {
-      display: none;
+        transform: scale(1.1);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     }
 
     /* Mobile styles */
     @media (max-width: 768px) {
-      .hero {
+        .hero {
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .hero-text {
+            max-width: 100%;
+        }
+
+        .hero img {
+            display: none;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 16px;
+            background-color: var(--light-bg);
+        }
+
+        .service {
+            background-color: var(--secondary-color);
+            padding: 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .service:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .sync-button {
+            display: flex;
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            background-color: var(--accent-color);
+            padding: 10px 16px;
+            border-radius: 30px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            color: #000;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+  </style>
+  
+  <script>
+    // Fonction pour ouvrir/fermer le menu mobile
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('active');
+    }
+
+    // Fonction pour fermer le menu si on clique en dehors
+    document.addEventListener('click', function (event) {
+        const menu = document.getElementById('mobileMenu');
+        const hamburger = document.querySelector('.hamburger');
+        
+        // Vérifier si le clic est à l'extérieur du menu mobile et du hamburger
+        if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+            menu.classList.remove('active');
+        }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/icon5.png" alt="شعار الموقع">
+    </div>
+    
+    <!-- Navigation desktop -->
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+      </ul>
+    </nav>
+    
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+  
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+    --primary-color: #102a2d;
+    --secondary-color: #0d2023;
+    --accent-color: #ecc94b;
+    --text-color: #e1e1e1;
+    --light-bg: #f4f4f4;
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    direction: rtl;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Assure un bon alignement */
+    height: 80px; /* Hauteur fixe pour éviter l'agrandissement */
+    padding: 0 2rem; /* Ajustement de l'espacement */
+    background-color: var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Empêche le contenu (logo) de dépasser */
+}
+
+
+/* Logo */
+.logo img {
+    height: 300px; /* Taille du logo */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin-top: 15px; /* Décale le logo vers le bas */
+}
+
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transform: translate(30px, 20px); /* X: décalage à droite, Y: décalage vers le bas */
+}
+
+}
+
+/* Navigation */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li {
+    color: #a0c4c8;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+header nav ul li:hover {
+    color: var(--text-color);
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--secondary-color), #183c40);
+    color: var(--text-color);
+}
+
+.hero-text {
+    max-width: 50%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.hero-text p {
+    max-width: 700px;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+.hero img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Services section */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    flex-wrap: wrap;
+    background-color: var(--light-bg);
+}
+
+.service {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bouton flottant "جميع دلائل الأستاذ " */
+.sync-button {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    padding: 12px 18px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Effet au survol */
+.sync-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Masquer le menu mobile par défaut (version PC) */
+.mobile-menu {
+    display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hero {
         flex-direction: column;
         text-align: center;
         padding: 2rem 1rem;
-      }
+    }
 
-      .hero-text {
+    .hero-text {
         max-width: 100%;
-      }
+    }
 
-      .hero img {
+    .hero img {
         display: none;
-      }
+    }
 
-      .services {
+    .services {
         display: grid;
         grid-template-columns: 1fr;
         gap: 16px;
         padding: 16px;
         background-color: var(--light-bg);
-      }
+    }
 
-      .service {
+    .service {
         background-color: var(--secondary-color);
         padding: 1.2rem;
         border-radius: 8px;
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      }
+    }
 
-      .service:hover {
+    .service:hover {
         transform: translateY(-3px);
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-      }
+    }
 
-      .service h3 {
+    .service h3 {
         font-size: 1.1rem;
         margin-bottom: 0.5rem;
-      }
+    }
 
-      .service p {
+    .service p {
         font-size: 0.9rem;
         margin: 0;
-      }
+    }
 
-      /* Bouton flottant "جميع دلائل الأستاذ " */
-      .sync-button {
+    /* Bouton flottant "جميع دلائل الأستاذ " */
+    .sync-button {
         display: flex;
         position: fixed;
         bottom: 16px;
@@ -263,28 +570,28 @@
         font-size: 1rem;
         font-weight: bold;
         text-decoration: none;
-      }
+    }
 
-      /* Navigation mobile */
-      header nav ul {
+    /* Navigation mobile */
+    header nav ul {
         display: none;
-      }
+    }
 
-      .hamburger {
+    .hamburger {
         display: block;
         cursor: pointer;
-      }
+    }
 
-      .hamburger div {
+    .hamburger div {
         width: 25px;
         height: 3px;
         background-color: var(--text-color);
         margin: 5px 0;
         transition: 0.4s;
-      }
+    }
 
-      /* Menu mobile overlay */
-      .mobile-menu {
+    /* Menu mobile overlay */
+    .mobile-menu {
         display: none;
         position: fixed;
         top: 0;
@@ -295,51 +602,72 @@
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
         padding: 2rem;
         z-index: 999;
-      }
+    }
 
-      .mobile-menu.active {
+    .mobile-menu.active {
         display: block;
         animation: slideIn 0.3s forwards;
-      }
+    }
 
-      @keyframes slideIn {
+    @keyframes slideIn {
         from {
-          transform: translateX(100%);
+            transform: translateX(100%);
         }
         to {
-          transform: translateX(0);
+            transform: translateX(0);
         }
-      }
+    }
+   
 
-      .mobile-menu ul {
+    .mobile-menu ul {
         list-style: none;
         padding: 0;
-      }
+    }
 
-      .mobile-menu li {
+    .mobile-menu li {
         margin-bottom: 1.5rem;
         font-size: 1.2rem;
         color: var(--text-color);
         cursor: pointer;
-      }
-
-      /* Ajustements typographiques */
-      .hero-text h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-text p {
-        font-size: 1rem;
-      }
     }
+
+    /* Ajustements typographiques */
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
   </style>
+  <script>
+    // Fonction pour ouvrir/fermer le menu mobile
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('active');
+    }
+
+    // Fonction pour fermer le menu si on clique en dehors
+    document.addEventListener('click', function (event) {
+        const menu = document.getElementById('mobileMenu');
+        const hamburger = document.querySelector('.hamburger');
+        
+        // Vérifier si le clic est à l'extérieur du menu mobile et du hamburger
+        if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+            menu.classList.remove('active');
+        }
+    });
+</script>
+
 </head>
 <body>
   <header>
     <div class="logo">
       <img src="images/icon5.png" alt="شعار الموقع">
-    </div>
-
+  </div>
+  
     <!-- Navigation desktop (visible sur PC) -->
     <nav>
       <ul>
@@ -357,7 +685,7 @@
       <div></div>
     </div>
   </header>
-
+  
   <!-- Menu mobile overlay (affiché uniquement sur mobile) -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
@@ -368,11 +696,10 @@
       <li><a href="privacy.html">سياسة الخصوصية</a></li>
     </ul>
   </div>
-
   
   <div class="hero">
     <div class="hero-text">
-      <h1>كنز الوثائق التربوية</h1>
+      <h1>موقع الوثيقة التربوية</h1>
       <p>منصة شاملة توفر للمعلمين كل الوثائق التي يحتاجونها لتسهيل عملهم التربوي اليومي.</p>
     </div>
     <img src="images/prof.png" alt="صورة توضيحية">
