@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Pages principales -->
+  <url>
+    <loc>https://alwatiqa.ma/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/contact.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/a-propos.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Documents pédagogiques par niveau -->
+  <url>
+    <loc>https://alwatiqa.ma/emploi1.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/emploi2.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/emploi3.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/emploi4.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/emploi5.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/emploi6.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/emploisss.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Évaluations et examens -->
+  <url>
+    <loc>https://alwatiqa.ma/examen1.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/examen2.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/examen3.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/examen4.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/examen5.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/examen6.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Autres documents -->
+  <url>
+    <loc>https://alwatiqa.ma/idariya.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/mihani.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Évaluations diagnostiques -->
+  <url>
+    <loc>https://alwatiqa.ma/tachkhisi1.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/tachkhisi2.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/tachkhisi3.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/tachkhisi4.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/tachkhisi5.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/tachkhisi6.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Tâches annuelles -->
+  <url>
+    <loc>https://alwatiqa.ma/tawazi31.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/tawazi32.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/tawazi33.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/tawazi34.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/tawazi35.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alwatiqa.ma/tawazi36.html</loc>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://alwatiqa.ma/tawazi36.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
