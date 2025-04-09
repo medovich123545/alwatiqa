@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مباراة أطر الإدارة التربوية 2026/2025</title>
+  <style>
+    :root {
+      --primary-color: #102a2d;
+      --secondary-color: #0d2023;
+      --accent-color: #ecc94b;
+      --text-color: #1f1c1c;
+      --highlight-color: #e7cbc6;
+      --light-bg: #f4f4f4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      color: var(--text-color);
+      background-color: var(--primary-color);
+      direction: rtl;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      background-color: var(--secondary-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      height: 80px;
+    }
+
+    .logo img {
+      height: 250px;
+      width: auto;
+    }
+
+    nav.desktop-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav.desktop-nav ul li {
+      color: #a0c4c8;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav.desktop-nav ul li:hover {
+      color: var(--highlight-color);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--highlight-color);
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 100%;
+      background-color: var(--secondary-color);
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+      padding: 2rem;
+      z-index: 1100;
+    }
+    .mobile-menu.active {
+      display: block;
+      animation: slideIn 0.3s forwards;
+    }
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .mobile-menu ul li {
+      color: #a0c4c8;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .mobile-menu ul li:hover {
+      color: var(--highlight-color);
+    }
+
+    main {
+      padding: 3rem 2rem;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+    }
+
+    main h2, main h3 {
+      color: var(--accent-color);
+      margin-top: 2rem;
+    }
+
+    main h3 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    main p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    .external-link {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .external-link:hover {
+      background-color: #d4a72e;
+    }
+
+    footer {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 0 1rem;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      nav.desktop-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 0.8rem;
+      text-align: center;
+    }
+
+    table thead {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/icon5.png" alt="شعار الموقع">
+    </div>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="services.html">الخدمات</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="privacy.html">سياسة الخصوصية</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>مباراة أطر الإدارة التربوية 2026/2025 للدخول إلى سلك تكوين أطر الإدارة التربوية - دورة 2025</h2>
+    <p>إعلان عن إجراء مباريات ولوج سلك تكوين أطر الإدارة التربوية 2025.</p>
+
+    <h3>شروط الترشيح:</h3>
+    <p>تفتح هذه المباراة في وجه موظفي وزارة التربية الوطنية المتوفرين على شهادة الإجازة أو شهادة معادلة لها، والذين قضوا أربع سنوات من الخدمة الفعلية في الوظيفة العمومية.</p>
+
+    <h3>ملف الترشيح:</h3>
+    <ul>
+      <li>مطبوع الترشيح حسب النموذج المرفق</li>
+      <li>ترخيص الإدارة باجتياز المباراة</li>
+      <li>نسخة من الشهادة الجامعية أو قرار المعادلة</li>
+      <li>نسخة من البطاقة الوطنية للتعريف</li>
+      <li>سيرة ذاتية مرفقة بالشهادات</li>
+      <li>رسالة تحفيزية</li>
+    </ul>
+
+    <h3>الاختبارات:</h3>
+    <p>تتضمن المباراة اختبارين: كتابي وشفوي، ويهدف الاختبار الكتابي إلى تقييم مدى استعداد المترشح للمساهمة في مهام الإدارة التربوية.</p>
+
+    <h3>الترشيح الإلكتروني:</h3>
+    <p>عبر البوابة: <a href="https://cfie.men.gov.ma" target="_blank">https://cfie.men.gov.ma</a></p>
+    <p>من الاثنين 31 مارس إلى الاثنين 14 أبريل 2025 على الساعة 16:30.</p>
+  </main>
+
+  <footer>
+    جميع الحقوق محفوظة &copy; 2025
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
