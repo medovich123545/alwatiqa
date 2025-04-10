@@ -343,11 +343,11 @@
   <div class="breaking-news">
     <div class="breaking-track">
       <a href="نتائج الامتحان المهني.html" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025 موجودة هنا جميع الفئات</a>
-      <a href="مسلك تكوين المفتشين.html" class="breaking-item">📢 إعلان عن إجراء مباريات ولوج مسالك تكوين المفتشين التربويين بمركز تكوين مفتشي التعليم</a>
-      <a href="مسلك تكوين المستشارين.html" class="breaking-item">⚠️  مباراة ولوج مسلك تكوين المستشارين في التوجيه التربوي
+      <a href="news1.html" class="breaking-item">📢 إعلان عن إجراء مباريات ولوج مسالك تكوين المفتشين التربويين بمركز تكوين مفتشي التعليم</a>
+      <a href="update.html" class="breaking-item">⚠️  مباراة ولوج مسلك تكوين المستشارين في التوجيه التربوي
 
         ومسلك تكوين المستشارين في التخطيط التربوي</a>
-      <a href="الإدارة التربوية.html" class="breaking-item">الشروط الجديدة لمباراة الإدارة التربوية حسب النظام الأساسي الجديد</a>
+      <a href="exam.html" class="breaking-item">الشروط الجديدة لمباراة الإدارة التربوية حسب النظام الأساسي الجديد</a>
      
     </div>
   </div>
@@ -367,7 +367,6 @@
     });
   </script>
   
-  <!-- JSON-LD Structured Data -->
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
   {
@@ -378,11 +377,23 @@
         "name": "نتائج الامتحان المهني 2024-2025",
         "startDate": "2024-05-01",
         "endDate": "2025-05-01",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
         "location": {
           "@type": "Place",
-          "name": "موقع الوثيقة التربوية"
+          "name": "موقع الوثيقة التربوية",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "MA"
+          }
         },
-        "description": "Découvrez les résultats de l'examen المهني pour toutes les catégories sur موقع الوثيقة التربوية.",
+        "organizer": {
+          "@type": "Organization",
+          "name": "وزارة التربية الوطنية",
+          "url": "https://www.men.gov.ma"
+        },
+        "image": "https://alwatiqa.ma/images/events/نتائج_الامتحان_المهني.png",
+        "description": "Découvrez les résultats de l'examen المهني pour toutes les الفئات via موقع الوثيقة التربوية.",
         "url": "https://alwatiqa.ma/نتائج_الامتحان_المهني.html"
       },
       {
@@ -390,10 +401,23 @@
         "name": "جديد مباراة الإدارة التربوية 2025",
         "startDate": "2025-03-15",
         "endDate": "2025-06-01",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "location": {
           "@type": "Place",
-          "name": "مركز التكوين الجهوي"
+          "name": "مركز التكوين الجهوي",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "الرباط",
+            "addressCountry": "MA"
+          }
         },
+        "organizer": {
+          "@type": "Organization",
+          "name": "وزارة التربية الوطنية",
+          "url": "https://www.men.gov.ma"
+        },
+        "image": "https://alwatiqa.ma/images/events/مباراة_أطر_الإدارة_التربوية.png",
         "description": "كل جديد بخصوص مباراة ولوج سلك تكوين أطر الإدارة التربوية 2025.",
         "url": "https://alwatiqa.ma/مباراة_الإدارة_التربوية.html"
       },
@@ -402,10 +426,23 @@
         "name": "مباراة التفتيش 2025 - مركز تكوين مفتشي التعليم",
         "startDate": "2025-04-10",
         "endDate": "2025-07-01",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "location": {
           "@type": "Place",
-          "name": "مركز تكوين مفتشي التعليم"
+          "name": "مركز تكوين مفتشي التعليم",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "الرباط",
+            "addressCountry": "MA"
+          }
         },
+        "organizer": {
+          "@type": "Organization",
+          "name": "وزارة التربية الوطنية",
+          "url": "https://www.men.gov.ma"
+        },
+        "image": "https://alwatiqa.ma/images/events/مركز_تكوين_المفتشين.jpg",
         "description": "مباراة التفتيش 2025: الدخول إلى مركز تكوين مفتشي التعليم لجميع التخصصات.",
         "url": "https://alwatiqa.ma/مباراة_التفتيش_2025.html"
       },
@@ -414,17 +451,30 @@
         "name": "إعلان عن مباريات ولوج مسالك تكوين المفتشين التربويين 2025",
         "startDate": "2025-04-01",
         "endDate": "2025-07-15",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
         "location": {
           "@type": "Place",
-          "name": "مركز تكوين مفتشي التعليم"
+          "name": "مركز تكوين مفتشي التعليم",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "الرباط",
+            "addressCountry": "MA"
+          }
         },
+        "organizer": {
+          "@type": "Organization",
+          "name": "وزارة التربية الوطنية",
+          "url": "https://www.men.gov.ma"
+        },
+        "image": "https://alwatiqa.ma/images/events/إعلان_عن_مباريات_التكوين_2025.jpg",
         "description": "إعلان رسمي عن فتح باب الترشيح لمباريات الولوج لمسالك التكوين بمركز تكوين المفتشين التربويين لسنة 2025.",
         "url": "https://alwatiqa.ma/إعلان_مباريات_التكوين_2025.html"
       }
     ]
   }
-  </script>
-  
+</script>
+
     </script>
   </body>
   </html>
