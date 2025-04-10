@@ -6,7 +6,6 @@
   <title>موقع الوثيقة التربوية - موارد تعليمية للمعلمين والمربين</title>
   <meta name="description" content="موقع يوفر وثائق تعليمية وإدارية للمعلمين بالمغرب، نتائج الامتحان المهني، دلائل الأستاذ والمزيد.">
 
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
@@ -253,7 +252,7 @@
 
     .breaking-track {
         display: flex;
-        animation: scroll-right 20s linear infinite; /* Réduit la durée pour plus de vitesse */
+        animation: scroll-right 20s linear infinite;
         white-space: nowrap;
     }
 
@@ -275,10 +274,9 @@
         animation-play-state: paused;
     }
     @keyframes scroll-right {
-    0% { transform: translateX(-100%); } /* Début à gauche hors de l'écran */
-    100% { transform: translateX(100%); } /* Fin à droite hors de l'écran */
-}
-
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
 
     @media (max-width: 768px) {
         .breaking-item {
@@ -327,10 +325,30 @@
   </div>
 
   <section class="services">
-    <a href="idariya.html"><div class="service"><h3>وثائق إدارية</h3><p>كل ما يحتاجه الأستاذ لتنظيم عمله الإداري.</p></div></a>
-    <a href="وثائق_تربوية.html"><div class="service"><h3>وثائق تربوية</h3><p>مجموعة شاملة من الوثائق لدعم العملية التعليمية.</p></div></a>
-    <a href="mihani.html"><div class="service"><h3>وثائق شخصية</h3><p>نماذج لإدارة الشؤون الشخصية للأستاذ.</p></div></a>
-    <a href="mihani.html"><div class="service"><h3>امتحان الكفاءة المهنية</h3><p>المواضيع والتصحيح الرسمي.</p></div></a>
+    <a href="idariya.html">
+      <div class="service">
+        <h3>وثائق إدارية</h3>
+        <p>كل ما يحتاجه الأستاذ لتنظيم عمله الإداري.</p>
+      </div>
+    </a>
+    <a href="وثائق_تربوية.html">
+      <div class="service">
+        <h3>وثائق تربوية</h3>
+        <p>مجموعة شاملة من الوثائق لدعم العملية التعليمية.</p>
+      </div>
+    </a>
+    <a href="mihani.html">
+      <div class="service">
+        <h3>وثائق شخصية</h3>
+        <p>نماذج لإدارة الشؤون الشخصية للأستاذ.</p>
+      </div>
+    </a>
+    <a href="mihani.html">
+      <div class="service">
+        <h3>امتحان الكفاءة المهنية</h3>
+        <p>المواضيع والتصحيح الرسمي.</p>
+      </div>
+    </a>
   </section>
 
   <a href="dalil_ostad.html" class="sync-button">جميع دلائل الأستاذ</a>
@@ -344,11 +362,10 @@
     <div class="breaking-track">
       <a href="نتائج الامتحان المهني.html" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025 موجودة هنا جميع الفئات</a>
       <a href="news1.html" class="breaking-item">📢 إعلان عن إجراء مباريات ولوج مسالك تكوين المفتشين التربويين بمركز تكوين مفتشي التعليم</a>
-      <a href="update.html" class="breaking-item">⚠️  مباراة ولوج مسلك تكوين المستشارين في التوجيه التربوي
-
-        ومسلك تكوين المستشارين في التخطيط التربوي</a>
+      <a href="update.html" class="breaking-item">
+        ⚠️ مباراة ولوج مسلك تكوين المستشارين في التوجيه التربوي ومسلك تكوين المستشارين في التخطيط التربوي
+      </a>
       <a href="exam.html" class="breaking-item">الشروط الجديدة لمباراة الإدارة التربوية حسب النظام الأساسي الجديد</a>
-     
     </div>
   </div>
 
@@ -367,8 +384,8 @@
     });
   </script>
   
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -473,17 +490,6 @@
       }
     ]
   }
-</script>
-
-    </script>
-  </body>
-  </html>
-  
+  </script>
 </body>
 </html>
-
-
-
-
-
-
