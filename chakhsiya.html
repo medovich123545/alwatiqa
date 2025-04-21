@@ -1,160 +1,169 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4972478852308329" crossorigin="anonymous"></script>
-
-    <title>نماذج المستندات الإدارية</title>
-    <style>
-        body {
-            font-family: "Cairo", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #102a2d;
-            color: #e1e1e1;
-            direction: rtl;
-        }
-        header {
-            background: linear-gradient(90deg, #0d2023, #183c40);
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-bottom: 4px solid #2980b9;
-        }
-        .content {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #0d2023;
-            border-radius: 12px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-        .content h2 {
-            color: #3498db;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .table-container {
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table th, table td {
-            border: 1px solid #3498db;
-            padding: 10px;
-            text-align: center;
-        }
-        table th {
-            background-color: #183c40;
-            color: #fff;
-        }
-        table tr:nth-child(even) {
-            background-color: #1a3d40;
-        }
-        table tr:hover {
-            background-color: #2b5d62;
-        }
-        footer {
-            background: #0d2023;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            color: white;
-            margin-top: 30px;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        @media screen and (max-width: 768px) {
-            header {
-                font-size: 24px;
-            }
-            .content {
-                padding: 15px;
-            }
-            table th, table td {
-                font-size: 14px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="دليل شامل للأساتذة يتضمن نماذج ووثائق إدارية قابلة للتنزيل، مع شروحات تفصيلية حول كل وثيقة وأهميتها في العمل التربوي." />
+  <title>نماذج المستندات الإدارية والشخصية للأستاذ</title>
+  <style>
+    :root {
+      --primary-color: #102a2d;
+      --secondary-color: #0d2023;
+      --accent-color: #ecc94b;
+      --text-color: #e1e1e1;
+      --light-bg: #f4f4f4;
+      --transition: 0.3s ease;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Cairo', sans-serif; background: var(--primary-color); color: var(--text-color); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    header { background: var(--secondary-color); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .logo img { max-height: 60px; width: auto; }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav li:hover { color: var(--accent-color); transition: var(--transition); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger div { width: 25px; height: 3px; background: var(--text-color); transition: var(--transition); }
+    .mobile-menu { display: none; position: fixed; top: 0; right: 0; width: 70%; height: 100%; background: var(--secondary-color); box-shadow: -2px 0 5px rgba(0,0,0,0.3); padding: 2rem; z-index: 99; }
+    .mobile-menu.active { display: block; animation: slideIn 0.3s forwards; }
+    .mobile-menu ul { list-style: none; padding: 0; }
+    .mobile-menu li { margin-bottom: 1.5rem; font-size: 1.2rem; cursor: pointer; }
+    @keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
+    main { padding: 2rem; }
+    .hero { background: linear-gradient(135deg, var(--secondary-color), #183c40); padding: 3rem 2rem; border-radius: 8px; text-align: center; margin-bottom: 2rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+    .docs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .doc-card { background: var(--secondary-color); border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform var(--transition), box-shadow var(--transition); }
+    .doc-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.3); }
+    .doc-card h3 { margin-bottom: 0.75rem; font-size: 1.2rem; color: var(--accent-color); }
+    .doc-card p { margin-bottom: 1rem; font-size: 1rem; }
+    .download-link { display: inline-block; padding: 0.5rem 1rem; background: var(--accent-color); color: #000; border-radius: 4px; font-weight: bold; transition: background var(--transition); }
+    .download-link:hover { background: #d4b93a; }
+    .breaking-news { position: fixed; bottom: 0; width: 100%; background: var(--secondary-color); overflow: hidden; font-size: 0.95rem; z-index: 100; }
+    .breaking-track { display: inline-flex; animation: scroll 20s linear infinite; }
+    .breaking-item { padding: 0 1rem; white-space: nowrap; border-left: 1px solid rgba(255,255,255,0.2); }
+    .breaking-item:first-child { border-left: none; }
+    @keyframes scroll { 0% { transform: translateX(100%);} 100% { transform: translateX(-100%);} }
+    footer { background: var(--secondary-color); padding: 2rem; text-align: center; margin-top: 2rem; }
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .hamburger { display: flex; }
+      .docs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
     <header>
-        وثائق شخصية و نماذج المستندات الإدارية
+      <div class="logo">
+        <a href="index.html"><img src="images/icon5.png" alt="شعار الموقع"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+          <li><a href="privacy.html">سياسة الخصوصية</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('active');">
+        <div></div><div></div><div></div>
+      </div>
     </header>
-
-    <div class="content">
-        <h2>المستندات الإداريةو الوثائق الشخصية للأستاذ</h2>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>العنوان</th>
-                        <th>WORLD</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>البطاقة الشخصية للأستاذ</td>
-                        <td><a href="https://drive.google.com/file/d/1OHRrxkNHay1r4VJEMCn9PK9kfVe5ogQy/view?usp=drive_link">تحميل </a></td>
-                    </tr>
-                    <tr>
-                        <td>إحصائيات التلاميذ</td>
-                        
-                        <td><a href="https://docs.google.com/document/d/1jR49De-Tou_P4W2bgV13MpDUqdWLWZ_A/edit?usp=drive_link&ouid=112192508866163956347&rtpof=true&sd=true">تحميل </a></td>
-                    </tr>
-                   
-                    <tr>
-                        <td>لائحة الأيام الوطنية والدولية للموسم الدراسي</td>
-                        <td><a href="https://docs.google.com/document/d/12Vu2n73NXI2gCXD-h4Jc2iAuArz1Vh2L/edit?usp=drive_link&ouid=112192508866163956347&rtpof=true&sd=true">تحميل </a></td>
-                    </tr>
-                    <tr>
-                        <td>ورقة خاصة بعناوين المراجع المعتمدة بالمؤسسة</td>
-                        <td><a href="https://docs.google.com/document/d/1xvlpfUxtkTin3k7RspM-_amPC_79Ovqn/edit?usp=drive_link&ouid=112192508866163956347&rtpof=true&sd=true">تحميل </a></td>
-                    </tr>
-                    <tr>
-                        <td>ورقة خاصة بمحضر تأسيس تعاونية القسم</td>
-                        <td><a href="https://docs.google.com/document/d/1U9hRBHdb8OKy_uTez7Lwh-STabZROWdY/edit?usp=drive_link&ouid=112192508866163956347&rtpof=true&sd=true">تحميل </a></td>
-                    </tr>
-                    <tr>
-                        <td>النشيد الوطني </td>
-                        <td><a href="https://docs.google.com/document/d/1dlaIg01CnL4sH9I_z589KLYxJThrW2tZ/edit?usp=drive_link&ouid=112192508866163956347&rtpof=true&sd=true">تحميل </a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td>ورقة خاصة بالقانون الداخلي للقسم</td>
-                        <td><a href="https://docs.google.com/document/d/1zBRcRZVxfMSWqJAt32iOkGyuIm5RNK_h/edit?usp=drive_link&ouid=112192508866163956347&rtpof=true&sd=true">تحميل </a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td>ورقة خاصة بالبحث الاجتماعي</td>
-                        <td><a href="https://docs.google.com/document/d/14y_VLW8WhIERkcGIaBHbOMdegyxUXN8a/edit?usp=drive_link&ouid=112192508866163956347&rtpof=true&sd=true">تحميل </a></td>
-                    </tr>
-                    <tr>
-                        <td>ورقة خاصة بجدول اللقاءات التربوية</td>
-                        <td><a href="https://docs.google.com/document/d/1DjIJGb-H5Rvn3KFXafXST4vj4SydIiam/edit?usp=drive_link&ouid=112192508866163956347&rtpof=true&sd=true">تحميل </a></td>
-                    </tr>
-                   
-                  
-                    <tr>
-                        <td> احصاء المتعلمين</td>
-                        <td><a href="https://docs.google.com/document/d/1jR49De-Tou_P4W2bgV13MpDUqdWLWZ_A/edit?usp=drive_link&ouid=112192508866163956347&rtpof=true&sd=true">تحميل </a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+  
+    <!-- ✅ Mobile Menu -->
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="index.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">الرئيسية</a></li>
+        <li><a href="about.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">من نحن</a></li>
+        <li><a href="services.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">الخدمات</a></li>
+        <li><a href="contact.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">اتصل بنا</a></li>
+        <li><a href="privacy.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">سياسة الخصوصية</a></li>
+      </ul>
     </div>
-
-    <footer>
-            جميع حقوق النشر محفوظة  لـموقع  متمدرس التربوي&copy; 2024
-    </footer>
+  <main>
+    <section class="hero">
+      <h1>نماذج المستندات الإدارية والشخصية للأستاذ</h1>
+      <p>دليل شامل للأساتذة يتضمن نماذج ووثائق إدارية قابلة للتنزيل، مع شروحات تفصيلية حول كل وثيقة وأهميتها في العمل التربوي.</p>
+    </section>
+    <section class="docs-grid">
+   <!-- البطاقة الشخصية للأستاذ -->
+<div class="doc-card">
+    <h3>البطاقة الشخصية للأستاذ</h3>
+    <p>وثيقة أساسية تتضمن معلومات الأستاذ الإدارية والشخصية، تسهل حفظ السجلات والتواصل.</p>
+    <a href="https://drive.google.com/file/d/1OHRrxkNHay1r4VJEMCn9PK9kfVe5ogQy/view?usp=drive_link" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- إحصائيات التلاميذ -->
+  <div class="doc-card">
+    <h3>إحصائيات التلاميذ</h3>
+    <p>وثيقة تقدم نظرة دقيقة حول عدد التلاميذ داخل الفصل حسب المستوى الدراسي والجنس، لتخطيط الموارد.</p>
+    <a href="https://docs.google.com/document/d/1jR49De-Tou_P4W2bgV13MpDUqdWLWZ_A/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- لائحة الأيام الوطنية والدولية -->
+  <div class="doc-card">
+    <h3>لائحة الأيام الوطنية والدولية</h3>
+    <p>لائحة تواريخ المناسبات الرسمية للمساعدة في برمجة الأنشطة المدرسية طوال العام.</p>
+    <a href="https://docs.google.com/document/d/12Vu2n73NXI2gCXD-h4Jc2iAuArz1Vh2L/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- ورقة عناوين المراجع المعتمدة -->
+  <div class="doc-card">
+    <h3>ورقة عناوين المراجع المعتمدة</h3>
+    <p>نظرة شاملة على أهم الكتب والمراجع المعتمدة في التدريس لتطوير الرصيد المعرفي.</p>
+    <a href="https://docs.google.com/document/d/1xvlpfUxtkTin3k7RspM-_amPC_79Ovqn/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- محضر تأسيس تعاونية القسم -->
+  <div class="doc-card">
+    <h3>محضر تأسيس تعاونية القسم</h3>
+    <p>وثيقة رسمية لتوثيق إنشاء تعاونية القسم بمشاركة التلاميذ، لتعزيز العمل الجماعي.</p>
+    <a href="https://docs.google.com/document/d/1U9hRBHdb8OKy_uTez7Lwh-STabZROWdY/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- النشيد الوطني المغربي -->
+  <div class="doc-card">
+    <h3>النشيد الوطني المغربي</h3>
+    <p>نسخة من النشيد الوطني لتلقينه للتلاميذ وترديده خلال الأنشطة والمناسبات الرسمية.</p>
+    <a href="https://docs.google.com/document/d/1dlaIg01CnL4sH9I_z589KLYxJThrW2tZ/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- القانون الداخلي للقسم -->
+  <div class="doc-card">
+    <h3>القانون الداخلي للقسم</h3>
+    <p>قوانين وسلوكيات القسم المحددة للحقوق والواجبات لفرض جو من الانضباط والاحترام.</p>
+    <a href="https://docs.google.com/document/d/1zBRcRZVxfMSWqJAt32iOkGyuIm5RNK_h/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- البحث الاجتماعي للتلميذ -->
+  <div class="doc-card">
+    <h3>البحث الاجتماعي للتلميذ</h3>
+    <p>وثيقة لفهم الوضعية الاقتصادية والاجتماعية للتلميذ بهدف تقديم الدعم المناسب.</p>
+    <a href="https://docs.google.com/document/d/14y_VLW8WhIERkcGIaBHbOMdegyxUXN8a/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- جدول اللقاءات التربوية -->
+  <div class="doc-card">
+    <h3>جدول اللقاءات التربوية</h3>
+    <p>جدول لتسجيل مواعيد اللقاءات التربوية، مواضيعها وتوصياتها لتحسين التنسيق الإداري.</p>
+    <a href="https://docs.google.com/document/d/1DjIJGb-H5Rvn3KFXafXST4vj4SydIiam/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+    </section>
+  </main>
+  <div class="breaking-news">
+    <div class="breaking-track">
+      <a href="#" class="breaking-item">📚 تأجيل مباريات ولوج مسالك تكوين المفتشين التربويين - دورة 2025</a>
+      <a href="#" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025 هنا جميع الفئات</a>
+      <a href="#" class="breaking-item">📢 إعلان عن إجراء مباريات ولوج مسالك تكوين المفتشين التربويين</a>
+      <a href="#" class="breaking-item">⚠️ مباراة ولوج مسلك تكوين المستشارين في التخطيط التربوي</a>
+      <a href="#" class="breaking-item">📌 الشروط الجديدة لمباراة الإدارة التربوية</a>
+    </div>
+  </div>
+  <footer>
+    <p>نحن هنا لدعم عملك. تواصل معنا لمعرفة المزيد عن كيفية مساعدتك في النمو والنجاح.</p>
+    <p>جميع حقوق النشر محفوظة &copy; 2024 متمدرس التربوي</p>
+  </footer>
 </body>
 </html>
