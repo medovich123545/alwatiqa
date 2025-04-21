@@ -3,169 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نماذج المستندات الإدارية</title>
+    <title>نماذج المستندات الإدارية - تحميل المستندات بسهولة</title>
+    <meta name="description" content="تحميل نماذج مستندات إدارية باللغة العربية، بما في ذلك استفسارات، شهادات الأجرة، وطلبات القن السري لمنظومة مسار.">
+    <meta name="keywords" content="نماذج مستندات إدارية, شهادة أجرة, استفسار, طلب القن السري, تحميل PDF, مستندات تعليمية">
+    <meta name="author" content="موقع نماذج المستندات">
+    <meta property="og:title" content="نماذج المستندات الإدارية">
+    <meta property="og:description" content="تحميل نماذج مستندات إدارية بسهولة لتسهيل الإجراءات الرسمية الخاصة بك.">
+    <meta property="og:image" content="images/icon5.png">
+    <meta property="og:url" content="https://www.votre-site.com">
     <style>
-        body {
-            font-family: "Cairo", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #102a2d;
-            color: #e1e1e1;
-            direction: rtl;
+        :root {
+            --primary-color: #102a2d;
+            --secondary-color: #0d2023;
+            --accent-color: #ecc94b;
+            --text-color: #e1e1e1;
+            --light-bg: #f4f4f4;
+            --transition: 0.3s ease;
         }
-        header {
-            background: linear-gradient(90deg, #0d2023, #183c40);
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-bottom: 4px solid #2980b9;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Cairo', sans-serif; background: var(--primary-color); color: var(--text-color); line-height: 1.6; }
+        a { color: inherit; text-decoration: none; }
+        
+        header { 
+            background: var(--secondary-color); 
+            padding: 1rem 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
         }
-        .content {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #0d2023;
-            border-radius: 12px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-        .content h2 {
-            color: #3498db;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .table-container {
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table th, table td {
-            border: 1px solid #3498db;
-            padding: 10px;
-            text-align: center;
-        }
-        table th {
-            background-color: #183c40;
-            color: #fff;
-        }
-        table tr:nth-child(even) {
-            background-color: #1a3d40;
-        }
-        table tr:hover {
-            background-color: #2b5d62;
-        }
-        footer {
-            background: #0d2023;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            color: white;
-            margin-top: 30px;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        @media screen and (max-width: 768px) {
-            header {
-                font-size: 24px;
-            }
-            .content {
-                padding: 15px;
-            }
-            table th, table td {
-                font-size: 14px;
-            }
+        
+        .logo img { max-height: 200px; width: auto; }
+        nav ul { display: flex; gap: 1.5rem; list-style: none; }
+        nav li:hover { color: var(--accent-color); transition: var(--transition); }
+        
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .hamburger div { width: 25px; height: 3px; background: var(--text-color); transition: var(--transition); }
+        
+        .mobile-menu { display: none; position: fixed; top: 0; right: 0; width: 70%; height: 100%; background: var(--secondary-color); box-shadow: -2px 0 5px rgba(0,0,0,0.3); padding: 2rem; z-index: 99; }
+        .mobile-menu.active { display: block; animation: slideIn 0.3s forwards; }
+        
+        .mobile-menu ul { list-style: none; padding: 0; }
+        .mobile-menu li { margin-bottom: 1.5rem; font-size: 1.2rem; cursor: pointer; }
+        
+        @keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
+        
+        main { padding: 2rem; }
+        
+        .hero { background: linear-gradient(135deg, var(--secondary-color), #183c40); padding: 3rem 2rem; border-radius: 8px; text-align: center; margin-bottom: 2rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+        
+        .docs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+        
+        .doc-card { background: var(--secondary-color); border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform var(--transition), box-shadow var(--transition); }
+        .doc-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.3); }
+        
+        .doc-card h3 { margin-bottom: 0.75rem; font-size: 1.2rem; color: var(--accent-color); }
+        .doc-card p { margin-bottom: 1rem; font-size: 1rem; }
+        
+        .download-link { display: inline-block; padding: 0.5rem 1rem; background: var(--accent-color); color: #000; border-radius: 4px; font-weight: bold; transition: background var(--transition); }
+        .download-link:hover { background: #d4b93a; }
+        
+        .breaking-news { position: fixed; bottom: 0; width: 100%; background: var(--secondary-color); overflow: hidden; font-size: 0.95rem; z-index: 100; }
+        .breaking-track { display: inline-flex; animation: scroll 20s linear infinite; }
+        .breaking-item { padding: 0 1rem; white-space: nowrap; border-left: 1px solid rgba(255,255,255,0.2); }
+        .breaking-item:first-child { border-left: none; }
+        
+        @keyframes scroll { 0% { transform: translateX(100%);} 100% { transform: translateX(-100%);} }
+        
+        footer { background: var(--secondary-color); padding: 2rem; text-align: center; margin-top: 2rem; }
+        
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hamburger { display: flex; }
+            .docs-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <header>
-        نماذج المستندات الإدارية
+        <div class="logo">
+            <a href="index.html"><img src="images/icon5.png" alt="شعار الموقع"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="privacy.html">سياسة الخصوصية</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMobileMenu();">
+            <div></div><div></div><div></div>
+        </div>
     </header>
 
-    <div class="content">
-        <h2>المستندات الإدارية</h2>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>العنوان</th>
-                        <th>PDF</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>شهادة أجرة</td>
-                        <td><a href="https://drive.google.com/file/d/1JqKwxIg42n8Yi5SWN_eps4TM3t2ecu3a/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>استفسار</td>
-                        <td><a href="https://drive.google.com/file/d/1PC1EmYF13s1QtHUOowwK1xBIrJ3sqor8/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>طلب القن السري لمنظومة مسار</td>
-                        <td><a href="https://drive.google.com/file/d/1922woZ3rqe1zc4Sbrhz6ac25-zJW3jtL/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>إيصال باستلام شهادة (ات) طبية</td>
-                        <td><a href="https://drive.google.com/file/d/1mLX-zVzrlqNHlOR7hOEKQJjpPd6FiSde/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>رخصة الرضاعة</td>
-                        <td><a href="https://drive.google.com/file/d/1-A5u2IU3mw4AeuBQ5H19d-ve5XeZcMJd/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>محضر استئناف العمل</td>
-                        <td><a href="https://drive.google.com/file/d/1Gv5FVyPuWrnwBGOGk2GcJvBPrrbhpQxt/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>طلب رخصة الغياب</td>
-                        <td><a href="https://drive.google.com/file/d/1bezf7uRPtF3909U_FUvtQK1F2qb26ZKL/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>طلب رخصة</td>
-                        <td><a href="https://drive.google.com/file/d/1UzY3iH4XPp1Nq-Rkk1Kao2QI8tGzTN6b/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>شهادة العمل</td>
-                        <td><a href="https://drive.google.com/file/d/1HYkZ6eka2Koqdesi_90n2cqp8gfEyB6O/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>طلب تحويل الأجرة</td>
-                        <td><a href="https://drive.google.com/file/d/1nQQV0dTknQyT4B1rGa3p9dzrctB7J_A_/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>طلب قرار الرتبة</td>
-                        <td><a href="https://drive.google.com/file/d/1_PdLZwDuI9k0Ih408x5m-rbtb_riMZhs/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>نموذج الطلب تكليف</td>
-                        <td><a href="https://drive.google.com/file/d/1UaaurYVK3opVT1LRJ3eURhIULwP9h0AD/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>طلب وثيقة ادارية</td>
-                        <td><a href="https://drive.google.com/file/d/1JuhFSB13bg1_7eBJG_W9ABtgRyrwgwZT/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>رسالة التزكية</td>
-                        <td><a href="https://drive.google.com/file/d/1QWlAnqxpc3YXjjVw4PeHChN0Zff3mG7X/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td>طلب اجتياز مبارة المتصرفين الاداريين</td>
-                        <td><a href="https://drive.google.com/file/d/1Am302x5NqP3swXBV3rkHQ31n3SlA8H-n/view?usp=drive_link" target="_blank">تحميل PDF</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html" onclick="closeMobileMenu()">الرئيسية</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">من نحن</a></li>
+            <li><a href="services.html" onclick="closeMobileMenu()">الخدمات</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">اتصل بنا</a></li>
+            <li><a href="privacy.html" onclick="closeMobileMenu()">سياسة الخصوصية</a></li>
+        </ul>
     </div>
+
+    <main>
+        <div class="hero">
+            <h1>موقع الوثيقة التربوية  </h1>
+            <p>نضع بين يديكم مجموعة مختارة من النماذج الإدارية الرسمية المصممة بعناية لتلبية مختلف حاجياتكم المهنية. تهدف هذه الوثائق إلى تسهيل الإجراءات الإدارية وتسريع المعاملات بطريقة فعالة ومبسطة. يمكنكم تحميل النماذج مباشرة بصيغة PDF وبكل سهولة، مما يوفر عليكم الوقت والجهد في إعداد الطلبات والمراسلات الرسمية.</p>
+        </div>
+
+        <div class="breaking-news">
+            <div class="breaking-track">
+                <a href="#" class="breaking-item">📚 تأجيل مباريات ولوج مسالك تكوين المفتشين التربويين - دورة 2025</a>
+                <a href="#" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025 هنا جميع الفئات</a>
+                <a href="#" class="breaking-item">📢 إعلان عن إجراء مباريات ولوج مسالك تكوين المفتشين التربويين</a>
+                <a href="#" class="breaking-item">⚠️ مباراة ولوج مسلك تكوين المستشارين في التخطيط التربوي</a>
+                <a href="#" class="breaking-item">📌 الشروط الجديدة لمباراة الإدارة التربوية</a>
+            </div>
+        </div>
+
+        <div class="docs-grid">
+            <div class="doc-card">
+                <h3>شهادة أجرة</h3>
+                <p>وثيقة رسمية تُستخدم لإثبات دخل الموظف، وتُطلب غالبًا في المعاملات الإدارية مثل القروض أو طلب المنح.</p>
+                <a href="https://drive.google.com/file/d/1JqKwxIg42n8Yi5SWN_eps4TM3t2ecu3a/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>استفسار</h3>
+                <p>نموذج يُستخدم للتواصل الرسمي مع الإدارة وطلب توضيحات حول مسائل معينة تتعلق بالعمل.</p>
+                <a href="https://drive.google.com/file/d/1PC1EmYF13s1QtHUOowwK1xBIrJ3sqor8/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>طلب القن السري لمنظومة مسار</h3>
+                <p>استمارة ضرورية لطلب القن السري للدخول إلى منظومة مسار الخاصة بنتائج ومعلومات التلاميذ.</p>
+                <a href="https://drive.google.com/file/d/1922woZ3rqe1zc4Sbrhz6ac25-zJW3jtL/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>إيصال باستلام شهادة (ات) طبية</h3>
+                <p>وثيقة تؤكد استلام الشهادات الطبية المقدمة من طرف الموظف في حالات الغياب لأسباب صحية.</p>
+                <a href="https://drive.google.com/file/d/1mLX-zVzrlqNHlOR7hOEKQJjpPd6FiSde/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>رخصة الرضاعة</h3>
+                <p>نموذج يُقدم من طرف الموظفات لطلب الاستفادة من رخصة الرضاعة وفقًا للقوانين الجاري بها العمل.</p>
+                <a href="https://drive.google.com/file/d/1-A5u2IU3mw4AeuBQ5H19d-ve5XeZcMJd/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>محضر استئناف العمل</h3>
+                <p>وثيقة تُستخدم لتأكيد عودة الموظف إلى عمله بعد انتهاء عطلة أو رخصة.</p>
+                <a href="https://drive.google.com/file/d/1Gv5FVyPuWrnwBGOGk2GcJvBPrrbhpQxt/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>طلب رخصة الغياب</h3>
+                <p>وثيقة رسمية يُقدمها الموظف لطلب إذن بالغياب لأسباب مهنية أو شخصية.</p>
+                <a href="https://drive.google.com/file/d/1bezf7uRPtF3909U_FUvtQK1F2qb26ZKL/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>طلب رخصة</h3>
+                <p>نموذج عام يُستخدم لطلب رخصة بجميع أنواعها، سواء كانت مرضية، سنوية، أو استثنائية.</p>
+                <a href="https://drive.google.com/file/d/1UzY3iH4XPp1Nq-Rkk1Kao2QI8tGzTN6b/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>شهادة العمل</h3>
+                <p>وثيقة تُثبت أن الموظف يعمل حاليًا لدى المؤسسة، وتُطلب غالبًا للإجراءات البنكية أو الإدارية.</p>
+                <a href="https://drive.google.com/file/d/1HYkZ6eka2Koqdesi_90n2cqp8gfEyB6O/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>طلب تحويل الأجرة</h3>
+                <p>استمارة يُقدمها الموظف لتحويل راتبه الشهري إلى حساب بنكي جديد أو مختلف.</p>
+                <a href="https://drive.google.com/file/d/1nQQV0dTknQyT4B1rGa3p9dzrctB7J_A_/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>طلب قرار الرتبة</h3>
+                <p>يُستخدم هذا الطلب للحصول على نسخة رسمية من قرار الرتبة الصادر من وزارة التربية أو الإدارة المختصة.</p>
+                <a href="https://drive.google.com/file/d/1_PdLZwDuI9k0Ih408x5m-rbtb_riMZhs/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>نموذج الطلب تكليف</h3>
+                <p>وثيقة تُستخدم لتقديم طلب تكليف بمهمة أو عمل مؤقت داخل نفس المؤسسة أو خارجها.</p>
+                <a href="https://drive.google.com/file/d/1UaaurYVK3opVT1LRJ3eURhIULwP9h0AD/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>طلب وثيقة إدارية</h3>
+                <p>نموذج عام يُستعمل لطلب أي وثيقة إدارية من إدارة المؤسسة مثل الشهادات أو النسخ المصادق عليها.</p>
+                <a href="https://drive.google.com/file/d/1JuhFSB13bg1_7eBJG_W9ABtgRyrwgwZT/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>رسالة التزكية</h3>
+                <p>نموذج رسمي لتزكية موظف أو شخص آخر من أجل الترشح أو التوظيف أو تقديمه لجهة معينة.</p>
+                <a href="https://drive.google.com/file/d/1QWlAnqxpc3YXjjVw4PeHChN0Zff3mG7X/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        
+            <div class="doc-card">
+                <h3>طلب اجتياز مباراة المتصرفين الإداريين</h3>
+                <p>وثيقة تُستخدم لتقديم طلب المشاركة في مباريات المتصرفين بالإدارات العمومية.</p>
+                <a href="https://drive.google.com/file/d/1Am302x5NqP3swXBV3rkHQ31n3SlA8H-n/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
+            </div>
+        </div>
+        
+        </div>
+    </main>
 
     <footer>
         جميع حقوق النشر محفوظة &copy; 2024
     </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+
+        // Close the mobile menu when clicking outside
+        window.onclick = function(event) {
+            if (!event.target.closest('.mobile-menu') && !event.target.closest('.hamburger')) {
+                document.querySelector('.mobile-menu').classList.remove('active');
+            }
+        }
+
+        // Close the mobile menu after clicking a link inside
+        function closeMobileMenu() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+        }
+    </script>
 </body>
 </html>
