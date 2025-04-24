@@ -1,176 +1,227 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مواضيع الامتحان المهني التعليم الابتدائي</title>
-    <style>
-        body {
-            font-family: "Cairo", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #102a2d;
-            color: #e1e1e1;
-            direction: rtl;
-        }
-        header {
-            background: linear-gradient(90deg, #0d2023, #183c40);
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-bottom: 4px solid #2980b9;
-        }
-        .content {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #0d2023;
-            border-radius: 12px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-        .content h2 {
-            color: #3498db;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .table-container {
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table th, table td {
-            border: 1px solid #3498db;
-            padding: 10px;
-            text-align: center;
-        }
-        table th {
-            background-color: #183c40;
-            color: #fff;
-        }
-        table tr:nth-child(even) {
-            background-color: #1a3d40;
-        }
-        table tr:hover {
-            background-color: #2b5d62;
-        }
-        footer {
-            background: #0d2023;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            color: white;
-            margin-top: 30px;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        @media screen and (max-width: 768px) {
-            header {
-                font-size: 24px;
-            }
-            .content {
-                padding: 15px;
-            }
-            table th, table td {
-                font-size: 14px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مواضيع الامتحان المهني - التعليم الابتدائي</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-primary: #005f73;
+      --color-secondary: #0a9396;
+      --color-accent: #ee9b00;
+      --color-text: #001219;
+      --color-light: #fefae0;
+      --transition: 0.3s ease;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Cairo', sans-serif; background: var(--color-bg); color: var(--color-text); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+    a { color: inherit; text-decoration: none; }
+    header.main-header { background: linear-gradient(90deg, var(--color-secondary), var(--color-primary)); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: relative; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .logo img { height: 50px; }
+    nav ul { display: flex; gap: 1.5rem; }
+    nav ul.active { display: flex; flex-direction: column; position: absolute; top: 80px; right: 0; width: 70%; height: calc(100vh - 80px); background: var(--color-secondary); padding: 2rem; box-shadow: -2px 0 5px rgba(0,0,0,0.1); z-index: 1000; }
+    nav li { list-style: none; }
+    nav li a { padding: .5rem; font-weight: 600; display: block; }
+    nav li a::after { content: ''; display: block; width: 0; height: 2px; background: var(--color-accent); transition: width var(--transition); }
+    nav li a:hover::after { width: 100%; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger div { width: 25px; height: 3px; background: var(--color-text); transition: var(--transition); }
+    @media (max-width: 768px) { nav ul { display: none; } .hamburger { display: flex; } }
+    .hero { background: url('images/hero-bg.jpg') center/cover no-repeat; position: relative; padding: 6rem 2rem; text-align: center; color: var(--color-light); }
+    .hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.4); }
+    .hero-content { position: relative; max-width: 800px; margin: auto; }
+    .hero-content h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero-content p { font-size: 1.2rem; }
+    main { flex: 1; padding: 2rem; }
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 2rem; color: var(--color-secondary); margin-bottom: 1rem; }
+    h3 { font-size: 1.5rem; margin: 1.5rem 0 .5rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: .5rem; }
+    .overview { background: var(--color-light); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 2rem; }
+    .overview p { margin-bottom: .75rem; }
+    .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; padding: 1rem; background: var(--color-light); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .doc-card { background: var(--color-bg); border: 2px solid var(--color-secondary); border-radius: 8px; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between; transition: transform var(--transition), box-shadow var(--transition); }
+    .doc-card:nth-child(odd) { border-color: var(--color-primary); }
+    .doc-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .doc-card h4 { font-size: 1.1rem; margin-bottom: .5rem; color: var(--color-secondary); }
+    .card-desc { font-size: .9rem; margin-bottom: .75rem; color: #333; }
+    .card-buttons { display: flex; gap: .5rem; }
+    .card-buttons button { flex: 1; padding: .5rem; background: var(--color-accent); border: none; border-radius: 5px; font-size: .9rem; font-weight: 600; color: var(--color-bg); cursor: pointer; transition: background var(--transition); }
+    .card-buttons button:hover { background: #ffba08; }
+    .breaking-news { background: var(--color-primary); color: var(--color-light); padding: .5rem; overflow: hidden; }
+    .breaking-track { display: inline-block; white-space: nowrap; animation: ticker 30s linear infinite; }
+    .breaking-news:hover .breaking-track { animation-play-state: paused; }
+    .breaking-item { display: inline-block; margin: 0 1.5rem; font-weight: 600; }
+    @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+    footer { text-align: center; padding: 2rem; background: var(--color-secondary); color: var(--color-light); }
+  </style>
 </head>
 <body>
-    <header>
-        مواضيع الامتحان المهني :  التعليم الابتدائي
-    </header>
+  <header class="main-header">
+    <div class="logo"><a href="index.html"><img src="images/icon5.png" alt="شعار الموقع"></a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()"><div></div><div></div><div></div></div>
+  </header>
 
-    <div class="content">
-        <h2>مواضيع الامتحان المهني :التعليم الابتدائي</h2>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>السنة</th>
-                        <th>الامتحان</th>
-                        <th>التصحيح</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-
-                    <tr>
-                        <td>2012</td>
-                        <td><a href="https://drive.google.com/file/d/1XrchT3qmXeP3t5FNjtxaKtYuDFgr2lcy/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/12xWdbrz2COuXveCjj20NPkW83Yl18Rrb/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td>2013</td>
-                        <td><a href="https://drive.google.com/file/d/1oMZ51tg4cVzOHSEjJzTCrCCOtxufHnRh/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/1syNg_R6DW2fQTFOwp3jVfXv3MYzCAA8z/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2014</td>
-                        <td><a href="https://drive.google.com/file/d/1PbIOtiF6ale13M4sumiyESyHItzlz-ji/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/1JyMv6neimGeFrb6fmwTHS-eS4Opv0uSk/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2015</td>
-                        <td><a href="https://drive.google.com/file/d/1U6yXgsuAKL_aKow5oBJJd_XvaBCA_bH1/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/1ZfXg8wJOTAvEehcJbgF4L_tfAad8NKiT/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td><a href="https://drive.google.com/file/d/1H1sn3tP5U77gEcOMPfgxWUhPXnCtkyFy/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/1H242__acdQiJyqGrt3cRXh_j1H27zOBz/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td><a href="https://drive.google.com/file/d/1ozavj9_tEBu0biN9RxJNmyHylt_57ax8/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/1LeZ_cVTfTUMVM_Z7AvbNhVr4OG2YDuKm/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td><a href="https://drive.google.com/file/d/1414DuE07JiIFV5GB-nR00b7eI_dNPk-k/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/1w1LsiBUvor9Ly0FssJtq0q9POBQJy0pl/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td><a href="https://drive.google.com/file/d/1HAyl42Kal__o6PoSwq7Fz_CYWbYGBxF-/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/1gAhGsSQVpXbYNQV_qPoEkPVc52w-TrmH/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2020</td>
-                        <td><a href="https://drive.google.com/file/d/1XWrByE-3YpwU-MQ3bWogMDEeD7vM36w2/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/1XWrByE-3YpwU-MQ3bWogMDEeD7vM36w2/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td><a href="https://drive.google.com/file/d/18Saam5Je9yudEa1iXj6ZIDBvmej2AGj2/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/18Saam5Je9yudEa1iXj6ZIDBvmej2AGj2/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td><a href="https://drive.google.com/file/d/1bha318skRAQ5U1_v9y0gs6vVTA62-kXH/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/1bha318skRAQ5U1_v9y0gs6vVTA62-kXH/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td><a href="https://drive.google.com/file/d/11VsXDH-B2oPFe78-5kUefA-1mdPpLSgv/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/11VsXDH-B2oPFe78-5kUefA-1mdPpLSgv/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td><a href="" target="_blank"><button>تحميل</button></a></td>
-                        <td><a href="https://drive.google.com/file/d/1BfU2hO-jLSYry4m2GfMhGDLGfUrYZdGP/view?usp=drive_link" target="_blank"><button>تحميل</button></a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>الاستعداد للامتحان المهني</h1>
+      <p>خطوات فعالة للتحضير والثقة بالنفس لتحقيق النجاح في الامتحان المهني للتعليم الابتدائي.</p>
     </div>
+  </section>
+
+  <main>
+    <!-- Section overview -->
+    <section class="overview">
+      <h2>لمحة عن الامتحان المهني</h2>
+      <p>الامتحان المهني للتعليم الابتدائي يتكون من جزأين رئيسيين: الجزء النظري (أسئلة متعددة الاختيارات وأسئلة مقالية) والجزء التطبيقي (بعنوان إعداد وتصحيح الدروس). يتم تقييم المرشحين بناءً على دقتهم في المحتوى وقدرتهم على التحليل والبناء.</p>
+      <p>تختلف صيغ الأسئلة من سنة لأخرى، لذا من المهم مراجعة الامتحانات السابقة لفهم التوجهات والمنهجيات. ستجد أدناه قائمة بجميع الامتحانات من 2012 إلى 2025 مع وصف موجز لكل دورة.</p>
+    </section>
+
+    <!-- Exams grid -->
+    <h2>قائمة الامتحانات</h2>
+    <div class="docs-grid">
+      <!-- Card 2012 -->
+      <div class="doc-card">
+        <h4>امتحان 2012</h4>
+        <p class="card-desc">ركزت هذه الدورة على مهارات القراءة والفهم، وأسئلة المقال تطلبت تحليل نصوص أدبية وتقارير مدرسية.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/1XrchT3qmXeP3t5FNjtxaKtYuDFgr2lcy/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/12xWdbrz2COuXveCjj20NPkW83Yl18Rrb/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <!-- Card 2013 -->
+      <div class="doc-card">
+        <h4>امتحان 2013</h4>
+        <p class="card-desc">اشتمل بشكل أكبر على الأسئلة التطبيقية المتعلقة بتخطيط الدروس وأساليب التقويم.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/1oMZ51tg4cVzOHSEjJzTCrCCOtxufHnRh/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1syNg_R6DW2fQTFOwp3jVfXv3MYzCAA8z/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <!-- Card 2014 -->
+      <div class="doc-card">
+        <h4>امتحان 2014</h4>
+        <p class="card-desc">تميز هذا العام بأسئلة حول استراتيجيات تدريس المواد العلمية واللغوية.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/1PbIOtiF6ale13M4sumiyESyHItzlz-ji/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1JyMv6neimGeFrb6fmwTHS-eS4Opv0uSk/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <!-- Card 2015 -->
+      <div class="doc-card">
+        <h4>امتحان 2015</h4>
+        <p class="card-desc">توسع في أسئلة التقييم الذاتي وتقنيات التحفيز داخل الصف.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/1U6yXgsuAKL_aKow5oBJJd_XvaBCA_bH1/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1ZfXg8wJOTAvEehcJbgF4L_tfAad8NKiT/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <!-- Card 2016 -->
+      <div class="doc-card">
+        <h4>امتحان 2016</h4>
+        <p class="card-desc">ركز على الإدارة الصفية وتطبيقات تكنولوجيا المعلومات في التعليم.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/1H1sn3tP5U77gEcOMPfgxWUhPXnCtkyFy/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1H242__acdQiJyqGrt3cRXh_j1H27zOBz/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <!-- Card 2017 -->
+      <div class="doc-card">
+        <h4>امتحان 2017</h4>
+        <p class="card-desc">شملت أسئلة توسعية في التقويم البنائي وأساليب التدريس المبتكرة.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/1ozavj9_tEBu0biN9RxJNmyHylt_57ax8/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1LeZ_cVTfTUMVM_Z7AvbNhVr4OG2YDuKm/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <!-- Cards 2018 to 2025 -->
+      <div class="doc-card">
+        <h4>امتحان 2018</h4>
+        <p class="card-desc">احتوت الدورة على أسئلة حول التخطيط الأسبوعي للدروس وتوظيف الألعاب التربوية.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/1414DuE07JiIFV5GB-nR00b7eI_dNPk-k/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1w1LsiBUvor9Ly0FssJtq0q9POBQJy0pl/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <div class="doc-card">
+        <h4>امتحان 2019</h4>
+        <p class="card-desc">ركزت هذه الدورة على أساليب التقييم المستمر وتقنيات تصميم الاختبارات القصيرة.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/1HAyl42Kal__o6PoSwq7Fz_CYWbYGBxF-/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1gAhGsSQVpXbYNQV_qPoEkPVc52w-TrmH/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <div class="doc-card">
+        <h4>امتحان 2020</h4>
+        <p class="card-desc">تميز هذا العام بأسئلة عن التعليم عن بعد وإعداد الدروس الرقمية.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/1XWrByE-3YpwU-MQ3bWogMDEeD7vM36w2/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1XWrByE-3YpwU-MQ3bWogMDEeD7vM36w2/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <div class="doc-card">
+        <h4>امتحان 2021</h4>
+        <p class="card-desc">شملت الأسئلة التركيز على المهارات اللغوية والتواصل داخل الفصل.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/18Saam5Je9yudEa1iXj6ZIDBvmej2AGj2/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/18Saam5Je9yudEa1iXj6ZIDBvmej2AGj2/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <div class="doc-card">
+        <h4>امتحان 2022</h4>
+        <p class="card-desc">شهد هذا العام أسئلة تطبيقية حول سياسة "تعلم مدى الحياة" وتنمية التفكير النقدي.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/1bha318skRAQ5U1_v9y0gs6vVTA62-kXH/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1bha318skRAQ5U1_v9y0gs6vVTA62-kXH/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <div class="doc-card">
+        <h4>امتحان 2023</h4>
+        <p class="card-desc">ركزت الدورة على دمج التقنيات الحديثة داخل التدريس وتقييم المشاريع الطلابية.</p>
+        <div class="card-buttons">
+          <button onclick="window.open('https://drive.google.com/file/d/11VsXDH-B2oPFe78-5kUefA-1mdPpLSgv/view?usp=drive_link')">تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/11VsXDH-B2oPFe78-5kUefA-1mdPpLSgv/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+      <div class="doc-card">
+        <h4>امتحان 2024</h4>
+        <p class="card-desc">احتوت هذه الدورة على أسئلة تحليل مناهج جديدة وأساليب تقييم مستجدة.</p>
+        <div class="card-buttons">
+          <button disabled>تحميل الامتحان</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1BfU2hO-jLSYry4m2GfMhGDLGfUrYZdGP/view?usp=drive_link')">تحميل التصحيح</button>
+        </div>
+      </div>
+        </div>
+        <!-- More cards ... -->
+      </div>
+    </section>
+  </main>
+  <div class="breaking-news">
+    <div class="breaking-track">
+      <a href="#" class="breaking-item">📚 تأجيل مباريات ولوج مسالك تكوين المفتشين - دورة 2025</a>
+      <a href="نتائج الامتحان المهني.html" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025 موجودة هنا</a>
+      <a href="#" class="breaking-item">📢 إعلان عن مباريات تكوين المفتشين</a>
+    </div>
+  </div>
+  <footer><p>جميع الحقوق محفوظة © 2025 - موقع الوثيقة التربوية</p></footer>
+  <script>
+    const navMenu = document.querySelector('nav ul');
+    const hamburger = document.querySelector('.hamburger');
+    function toggleMenu() { navMenu.classList.toggle('active'); }
+    window.addEventListener('click', e => { if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) navMenu.classList.remove('active'); });
+  </script>
 </body>
 </html>
