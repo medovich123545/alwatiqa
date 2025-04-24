@@ -1,479 +1,516 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نماذج المستندات الإدارية - تحميل المستندات بسهولة</title>
-    <meta name="description" content="تحميل نماذج مستندات إدارية باللغة العربية، بما في ذلك استفسارات، شهادات الأجرة، وطلبات القن السري لمنظومة مسار.">
-    <meta name="keywords" content="نماذج مستندات إدارية, شهادة أجرة, استفسار, طلب القن السري, تحميل PDF, مستندات تعليمية">
-    <meta name="author" content="موقع نماذج المستندات">
-    <meta property="og:title" content="نماذج المستندات الإدارية">
-    <meta property="og:description" content="تحميل نماذج مستندات إدارية بسهولة لتسهيل الإجراءات الرسمية الخاصة بك.">
-    <meta property="og:image" content="images/icon5.png">
-    <meta property="og:url" content="https://www.votre-site.com">
-    <style>
-        :root {
-            --primary-color: #102a2d;
-            --secondary-color: #0d2023;
-            --accent-color: #ecc94b;
-            --text-color: #e1e1e1;
-            --light-bg: #f4f4f4;
-            --transition: 0.3s ease;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Cairo', sans-serif; background: var(--primary-color); color: var(--text-color); line-height: 1.6; }
-        a { color: inherit; text-decoration: none; }
-        
-        header { 
-            background: var(--secondary-color); 
-            padding: 1rem 2rem; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            position: sticky; 
-            top: 0; 
-            z-index: 100; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
-        }
-        
-        
-        main { padding: 2rem; }
-        
-        .hero { background: linear-gradient(135deg, var(--secondary-color), #183c40); padding: 3rem 2rem; border-radius: 8px; text-align: center; margin-bottom: 2rem; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
-        
-        .docs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-        
-        .doc-card { background: var(--secondary-color); border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform var(--transition), box-shadow var(--transition); }
-        .doc-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.3); }
-        
-        .doc-card h3 { margin-bottom: 0.75rem; font-size: 1.2rem; color: var(--accent-color); }
-        .doc-card p { margin-bottom: 1rem; font-size: 1rem; }
-        
-        .download-link { display: inline-block; padding: 0.5rem 1rem; background: var(--accent-color); color: #000; border-radius: 4px; font-weight: bold; transition: background var(--transition); }
-        .download-link:hover { background: #d4b93a; }
-        
-        .breaking-news { position: fixed; bottom: 0; width: 100%; background: var(--secondary-color); overflow: hidden; font-size: 0.95rem; z-index: 100; }
-        .breaking-track { display: inline-flex; animation: scroll 20s linear infinite; }
-        .breaking-item { padding: 0 1rem; white-space: nowrap; border-left: 1px solid rgba(255,255,255,0.2); }
-        .breaking-item:first-child { border-left: none; }
-        
-        @keyframes scroll { 0% { transform: translateX(100%);} 100% { transform: translateX(-100%);} }
-      
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="دليل شامل للأساتذة يتضمن نماذج ووثائق إدارية قابلة للتنزيل، مع شروحات تفصيلية حول كل وثيقة وأهميتها في العمل التربوي." />
+  <title>نماذج المستندات الإدارية والشخصية للأستاذ</title>
+  <style>
+    :root {
+      --primary-color: #102a2d;
+      --secondary-color: #0d2023;
+      --accent-color: #ecc94b;
+      --text-color: #e1e1e1;
+      --light-bg: #f4f4f4;
+      --transition: 0.3s ease;
+    }
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: var(--primary-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+  
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  
+    /* Header */
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 80px;
-        padding: 0 2rem;
-        background-color: var(--secondary-color);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 0 2rem;
+      background-color: var(--secondary-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
-
+  
     .logo img {
-        height: 300px;
-        width: auto;
-        max-width: 100%;
-        object-fit: contain;
-        margin-top: 5px;
+      height: 300px;
+      width: auto;
+      object-fit: contain;
+      margin-top: 5px;
+      max-width: 100%;
     }
-
-    @media (max-width: 768px) {
-      .logo img {
-          height: 300px;
-          transform: translate(30px, 20px);
-      }
-    }
-
+  
     header nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1.5rem;
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
     }
-
+  
     header nav ul li {
-        color: #a0c4c8;
-        cursor: pointer;
-        transition: color 0.3s;
+      color: #a0c4c8;
+      cursor: pointer;
+      transition: color var(--transition);
     }
-
+  
     header nav ul li:hover {
-        color: var(--text-color);
+      color: var(--text-color);
     }
-
+  
+    /* Hero section */
     .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 4rem 2rem;
-        background: linear-gradient(135deg, var(--secondary-color), #183c40);
-        color: var(--text-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--secondary-color), #183c40);
+      color: var(--text-color);
     }
-
+  
     .hero-text {
-        max-width: 50%;
-        animation: fadeIn 2s ease-in-out;
+      max-width: 50%;
+      animation: fadeIn 2s ease-in-out;
     }
-
+  
     .hero-text h1 {
-        font-size: 3.5rem;
-        margin: 0;
+      font-size: 3.5rem;
+      margin: 0;
     }
-
+  
     .hero-text p {
-        max-width: 700px;
-        font-size: 1.3rem;
-        margin-top: 1rem;
-        line-height: 1.8;
+      max-width: 700px;
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      line-height: 1.8;
     }
-
+  
     .hero img {
-        max-width: 40%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 40%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
-
+  
+    /* Cards + Services */
     .services {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        padding: 3rem;
-        flex-wrap: wrap;
-        background-color: var(--light-bg);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem;
+      flex-wrap: wrap;
+      background-color: var(--light-bg);
     }
-
-    .service {
-        background-color: var(--secondary-color);
-        padding: 1.5rem;
-        border-radius: 10px;
-        width: 300px;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s, box-shadow 0.3s;
+  
+    .service, .doc-card {
+      background-color: var(--secondary-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform var(--transition), box-shadow var(--transition);
     }
-
-    .service:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  
+    .service:hover, .doc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     }
-
-    .footer {
-        background-color: var(--secondary-color);
-        color: var(--text-color);
-        padding: 2rem;
-        text-align: center;
+  
+    .doc-card h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+      color: var(--accent-color);
     }
-
-    .footer p {
-        font-size: 1.2rem;
-        line-height: 1.8;
+  
+    .doc-card p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
     }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to   { opacity: 1; transform: translateY(0); }
+  
+    .download-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: var(--accent-color);
+      color: #000;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background var(--transition);
     }
-
+  
+    .download-link:hover {
+      background: #d4b93a;
+    }
+  
+    /* Sync Button */
     .sync-button {
-        position: fixed;
-        bottom: 70px;
-        right: 20px;
-        background-color: var(--accent-color);
-        padding: 12px 18px;
-        border-radius: 30px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        color: #000;
-        font-size: 1rem;
-        font-weight: bold;
-        text-decoration: none;
-        transition: transform 0.3s, box-shadow 0.3s;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      background-color: var(--accent-color);
+      padding: 12px 18px;
+      border-radius: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      color: #000;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-
+  
     .sync-button:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     }
-
+  
+    /* Footer */
+    .footer, footer {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    .footer p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+  
+    /* Hamburger */
     .hamburger {
-        display: none;
-        cursor: pointer;
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
     }
-
+  
     .hamburger div {
-        width: 25px;
-        height: 3px;
-        background-color: var(--text-color);
-        margin: 5px 0;
-        transition: 0.4s;
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      transition: var(--transition);
     }
-
+  
+    /* Mobile menu */
     .mobile-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 70%;
-        height: 100%;
-        background-color: var(--secondary-color);
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
-        padding: 2rem;
-        z-index: 999;
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 100%;
+      background-color: var(--secondary-color);
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+      padding: 2rem;
+      z-index: 999;
     }
-
+  
     .mobile-menu.active {
-        display: block;
-        animation: slideIn 0.3s forwards;
+      display: block;
+      animation: slideInMenu 0.3s forwards;
     }
-
-    @keyframes slideIn {
-        from { transform: translateX(100%); }
-        to { transform: translateX(0); }
-    }
-
+  
     .mobile-menu ul {
-        list-style: none;
-        padding: 0;
+      list-style: none;
+      padding: 0;
     }
-
+  
     .mobile-menu li {
-        margin-bottom: 1.5rem;
-        font-size: 1.2rem;
-        color: var(--text-color);
-        cursor: pointer;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      color: var(--text-color);
+      cursor: pointer;
     }
-
-    @media (max-width: 768px) {
-        .hero { flex-direction: column; text-align: center; padding: 2rem 1rem; }
-        .hero-text { max-width: 100%; }
-        .hero img { display: none; }
-        .services { display: grid; grid-template-columns: 1fr; gap: 16px; padding: 16px; }
-        .hamburger { display: block; }
-        header nav ul { display: none; }
-        .sync-button { bottom: 70px; right: 16px; padding: 10px 16px; }
-        .hero-text h1 { font-size: 2.5rem; }
-        .hero-text p { font-size: 1rem; }
-    }
-
-    /* Bande défilante breaking news */
+  
+    /* Breaking News */
     .breaking-news {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 45px;
-        background-color: #191f3b;
-        color: white;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        z-index: 9999;
-        font-family: 'Cairo', sans-serif;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 45px;
+      background-color: #191f3b;
+      color: white;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      z-index: 9999;
+      font-family: 'Cairo', sans-serif;
     }
-
+  
     .breaking-track {
-        display: flex;
-        animation: scroll-right 20s linear infinite;
-        white-space: nowrap;
+      display: flex;
+      animation: scroll-right 20s linear infinite;
+      white-space: nowrap;
     }
-
+  
     .breaking-item {
-        display: inline-block;
-        padding: 0 1.5rem;
-        color: white;
-        font-size: 1rem;
-        font-weight: bold;
-        text-decoration: none;
-        border-left: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      text-decoration: none;
     }
-
+  
+    .breaking-item:first-child {
+      border-left: none;
+    }
+  
     .breaking-item:hover {
-        background-color: rgba(255, 255, 255, 0.15);
+      background-color: rgba(255, 255, 255, 0.15);
     }
-
+  
     .breaking-news:hover .breaking-track {
-        animation-play-state: paused;
+      animation-play-state: paused;
     }
+  
+    /* Grid Docs */
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+  
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  
+    @keyframes slideInMenu {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+    }
+  
     @keyframes scroll-right {
       0% { transform: translateX(-100%); }
       100% { transform: translateX(100%); }
     }
-
+  
+    /* Responsive */
     @media (max-width: 768px) {
-        .breaking-item {
-            font-size: 0.9rem;
-            padding: 0 1rem;
-        }
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+      /* Pause uniquement pendant qu’on reste appuyé */
+  .breaking-news:active .breaking-track {
+    animation-play-state: paused !important;
+  }
+      .hero-text {
+        max-width: 100%;
+      }
+  
+      .hero img {
+        display: none;
+      }
+  
+      .services {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px;
+      }
+  
+      .hamburger {
+        display: flex;
+      }
+  
+      header nav ul {
+        display: none;
+      }
+  
+      .logo img {
+        height: 300px;
+        transform: translate(30px, 20px);
+      }
+  
+      .sync-button {
+        right: 16px;
+        padding: 10px 16px;
+      }
+  
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+  
+      .hero-text p {
+        font-size: 1rem;
+      }
+  
+      .breaking-item {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+      }
     }
+  </style>
+
     
-    </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html"><img src="images/icon5.png" alt="شعار الموقع"></a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="about.html">من نحن</a></li>
-                <li><a href="services.html">الخدمات</a></li>
-                <li><a href="contact.html">اتصل بنا</a></li>
-                <li><a href="privacy.html">سياسة الخصوصية</a></li>
-            </ul>
-        </nav>
-        <div class="hamburger" onclick="toggleMobileMenu();">
-            <div></div><div></div><div></div>
-        </div>
-    </header>
-
-    <div class="mobile-menu">
+      <div class="logo">
+        <a href="index.html"><img src="images/icon5.png" alt="شعار الموقع"></a>
+      </div>
+      <nav>
         <ul>
-            <li><a href="index.html" onclick="closeMobileMenu()">الرئيسية</a></li>
-            <li><a href="about.html" onclick="closeMobileMenu()">من نحن</a></li>
-            <li><a href="services.html" onclick="closeMobileMenu()">الخدمات</a></li>
-            <li><a href="contact.html" onclick="closeMobileMenu()">اتصل بنا</a></li>
-            <li><a href="privacy.html" onclick="closeMobileMenu()">سياسة الخصوصية</a></li>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+          <li><a href="privacy.html">سياسة الخصوصية</a></li>
         </ul>
+      </nav>
+      <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('active');">
+        <div></div><div></div><div></div>
+      </div>
+    </header>
+  
+    <!-- ✅ Mobile Menu -->
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="index.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">الرئيسية</a></li>
+        <li><a href="about.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">من نحن</a></li>
+        <li><a href="services.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">الخدمات</a></li>
+        <li><a href="contact.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">اتصل بنا</a></li>
+        <li><a href="privacy.html" onclick="document.querySelector('.mobile-menu').classList.remove('active')">سياسة الخصوصية</a></li>
+      </ul>
     </div>
+  <main>
+    <section class="hero">
+      <h1>نماذج المستندات الإدارية والشخصية للأستاذ</h1>
+      <p>دليل شامل للأساتذة يتضمن نماذج ووثائق إدارية قابلة للتنزيل، مع شروحات تفصيلية حول كل وثيقة وأهميتها في العمل التربوي.</p>
+    </section>
+    <section class="docs-grid">
+   <!-- البطاقة الشخصية للأستاذ -->
+<div class="doc-card">
+    <h3>البطاقة الشخصية للأستاذ</h3>
+    <p>وثيقة أساسية تتضمن معلومات الأستاذ الإدارية والشخصية، تسهل حفظ السجلات والتواصل.</p>
+    <a href="https://drive.google.com/file/d/1OHRrxkNHay1r4VJEMCn9PK9kfVe5ogQy/view?usp=drive_link" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- إحصائيات التلاميذ -->
+  <div class="doc-card">
+    <h3>إحصائيات التلاميذ</h3>
+    <p>وثيقة تقدم نظرة دقيقة حول عدد التلاميذ داخل الفصل حسب المستوى الدراسي والجنس، لتخطيط الموارد.</p>
+    <a href="https://docs.google.com/document/d/1jR49De-Tou_P4W2bgV13MpDUqdWLWZ_A/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- لائحة الأيام الوطنية والدولية -->
+  <div class="doc-card">
+    <h3>لائحة الأيام الوطنية والدولية</h3>
+    <p>لائحة تواريخ المناسبات الرسمية للمساعدة في برمجة الأنشطة المدرسية طوال العام.</p>
+    <a href="https://docs.google.com/document/d/12Vu2n73NXI2gCXD-h4Jc2iAuArz1Vh2L/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- ورقة عناوين المراجع المعتمدة -->
+  <div class="doc-card">
+    <h3>ورقة عناوين المراجع المعتمدة</h3>
+    <p>نظرة شاملة على أهم الكتب والمراجع المعتمدة في التدريس لتطوير الرصيد المعرفي.</p>
+    <a href="https://docs.google.com/document/d/1xvlpfUxtkTin3k7RspM-_amPC_79Ovqn/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- محضر تأسيس تعاونية القسم -->
+  <div class="doc-card">
+    <h3>محضر تأسيس تعاونية القسم</h3>
+    <p>وثيقة رسمية لتوثيق إنشاء تعاونية القسم بمشاركة التلاميذ، لتعزيز العمل الجماعي.</p>
+    <a href="https://docs.google.com/document/d/1U9hRBHdb8OKy_uTez7Lwh-STabZROWdY/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- النشيد الوطني المغربي -->
+  <div class="doc-card">
+    <h3>النشيد الوطني المغربي</h3>
+    <p>نسخة من النشيد الوطني لتلقينه للتلاميذ وترديده خلال الأنشطة والمناسبات الرسمية.</p>
+    <a href="https://docs.google.com/document/d/1dlaIg01CnL4sH9I_z589KLYxJThrW2tZ/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- القانون الداخلي للقسم -->
+  <div class="doc-card">
+    <h3>القانون الداخلي للقسم</h3>
+    <p>قوانين وسلوكيات القسم المحددة للحقوق والواجبات لفرض جو من الانضباط والاحترام.</p>
+    <a href="https://docs.google.com/document/d/1zBRcRZVxfMSWqJAt32iOkGyuIm5RNK_h/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- البحث الاجتماعي للتلميذ -->
+  <div class="doc-card">
+    <h3>البحث الاجتماعي للتلميذ</h3>
+    <p>وثيقة لفهم الوضعية الاقتصادية والاجتماعية للتلميذ بهدف تقديم الدعم المناسب.</p>
+    <a href="https://docs.google.com/document/d/14y_VLW8WhIERkcGIaBHbOMdegyxUXN8a/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+  <!-- جدول اللقاءات التربوية -->
+  <div class="doc-card">
+    <h3>جدول اللقاءات التربوية</h3>
+    <p>جدول لتسجيل مواعيد اللقاءات التربوية، مواضيعها وتوصياتها لتحسين التنسيق الإداري.</p>
+    <a href="https://docs.google.com/document/d/1DjIJGb-H5Rvn3KFXafXST4vj4SydIiam/edit" class="download-link" target="_blank">تحميل</a>
+  </div>
+  
+    </section>
+  </main>
+   <!-- Bande déroulante breaking news -->
+   <div class="breaking-news">
+    <div class="breaking-track">
+      <a href="  
+      مسالك تكوين المفتشين .html" class="breaking-item">📚 تأجيل مباريات ولوج مسالك تكوين المفتشين التربويين - دورة 2025</a>
+      <a href="نتائج الامتحان المهني.html" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025 موجودة هنا جميع الفئات</a>
+      <a href="مسلك تكوين المفتشين.html" class="breaking-item">📢 إعلان عن إجراء مباريات ولوج مسالك تكوين المفتشين التربويين بمركز تكوين مفتشي التعليم</a>
+      <a href="مسلك تكوين المستشارين.html" class="breaking-item">
+        ⚠️ مباراة ولوج مسلك تكوين المستشارين في التوجيه التربوي ومسلك تكوين المستشارين في التخطيط التربوي
+      </a>
+      <a href="الإدارة التربوية.html" class="breaking-item">الشروط الجديدة لمباراة الإدارة التربوية حسب النظام الأساسي الجديد</a>
+    </div>
+  </div>
+  <footer>
+    <p>نحن هنا لدعم عملك. تواصل معنا لمعرفة المزيد عن كيفية مساعدتك في النمو والنجاح.</p>
+    <p>جميع حقوق النشر محفوظة &copy; 2024 متمدرس التربوي</p>
+  </footer>
+  <script>
+    const banner = document.querySelector('.breaking-news');
+    const track  = document.querySelector('.breaking-track');
+  
+    /* Au toucher : on pause */
+    banner.addEventListener('touchstart', () => {
+      track.style.animationPlayState = 'paused';
+    }, { passive: true });
+  
+    /* Quand on relâche : on relance */
+    banner.addEventListener('touchend', () => {
+      track.style.animationPlayState = 'running';
+    });
+  </script>
+  
+  <script>
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        document.querySelector('.mobile-menu').classList.toggle('active');
+    }
 
-    <main>
-        <div class="hero">
-            <h1>موقع الوثيقة التربوية  </h1>
-            <p>نضع بين يديكم مجموعة مختارة من النماذج الإدارية الرسمية المصممة بعناية لتلبية مختلف حاجياتكم المهنية. تهدف هذه الوثائق إلى تسهيل الإجراءات الإدارية وتسريع المعاملات بطريقة فعالة ومبسطة. يمكنكم تحميل النماذج مباشرة بصيغة PDF وبكل سهولة، مما يوفر عليكم الوقت والجهد في إعداد الطلبات والمراسلات الرسمية.</p>
-        </div>
-
-        <div class="breaking-news">
-            <div class="breaking-track">
-                <a href="#" class="breaking-item">📚 تأجيل مباريات ولوج مسالك تكوين المفتشين التربويين - دورة 2025</a>
-                <a href="#" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025 هنا جميع الفئات</a>
-                <a href="#" class="breaking-item">📢 إعلان عن إجراء مباريات ولوج مسالك تكوين المفتشين التربويين</a>
-                <a href="#" class="breaking-item">⚠️ مباراة ولوج مسلك تكوين المستشارين في التخطيط التربوي</a>
-                <a href="#" class="breaking-item">📌 الشروط الجديدة لمباراة الإدارة التربوية</a>
-            </div>
-        </div>
-
-        <div class="docs-grid">
-            <div class="doc-card">
-                <h3>شهادة أجرة</h3>
-                <p>وثيقة رسمية تُستخدم لإثبات دخل الموظف، وتُطلب غالبًا في المعاملات الإدارية مثل القروض أو طلب المنح.</p>
-                <a href="https://drive.google.com/file/d/1JqKwxIg42n8Yi5SWN_eps4TM3t2ecu3a/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>استفسار</h3>
-                <p>نموذج يُستخدم للتواصل الرسمي مع الإدارة وطلب توضيحات حول مسائل معينة تتعلق بالعمل.</p>
-                <a href="https://drive.google.com/file/d/1PC1EmYF13s1QtHUOowwK1xBIrJ3sqor8/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>طلب القن السري لمنظومة مسار</h3>
-                <p>استمارة ضرورية لطلب القن السري للدخول إلى منظومة مسار الخاصة بنتائج ومعلومات التلاميذ.</p>
-                <a href="https://drive.google.com/file/d/1922woZ3rqe1zc4Sbrhz6ac25-zJW3jtL/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>إيصال باستلام شهادة (ات) طبية</h3>
-                <p>وثيقة تؤكد استلام الشهادات الطبية المقدمة من طرف الموظف في حالات الغياب لأسباب صحية.</p>
-                <a href="https://drive.google.com/file/d/1mLX-zVzrlqNHlOR7hOEKQJjpPd6FiSde/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>رخصة الرضاعة</h3>
-                <p>نموذج يُقدم من طرف الموظفات لطلب الاستفادة من رخصة الرضاعة وفقًا للقوانين الجاري بها العمل.</p>
-                <a href="https://drive.google.com/file/d/1-A5u2IU3mw4AeuBQ5H19d-ve5XeZcMJd/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>محضر استئناف العمل</h3>
-                <p>وثيقة تُستخدم لتأكيد عودة الموظف إلى عمله بعد انتهاء عطلة أو رخصة.</p>
-                <a href="https://drive.google.com/file/d/1Gv5FVyPuWrnwBGOGk2GcJvBPrrbhpQxt/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>طلب رخصة الغياب</h3>
-                <p>وثيقة رسمية يُقدمها الموظف لطلب إذن بالغياب لأسباب مهنية أو شخصية.</p>
-                <a href="https://drive.google.com/file/d/1bezf7uRPtF3909U_FUvtQK1F2qb26ZKL/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>طلب رخصة</h3>
-                <p>نموذج عام يُستخدم لطلب رخصة بجميع أنواعها، سواء كانت مرضية، سنوية، أو استثنائية.</p>
-                <a href="https://drive.google.com/file/d/1UzY3iH4XPp1Nq-Rkk1Kao2QI8tGzTN6b/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>شهادة العمل</h3>
-                <p>وثيقة تُثبت أن الموظف يعمل حاليًا لدى المؤسسة، وتُطلب غالبًا للإجراءات البنكية أو الإدارية.</p>
-                <a href="https://drive.google.com/file/d/1HYkZ6eka2Koqdesi_90n2cqp8gfEyB6O/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>طلب تحويل الأجرة</h3>
-                <p>استمارة يُقدمها الموظف لتحويل راتبه الشهري إلى حساب بنكي جديد أو مختلف.</p>
-                <a href="https://drive.google.com/file/d/1nQQV0dTknQyT4B1rGa3p9dzrctB7J_A_/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>طلب قرار الرتبة</h3>
-                <p>يُستخدم هذا الطلب للحصول على نسخة رسمية من قرار الرتبة الصادر من وزارة التربية أو الإدارة المختصة.</p>
-                <a href="https://drive.google.com/file/d/1_PdLZwDuI9k0Ih408x5m-rbtb_riMZhs/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>نموذج الطلب تكليف</h3>
-                <p>وثيقة تُستخدم لتقديم طلب تكليف بمهمة أو عمل مؤقت داخل نفس المؤسسة أو خارجها.</p>
-                <a href="https://drive.google.com/file/d/1UaaurYVK3opVT1LRJ3eURhIULwP9h0AD/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>طلب وثيقة إدارية</h3>
-                <p>نموذج عام يُستعمل لطلب أي وثيقة إدارية من إدارة المؤسسة مثل الشهادات أو النسخ المصادق عليها.</p>
-                <a href="https://drive.google.com/file/d/1JuhFSB13bg1_7eBJG_W9ABtgRyrwgwZT/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>رسالة التزكية</h3>
-                <p>نموذج رسمي لتزكية موظف أو شخص آخر من أجل الترشح أو التوظيف أو تقديمه لجهة معينة.</p>
-                <a href="https://drive.google.com/file/d/1QWlAnqxpc3YXjjVw4PeHChN0Zff3mG7X/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        
-            <div class="doc-card">
-                <h3>طلب اجتياز مباراة المتصرفين الإداريين</h3>
-                <p>وثيقة تُستخدم لتقديم طلب المشاركة في مباريات المتصرفين بالإدارات العمومية.</p>
-                <a href="https://drive.google.com/file/d/1Am302x5NqP3swXBV3rkHQ31n3SlA8H-n/view?usp=drive_link" target="_blank" class="download-link">تحميل PDF</a>
-            </div>
-        </div>
-        
-        </div>
-    </main>
-
-    <footer>
-        جميع حقوق النشر محفوظة &copy; 2024
-    </footer>
-
-    <script>
-        // Toggle mobile menu
-        function toggleMobileMenu() {
-            document.querySelector('.mobile-menu').classList.toggle('active');
-        }
-
-        // Close the mobile menu when clicking outside
-        window.onclick = function(event) {
-            if (!event.target.closest('.mobile-menu') && !event.target.closest('.hamburger')) {
-                document.querySelector('.mobile-menu').classList.remove('active');
-            }
-        }
-
-        // Close the mobile menu after clicking a link inside
-        function closeMobileMenu() {
+    // Close the mobile menu when clicking outside
+    window.onclick = function(event) {
+        if (!event.target.closest('.mobile-menu') && !event.target.closest('.hamburger')) {
             document.querySelector('.mobile-menu').classList.remove('active');
         }
-    </script>
+    }
+
+    // Close the mobile menu after clicking a link inside
+    function closeMobileMenu() {
+        document.querySelector('.mobile-menu').classList.remove('active');
+    }
+</script>
 </body>
 </html>
