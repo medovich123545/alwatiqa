@@ -40,14 +40,25 @@ a {
 
 /* Header compacté verticalement */
 header.main-header {
-  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
-  padding: 0.5rem 2rem;        /* Réduit l’espace vertical */
+  /* on remplace padding vertical + height auto par une hauteur fixe */
+  height: 80px;
+  padding: 0 2rem;             /* uniquement marge gauche/droite */
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: relative;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  align-items: center;         /* centre verticalement les items */
+  background-color: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
+/* Faire en sorte que le logo ne déborde pas du header */
+.logo img {
+  max-height: 100%;            /* s’adapte à la hauteur du header */
+  width: auto;
+}
+
 
 /* Logo redimensionné */
 .logo img {
