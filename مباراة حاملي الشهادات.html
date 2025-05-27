@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>نتائج مباراة الترقية وتغيير الإطار 2025 | وزارة التربية الوطنية</title>
   <meta name="description" content="الإعلان الرسمي عن النتائج النهائية لمباراة الترقية وتغيير الإطار دورة 2025 لنساء ورجال التعليم. تحميل اللوائح حسب الفئات الأكاديمية.">
   <meta name="keywords" content="نتائج الترقية 2025, تغيير الإطار, وزارة التربية الوطنية, التعليم الابتدائي, التعليم الإعدادي, التعليم الثانوي">
@@ -11,10 +10,10 @@
   <meta property="og:title" content="نتائج مباراة الترقية وتغيير الإطار 2025">
   <meta property="og:description" content="الإعلان الرسمي عن النتائج النهائية لمباراة الترقية وتغيير الإطار دورة 2025 لجميع الفئات التعليمية.">
   <meta property="og:image" content="https://www.men.gov.ma/images/logo_men.png">
-  <script src="https://ligheechoagool.com/88/tag.min.js" data-zone="146637" async data-cfasync="false"></script>
   <meta property="og:url" content="https://www.men.gov.ma/Ar/Pages/Publication.aspx?IDPublication=PromotionTransfer2025">
+
+  <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <script type='text/javascript' src='//pl26706120.profitableratecpm.com/7b/b6/88/7bb6881807626d4d0f89e62d159c4a99.js'></script>
   <style>
     :root {
       --primary-color: #102a2d;
@@ -24,253 +23,133 @@
       --highlight-color: #e7cbc6;
       --light-bg: #f4f4f4;
     }
-
-    * {
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
       font-family: 'Cairo', sans-serif;
       color: var(--text-color);
-      background-color: var(--primary-color);
-      direction: rtl;
+      background: var(--primary-color);
       line-height: 1.6;
     }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    header {
+    a { color: inherit; text-decoration: none; }
+    header.site-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 2rem;
-      background-color: var(--secondary-color);
+      padding: 0 1.5rem;
+      background: var(--secondary-color);
+      height: 80px;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      height: 80px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-
-    .logo img {
-      height: 60px;
-      width: auto;
-    }
-
-    /* Navigation Desktop */
+    .logo img { height: 60px; width: auto; }
     nav.desktop-nav ul {
       list-style: none;
       display: flex;
       gap: 1.5rem;
     }
-
-    nav.desktop-nav ul li {
-      color: #a0c4c8;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    nav.desktop-nav ul li:hover {
-      color: var(--highlight-color);
-    }
-
-    /* Menu Hamburger pour mobile */
+    nav.desktop-nav li:hover { color: var(--highlight-color); }
     .hamburger {
       display: none;
       flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 20px;
       cursor: pointer;
     }
-    
     .hamburger span {
-      width: 25px;
+      display: block;
       height: 3px;
-      background-color: var(--highlight-color);
-      margin: 4px 0;
-      transition: 0.4s;
+      background: var(--highlight-color);
+      transition: transform 0.3s ease;
     }
-
-    /* Menu mobile overlay */
     .mobile-menu {
       display: none;
       position: fixed;
       top: 0;
       right: 0;
       width: 70%;
-      height: 100%;
-      background-color: var(--secondary-color);
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+      height: 100vh;
+      background: var(--secondary-color);
       padding: 2rem;
       z-index: 1100;
     }
-    .mobile-menu.active {
-      display: block;
-      animation: slideIn 0.3s forwards;
-    }
-    .mobile-menu ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .mobile-menu ul li {
-      color: #a0c4c8;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-    .mobile-menu ul li:hover {
-      color: var(--highlight-color);
-    }
-
-    /* Section Hero */
+    .mobile-menu.active { display: block; animation: slideIn 0.3s forwards; }
+    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+    .mobile-menu li:hover { color: var(--highlight-color); }
     .hero {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: center;
       padding: 4rem 2rem;
       background: linear-gradient(135deg, var(--secondary-color), #183c40);
-      color: var(--text-color);
+      text-align: center;
     }
-
-    .hero-text {
-      max-width: 50%;
-      animation: fadeIn 2s ease-in-out;
-    }
-
     .hero-text h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
       color: var(--highlight-color);
     }
-
     .hero-text p {
-      font-size: 1.3rem;
-      max-width: 700px;
+      font-size: 1.2rem;
       color: var(--highlight-color);
+      max-width: 800px;
+      margin: 0 auto;
     }
-
-    /* Contenu principal */
     main {
       padding: 3rem 2rem;
-      background-color: var(--light-bg);
-      color: var(--text-color);
+      background: var(--light-bg);
     }
-
-    main h2, main h3 {
+    article {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    article h1 {
       color: var(--accent-color);
-      margin-top: 2rem;
+      margin-bottom: 1rem;
     }
-
-    main h3 {
-      font-size: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    main p {
-      font-size: 1.1rem;
-      margin-top: 1rem;
-    }
-
-    /* Bouton externe */
+    article time { font-size: 0.9rem; color: #555; }
+    article p { margin-top: 1rem; font-size: 1rem; }
     .external-link {
       display: inline-block;
-      background-color: var(--accent-color);
-      color: var(--primary-color);
+      margin: 2rem 0;
       padding: 0.8rem 2rem;
-      font-size: 1.1rem;
+      background: var(--accent-color);
+      color: var(--primary-color);
       font-weight: bold;
       border-radius: 8px;
-      transition: background-color 0.3s ease;
-      margin: 2rem auto;
-      text-align: center;
+      transition: background 0.3s;
     }
-
-    .external-link:hover {
-      background-color: #d4a72e;
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--secondary-color);
-      color: var(--text-color);
+    .external-link:hover { background: #d4a72e; }
+    footer.site-footer {
+      background: var(--secondary-color);
+      color: #ccc;
       padding: 2rem;
       text-align: center;
     }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes slideIn {
-      from { transform: translateX(100%); }
-      to { transform: translateX(0); }
-    }
-
-    /* Responsive Mobile */
+    @keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
     @media (max-width: 768px) {
-      header {
-        padding: 0 1rem;
-      }
-
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem 1rem;
-      }
-
-      .hero-text {
-        max-width: 100%;
-      }
-
-      nav.desktop-nav {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
+      .hamburger { display: flex; }
+      nav.desktop-nav { display: none; }
+      .hero { padding: 2rem 1rem; }
     }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "إعلان نتائج مباراة الترقية وتغيير الإطار 2025",
-    "startDate": "2025-07-15T00:00:00+01:00",
-    "location": {
-      "@type": "Organization",
-      "name": "وزارة التربية الوطنية والتعليم الأولي والرياضة",
-      "url": "https://www.men.gov.ma"
-    },
-    "description": "الإعلان الرسمي عن النتائج النهائية لمباراة الترقية وتغيير الإطار دورة 2025 لمختلف الأسلاك التعليمية.",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode"
-  }
-  </script>
 </head>
-  <script type="text/javascript">
-	atOptions = {
-		'key' : '74d538ae538b2b9b68e52e4928ed0525',
-		'format' : 'iframe',
-		'height' : 600,
-		'width' : 160,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/74d538ae538b2b9b68e52e4928ed0525/invoke.js"></script>
-	<script async="async" data-cfasync="false" src="//cloudlessdatapowerful.com/87843025477a4e268332724a20d18b61/invoke.js"></script>
-<div id="container-87843025477a4e268332724a20d18b61"></div>
 <body>
-  <header>
+  <header class="site-header">
     <div class="logo">
-      <img src="images/icon5.png" alt="شعار الموقع">
+      <a href="index.html" aria-label="الرئيسية">
+        <img src="images/icon5.png" alt="شعار وزارة التربية الوطنية">
+      </a>
     </div>
-    <nav class="desktop-nav">
+    <nav class="desktop-nav" role="navigation" aria-label="القائمة الرئيسية">
       <ul>
         <li><a href="index.html">الرئيسية</a></li>
         <li><a href="about.html">من نحن</a></li>
@@ -279,13 +158,14 @@
         <li><a href="privacy.html">سياسة الخصوصية</a></li>
       </ul>
     </nav>
-    <div class="hamburger" id="hamburger">
+    <button class="hamburger" id="hamburger" aria-label="فتح القائمة المتنقلة" aria-controls="mobile-menu" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </button>
   </header>
-  <nav class="mobile-menu" id="mobile-menu">
+
+  <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="القائمة المتنقلة">
     <ul>
       <li><a href="index.html">الرئيسية</a></li>
       <li><a href="about.html">من نحن</a></li>
@@ -295,14 +175,28 @@
     </ul>
   </nav>
 
-  <section class="hero">
+ 
+  <!-- 300×250 Top Banner Under Header -->
+  <div class="ad-center" id="ad-300x250-top">
+    <script async src="//cloudlessdatapowerful.com/9a053682d2653f742ff8479530242b09/invoke.js" loading="lazy"></script>
+  </div>
+
+<section class="hero">
     <div class="hero-text">
       <h1>📌 نتائج مباراة الترقية وتغيير الإطار 2025</h1>
       <p>أعلنت وزارة التربية الوطنية والتعليم الأولي والرياضة عن نتائج مباراة الترقية وتغيير الإطار لسنة 2025، والتي ينتظرها آلاف نساء ورجال التعليم في مختلف الأسلاك التعليمية.</p>
     </div>
   </section>
+  
+  <!-- Native In-Feed Ad after Hero -->
+  <div class="ad-center" id="ad-native-infeed">
+    <script async data-cfasync="false" src="//cloudlessdatapowerful.com/87843025477a4e268332724a20d18b61/invoke.js" loading="lazy"></script>
+  </div>
 
   <main>
+    <aside class="ad-sidebar"> <!-- Sticky Sidebar Ad -->
+      <script async src="//cloudlessdatapowerful.com/74d538ae538b2b9b68e52e4928ed0525/invoke.js" loading="lazy"></script>
+    </aside>
     <article itemscope itemtype="https://schema.org/Article">
       <header>
         <h1 itemprop="headline">نتائج مباراة الترقية وتغيير الإطار 2025</h1>
@@ -355,19 +249,34 @@
         <p>© 2025 وزارة التربية الوطنية والتعليم الأولي والرياضة.</p>
       </footer>
     </article>
+     <!-- إعلان جانبي ثابت لسطح المكتب -->
+    <aside class="ad-sidebar" aria-hidden="true">
+      <script async src="//cloudlessdatapowerful.com/74d538ae538b2b9b68e52e4928ed0525/invoke.js" loading="lazy"></script>
+    </aside>
   </main>
+  
+  <!-- Footer Banner 160×300 -->
+  <div class="ad-center" id="ad-160x300-footer">
+    <script async src="//cloudlessdatapowerful.com/7298e41121b2f61f2651d7a6ca4e9152/invoke.js" loading="lazy"></script>
+  </div>
 
-  <footer>
-    <!-- حقوق وشبكات تواصل -->
+
+  <footer class="site-footer">
+    <p>حقوق النشر © 2025 وزارة التربية الوطنية والتعليم الأولي والرياضة.</p>
   </footer>
 
   <script>
-    // كود جافاسكربت للقائمة المتحركة والهمبرغر
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+      btn.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('active');
     });
+    // إظهار الإعلان الجانبي على سطح المكتب
+    if (window.innerWidth > 768) {
+      document.querySelector('.ad-sidebar').style.display = 'block';
+    }
   </script>
 </body>
 </html>
