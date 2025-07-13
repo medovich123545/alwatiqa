@@ -9,8 +9,7 @@
   <meta name="description" content="كيفية التسجيل في مباراة التعليم 2026: شروط الترشيح، الوثائق المطلوبة، المواعيد، وطريقة التسجيل عبر بوابة التوظيف الرسمية." />
   <meta name="keywords" content="مباراة التعليم 2026, التسجيل, وزارة التربية الوطنية, tawdif.men.gov.ma, أساتذة, شروط الترشيح" />
   <meta name="robots" content="index, follow" />
-  <script async="async" data-cfasync="false" src="//cloudlessdatapowerful.com/87843025477a4e268332724a20d18b61/invoke.js"></script>
-<div id="container-87843025477a4e268332724a20d18b61"></div>
+  
   <!-- Open Graph -->
   <meta property="og:site_name" content="وزارة التربية الوطنية والتعليم الأولي والرياضة" />
   <meta property="og:title" content="مباراة التعليم 2026 - التسجيل والشروط" />
@@ -47,76 +46,336 @@
     }
   }
   </script>
-
   <style>
-    :root { --primary-color: #102a2d; --secondary-color: #0d2023; --accent-color: #ecc94b; --text-color: #1f1c1c; --highlight-color: #e7cbc6; --light-bg: #f4f4f4; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Cairo', sans-serif; color: var(--text-color); background-color: var(--primary-color); direction: rtl; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    header { display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; background-color: var(--secondary-color); position: sticky; top: 0; z-index: 1000; height: 80px; }
-    .logo img { height: 60px; width: auto; }
-    nav.desktop-nav ul { list-style: none; display: flex; gap: 1.5rem; }
-    nav.desktop-nav ul li { color: #a0c4c8; transition: color .3s; }
-    nav.desktop-nav ul li:hover { color: var(--highlight-color); }
-    .hamburger { display: none; flex-direction: column; cursor: pointer; }
-    .hamburger span { width: 25px; height: 3px; background-color: var(--highlight-color); margin: 4px 0; }
-    .mobile-menu { display: none; position: fixed; top: 0; right: 0; width: 70%; height: 100%; background: var(--secondary-color); padding: 2rem; }
-    .mobile-menu.active { display: block; }
-    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-    main { padding: 2rem; background-color: var(--light-bg); }
-    main h1 { color: var(--accent-color); margin-bottom: 1rem; }
-    main h2 { margin-top: 1.5rem; color: var(--secondary-color); }
-    main p, main ol, main ul { margin-top: 1rem; font-size: 1.1rem; }
-    .external-link { display: inline-block; background: var(--accent-color); color: var(--primary-color); padding: .8rem 2rem; border-radius: 8px; margin: 1rem 0; }
-    footer { background: var(--secondary-color); color: var(--text-color); text-align: center; padding: 1rem; }
-    @media(max-width:768px){ nav.desktop-nav{ display:none;} .hamburger{ display:flex;} }
+    :root {
+      --primary-color: #102a2d;        /* لون رئيسي غامق */
+      --secondary-color: #0d2023;      /* لون ثانوي داكن */
+      --accent-color: #ecc94b;         /* لون مميز ذهبي */
+      --text-color: #e1e1e1;           /* لون النص الأساسي */
+      --header-height: 80px;
+      --radius: 0.75rem;
+      --padding-sm: 1rem;
+      --padding-md: 2rem;
+      --transition: 0.3s ease;
+      --shadow-color: rgba(0,0,0,0.4);
+      --max-width: 1200px;
+      --bg-color: #f0f4f6;
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+      line-height: 1.7;
+      padding-top: var(--header-height);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    a:hover {
+      color: var(--accent-color);
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-height);
+      background: var(--secondary-color);
+      box-shadow: 0 3px 8px var(--shadow-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--padding-md);
+      z-index: 1100;
+      transition: background-color 0.4s ease;
+    }
+
+    /* Logo */
+    .logo img {
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Desktop nav */
+    nav.desktop-nav ul {
+      list-style: none;
+      display: flex;
+      gap: var(--padding-md);
+    }
+    nav.desktop-nav li a {
+      color: var(--text-color);
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: var(--radius);
+      transition: background-color var(--transition), color var(--transition);
+    }
+    nav.desktop-nav li a:hover,
+    nav.desktop-nav li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+
+    /* Hamburger menu button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 1200;
+    }
+    .hamburger span {
+      width: 28px;
+      height: 3.5px;
+      background-color: var(--text-color);
+      border-radius: var(--radius);
+      transition: all 0.3s ease;
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 320px;
+      height: 100%;
+      background-color: var(--primary-color);
+      padding: var(--padding-md);
+      display: flex;
+      flex-direction: column;
+      gap: var(--padding-md);
+      transition: right var(--transition);
+      z-index: 1150;
+      box-shadow: -3px 0 15px var(--shadow-color);
+      overflow-y: auto;
+    }
+    .mobile-menu.active {
+      right: 0;
+    }
+    .mobile-close {
+      background: none;
+      border: none;
+      font-size: 2.5rem;
+      color: var(--text-color);
+      align-self: flex-start;
+      cursor: pointer;
+      padding: 0;
+      margin-bottom: var(--padding-md);
+      transition: color 0.3s ease;
+    }
+    .mobile-close:hover {
+      color: var(--accent-color);
+    }
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    .mobile-menu li {
+      margin-bottom: var(--padding-sm);
+    }
+    .mobile-menu li a {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      display: block;
+      border-radius: var(--radius);
+      transition: background-color var(--transition), color var(--transition);
+    }
+    .mobile-menu li a:hover,
+    .mobile-menu li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav.desktop-nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* محتوى الصفحة */
+    main {
+      max-width: var(--max-width);
+      margin: var(--padding-md) auto;
+      padding: 0 var(--padding-md);
+    }
+    article.main-article {
+      background: #fff;
+      padding: var(--padding-md);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      color: var(--primary-color);
+      line-height: 2;
+    }
+    article.main-article h2 {
+      color: var(--accent-color);
+      margin-bottom: var(--padding-md);
+    }
+    article.main-article p,
+    article.main-article ul,
+    article.main-article ol {
+      margin-bottom: var(--padding-md);
+    }
+    article.main-article ul,
+    article.main-article ol {
+      padding-right: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: var(--padding-md);
+      background: var(--secondary-color);
+      color: var(--text-color);
+      margin-top: var(--padding-md);
+      font-size: 0.9rem;
+    }
   </style>
 </head>
-<script src="https://fpyf8.com/88/tag.min.js" data-zone="146637" async data-cfasync="false"></script>
 <body>
-  <header>
-    <div class="logo"><img src="images/icon5.png" alt="شعار الموقع"></div>
-    <nav class="desktop-nav"><ul><li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="contact.html">اتصل بنا</a></li></ul></nav>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-  </header>
-  <nav class="mobile-menu" id="mobile-menu"><ul><li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="contact.html">اتصل بنا</a></li></ul></nav>
-  <main>
-    <h1>التسجيل في مباراة التعليم 2026</h1>
-    <p>تُنظم هذه المباراة من قبل <strong>وزارة التربية الوطنية والتعليم الأولي والرياضة</strong> لاختيار أساتذة التعليم الابتدائي والثانوي، بالإضافة إلى مختصّي الاقتصاد والإدارة، والتربويين والاجتماعيين.</p>
-    <h2>1. خطوات التسجيل</h2>
+
+<header>
+  <div class="logo">
+    <img src="images/icon5.png" alt="شعار الوزارة" />
+  </div>
+  <nav class="desktop-nav">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="services.html">الخدمات</a></li>
+      <li><a href="contact.html" >اتصل بنا</a></li>
+      <li><a href="privacy.html">سياسة الخصوصية</a></li>
+    </ul>
+  </nav>
+  <div class="hamburger" aria-label="قائمة التنقل" role="button" tabindex="0">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<nav class="mobile-menu" aria-label="القائمة الجانبية">
+  <button class="mobile-close" aria-label="إغلاق القائمة">&times;</button>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="about.html">من نحن</a></li>
+    <li><a href="services.html">الخدمات</a></li>
+    <li><a href="contact.html" >اتصل بنا</a></li>
+    <li><a href="privacy.html">سياسة الخصوصية</a></li>
+  </ul>
+</nav>
+
+<main>
+  <article class="main-article">
+    <h1>التسجيل في مباراة التعليم 2026 في المغرب</h1>
+
+    <h2>مواعيد التسجيل وفتح/إغلاق البوابة الإلكترونية</h2>
+    <p>المسار الزمني المتوقع: لم تُعلن وزارة التربية الوطنية مواعيد رسمية لمباراة التعليم 2026 حتى الآن. للعلم، فإن المباراة السابقة 2023/2024 فتحت فيها بوابة الترشيح في الفترة من 24 نونبر إلى 9 دجنبر 2023.</p>
+    <p>من المتوقع أن تُعلن الوزارة في الموسم القادم عن مواعيد مشابهة (عادة في الخريف) ووفق الجدولة الرسمية المعتمدة لاحقًا.</p>
+    <p><strong>البوابة الإلكترونية الرسمية:</strong> يتم التسجيل حصريًا عبر <a href="https://tawdif.men.gov.ma" target="_blank" rel="noopener">tawdif.men.gov.ma</a> لمسالك التعليم العام، أو عبر <a href="https://wolouj.men.gov.ma" target="_blank" rel="noopener">wolouj.men.gov.ma</a> بالنسبة لمباريات ولوج مراكز تكوين الأساتذة. يجب متابعة إعلانات الوزارة وموقعها الإلكتروني لمعرفة رابط التسجيل وتاريخ فتح البوابة بدقة.</p>
+
+    <h2>شروط الترشيح لمباراة التعليم</h2>
+    <ul>
+      <li><strong>الشروط العامة:</strong> يشترط في المترشح أن يكون مغربيًا ويتمتع بالحقوق الوطنية المدنية، وألا يكون قد صدرت في حقه أحكام قضائية مُخلة بالوطنية، وأن تتوفر فيه الشروط الصحية اللازمة لمزاولة مهنة التدريس، وألا يكون مرتبطًا بعلاقة عمل أخرى.</li>
+      <li><strong>السن:</strong> لا يجوز أن يتجاوز عمر المترشح 30 سنة عند تاريخ إجراء المباراة.</li>
+      <li><strong>المؤهلات الدراسية:</strong> شهادة الإجازة (البكالوريوس) في التربية أو ما يعادلها، وفق المرسوم رقم 2.12.90 الصادر في أبريل 2012.</li>
+      <li><strong>التخصصات المقبولة:</strong> الإجازة في تخصص التعليم الابتدائي لجميع المسارات. لمسارات التعليم الثانوي الإعدادي والتأهيلي، الأولوية للمترشحين الحاصلين على شهادات متطابقة مع التخصص المطلوب (مثل: الرياضيات، اللغات الأجنبية، الخ)، مع بعض الاستثناءات الخاصة.</li>
+    </ul>
+
+    <h2>الوثائق المطلوبة في ملف الترشيح</h2>
     <ol>
-      <li>زيارة بوابة التوظيف: <a href="http://tawdif.men.gov.ma" target="_blank" class="external-link">tawdif.men.gov.ma</a></li>
-      <li>إنشاء حساب جديد أو تسجيل الدخول.</li>
-      <li>اختيار الإطار: ابتدائي، ثانوي، اقتصاد وإدارة، تربوي، اجتماعي.</li>
-      <li>تعبئة استمارة الترشيح بمعلوماتك كاملة ودقيقة.</li>
-      <li>مصادقة الطلب خلال الفترة من 24 نونبر إلى 8 دجنبر 2023 (16:30).</li>
+      <li>وصل الترشح الإلكتروني (Reçu) يثبت إتمام ملء الاستمارة.</li>
+      <li>نسخ مصادق عليها من الشهادات الدراسية والبكالوريا، مع بيانات النقط.</li>
+      <li>نسخة من البطاقة الوطنية للتعريف.</li>
+      <li>رخصة المشاركة إدارية للموظفين (إن وجد).</li>
     </ol>
-    <h2>2. شروط الترشيح</h2>
-    <ul>
-      <li>الجنسية المغربية وحسن السيرة.</li>
-      <li>السن لا يتجاوز 30 سنة عند تاريخ الاختبار.</li>
-      <li>استيفاء الشروط الصحية والقانونية.</li>
-      <li>حيازة الإجازة في التربية أو التخصص المناسب.</li>
-    </ul>
-    <h2>3. الوثائق المطلوبة</h2>
-    <ul>
-      <li>وصل الترشح الإلكتروني.</li>
-      <li>نسخ الشهادات الأصلية أو المعادلة.</li>
-      <li>نسخ بيان النقط للبكالوريا والإجازة.</li>
-      <li>البطاقة الوطنية ورخصة المشاركة للموظفين.</li>
-    </ul>
-    <h2>4. بعد تقديم الطلب</h2>
-    <ul>
-      <li>نشر لوائح المترشحين المقبولين على بوابة المباريات ومواقع الأكاديميات.</li>
-      <li>إرسال استدعاءات SMS في بعض الأكاديميات.</li>
-      <li>الإعلان الرسمي يُعدُّ استدعاءً للامتحانات الكتابية والعملية والشفوية.</li>
-    </ul>
-  </main>
-  <footer>جميع الحقوق محفوظة &copy; 2025</footer>
-  <script>
-    document.getElementById('hamburger').addEventListener('click',()=>{
-      document.getElementById('mobile-menu').classList.toggle('active');
+
+    <h2>خطوات التسجيل على البوابة الإلكترونية</h2>
+    <ol>
+      <li><strong>الدخول وإنشاء الحساب:</strong> زيارة <a href="https://tawdif.men.gov.ma" target="_blank" rel="noopener">tawdif.men.gov.ma</a> أو <a href="https://wolouj.men.gov.ma" target="_blank" rel="noopener">wolouj.men.gov.ma</a> وإنشاء حساب جديد.</li>
+      <li><strong>اختيار الإطار:</strong> بعد تسجيل الدخول، اختيار الإطار المطلوب (ابتدائي، ثانوي إعدادي، ثانوي تأهيلي، الخ).</li>
+      <li><strong>ملء الاستمارة:</strong> تعبئة البيانات الشخصية والأكاديمية، وتحميل الوثائق بصيغة PDF ضمن الاستمارة والتأكد من صحة المعلومات.</li>
+      <li><strong>مصادقة الطلب:</strong> حفظ الطلب ومصادقته ضمن المدة المحددة (مثلاً حتى 9 دجنبر 2023).</li>
+      <li><strong>الإعلان عن القوائم:</strong> تُنشر لائحة المقبولين لاجتياز الاختبارات عبر البوابة ومواقع الأكاديميات الجهوية، مع إرسال رسائل SMS أحيانًا.</li>
+      <li><strong>إجراء الاختبارات:</strong> الاختبارات الكتابية ثم العملية (إن وجدت) ثم الشفوية، ويُعلن المجموع النهائي وأسماء الناجحين حسب الأكاديمية.</li>
+    </ol>
+
+    <h2>مستجدات وزارة التربية بشأن مباراة 2026</h2>
+    <p>لم تصدر وزارة التربية الوطنية أي بلاغ جديد بخصوص مباراة 2026 حتى الآن. يُنصح بمتابعة <a href="https://tawdif.men.gov.ma" target="_blank" rel="noopener">tawdif.men.gov.ma</a> و<a href="https://men.gov.ma" target="_blank" rel="noopener">men.gov.ma</a> للاطلاع على التحديثات الرسمية.</p>
+    <p>ذكرت وسائل إعلام مغربية أن الوزير الجديد (محمد سعد برادة) يدرس إعادة النظر في بعض الشروط، خاصة حد السن 30 سنة، ومن المتوقع صدور تفاصيل خلال الأسابيع القادمة.</p>
+  </article>
+</main>
+
+<footer>
+  جميع حقوق النشر محفوظة لـموقع الوثيقة التربوية &copy; 2026
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeBtn = document.querySelector('.mobile-close');
+
+    // فتح/غلق القائمة عند الضغط على الهامبرغر
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
     });
-  </script>
+
+    // غلق القائمة عند الضغط على زر الإغلاق
+    closeBtn.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+
+    // غلق القائمة عند الضغط خارجها
+    document.addEventListener('click', (e) => {
+      if (mobileMenu.classList.contains('active')) {
+        if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        }
+      }
+    });
+
+    // منع إغلاق القائمة عند النقر داخلها (إيقاف انتشار الحدث)
+    mobileMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  });
+</script>
+
 </body>
 </html>
