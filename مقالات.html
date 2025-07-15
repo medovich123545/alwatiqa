@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مقالات تربوية مميزة - منصة الوثيقة التربوية</title>
+  <meta name="description" content="اكتشف مقالات تربوية مميزة حول التعليم في المغرب والعالم. أرسل مقالك الخاص لفريقنا ليفحصه وينشره لآلاف الزوار.">
+  <meta name="keywords" content="مقالات تربوية, التعليم الابتدائي, التعليم في المغرب, مشاركة المقالات, منصة تربوية">
+  <link rel="canonical" href="https://www.alwatiqa.ma/articles.html">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.alwatiqa.ma/articles.html">
+  <meta property="og:title" content="مقالات تربوية مميزة - منصة الوثيقة التربوية">
+  <meta property="og:description" content="اكتشف مقالات تربوية مميزة حول التعليم في المغرب والعالم. أرسل مقالك الخاص لفريقنا ليفحصه وينشره لآلاف الزوار.">
+  <meta property="og:image" content="https://www.alwatiqa.ma/images/cover-articles.jpg">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.alwatiqa.ma/articles.html">
+  <meta property="twitter:title" content="مقالات تربوية مميزة - منصة الوثيقة التربوية">
+  <meta property="twitter:description" content="اكتشف مقالات تربوية مميزة حول التعليم في المغرب والعالم. أرسل مقالك الخاص لفريقنا ليفحصه وينشره لآلاف الزوار.">
+  <meta property="twitter:image" content="https://www.alwatiqa.ma/images/cover-articles.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "مقالات تربوية مميزة",
+    "url": "https://www.alwatiqa.ma/articles.html",
+    "description": "اكتشف مقالات تربوية مميزة حول التعليم في المغرب والعالم. أرسل مقالك الخاص لفريقنا ليفحصه وينشره لآلاف الزوار."
+  }
+  </script>
+
+  <!-- Google Font Cairo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary-color: #102a2d;
+      --secondary-color: #0d2023;
+      --accent-color: #ecc94b;
+      --text-color: #e1e1e1;
+      --light-bg: #f4f4f4;
+      --link-color: #e1e1e1;
+      --link-hover: #ecc94b;
+      --clr-bg: #0d2023;
+      --space-sm: 1rem;
+      --space-md: 2rem;
+      --radius: 10px;
+      --transition: 0.3s ease;
+      --header-height: 70px;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: var(--primary-color);
+      color: var(--text-color);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    a { text-decoration:none; color:inherit; }
+    header {
+      background: var(--secondary-color);
+      height: var(--header-height);
+      padding:0 var(--space-md);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      animation: slideDown 0.6s ease;
+    }
+    .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 250px; /* Augmente la taille du logo image */
+  width: auto;  /* Garde les proportions */
+}
+
+/* Navigation */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav-list li a {
+  padding: 0.5rem 1rem;
+  transition: color var(--transition);
+  color: var(--link-color);
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+  background: var(--link-hover);
+  color: var(--clr-bg);
+  outline: none;
+}
+
+/* Hamburger (mobile menu icon) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: var(--text-color);
+  transition: 0.4s;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: var(--secondary-color);
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    width: 100%;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .logo img {
+    height: 150px; /* taille réduite du logo pour mobile */
+  }
+}
+
+
+    .section-title {
+      font-size:2rem;
+      color:var(--accent-color);
+      text-align:center;
+      margin:var(--space-md) 0;
+      opacity:0;
+      animation: fadeIn 1s forwards 0.5s;
+    }
+    .intro-text {
+      max-width:800px;
+      margin:0 auto var(--space-md);
+      text-align:center;
+      line-height:1.8;
+    }
+    .cta {
+      background:var(--light-bg);
+      color:var(--secondary-color);
+      padding:var(--space-md);
+      border-radius:var(--radius);
+      text-align:center;
+      margin:var(--space-md);
+    }
+    .cta a {
+      display:inline-block;
+      margin-top:1rem;
+      background:var(--accent-color);
+      color:var(--secondary-color);
+      padding:0.75rem 1.5rem;
+      border-radius:var(--radius);
+      transition:transform var(--transition);
+    }
+    .cta a:hover { transform:translateY(-3px); background:#d4b538; }
+
+    .articles-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap:var(--space-md);
+      margin:0 var(--space-md) var(--space-md);
+    }
+    .article-card {
+      background:var(--secondary-color);
+      border-radius:var(--radius);
+      box-shadow:0 4px 16px rgba(0,0,0,0.3);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      transform:translateY(20px);
+      opacity:0;
+      animation: fadeInUp 0.8s forwards;
+    }
+    .article-card:nth-child(1) { animation-delay:0.6s; }
+    .article-card:nth-child(2) { animation-delay:0.7s; }
+    .article-card:nth-child(3) { animation-delay:0.8s; }
+    .article-card:nth-child(4) { animation-delay:0.9s; }
+    .article-card:nth-child(5) { animation-delay:1.0s; }
+    .article-card:nth-child(6) { animation-delay:1.1s; }
+    .article-image { width:100%; height:180px; object-fit:cover; }
+    .article-content {
+      padding:var(--space-sm);
+      flex-grow:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .article-title { font-size:1.1rem; color:var(--accent-color); margin-bottom:0.5rem; }
+    .read-more {
+      align-self:flex-start;
+      background:var(--accent-color);
+      color:var(--secondary-color);
+      padding:0.5rem 1rem;
+      border-radius:var(--radius);
+      transition:transform var(--transition), background var(--transition);
+    }
+    .read-more:hover { transform:translateY(-3px); background:#d4b538; }
+
+    @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);} }
+    @keyframes slideDown { from{transform:translateY(-100%);} to{transform:translateY(0);} }
+  </style>
+</head>
+<body>
+  <header>
+   <div class="logo">
+  <img src="images/icon5.png" alt="Logo الموقع">
+</div>
+
+    <nav>
+      <ul class="nav-list" id="mainMenu">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="#articles">مقالات</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1 class="section-title">بوابة المقالات التربوية   </h1>
+      <p class="intro-text">مرحبًا بك في منصة الوثيقة التربوية، الفضاء الرقمي الذي نهدف من خلاله إلى تقاسم مقالات علمية ومعرفية متخصصة في المجالين التربوي والتعليمي، والتي تسلط الضوء على قضايا التربية المعاصرة، وتواكب مستجدات التعليم، وتُسهم في إثراء المحتوى العربي التربوي، دعمًا للمعلمين، والباحثين، والمهتمين بالشأن التربوي والتعليمي في العالم العربي.
+
+</p>
+    </section>
+<section class="cta">
+  <h2>هل لديك مقالة ترغب في نشرها؟</h2>
+<p>
+يسرُّنا أن نُتيح لكم فرصة مشاركتنا مقالاتكم و التي تتناول كل ما يهمّ الميدان التربوي والتعليمي. سيقوم فريقنا المختص بمراجعة المقالات المرسلة لاختيار أفضلهَا، ليتم نشرها بعد ذلك على موقعنا، حيث ستُعرض أمام عشرات الآلاف من متابعينا.</p>
+  <a href="mailto:contact@alwatiqa.ma?subject=مقالة%20للنشر&body=يرجى%20إرفاق%20مقالتك%20هنا.">أرسل مقالك الآن</a>
+</section>
+
+    <section id="articles" class="articles-section">
+   
+    <div class="articles-grid">
+      <article class="article-card" style="--i:1">
+        <img src="images/a6.jpg" alt="البرمجة في التعليم الابتدائي المغربي" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">البرمجة في التعليم الابتدائي المغربي</h3>
+          <a href="البرمجة في التعليم الابتدائي المغربي.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:2">
+        <img src="images/a22.jpg" alt="التحضير لمباراة التفتيش التربوي" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">التحضير لمباراة التفتيش التربوي</h3>
+          <a href="التحضير لمباراة التفتيش التربوي.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:3">
+        <img src="images/a2.jpg" alt="التلاميذ الخجولين في الفصل" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">التلاميذ الخجولين في الفصل</h3>
+          <a href="التلاميذ الخجولين في الفصل.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:4">
+        <img src="images/a9.jpg" alt="التلاميذ كثيري الحركة" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">التلاميذ كثيري الحركة</h3>
+          <a href="التلاميذ كثيري الحركة.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:5">
+        <img src="images/a5.jpg" alt="التوحد داخل الفصل الدراسي" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">التوحد داخل الفصل الدراسي</h3>
+          <a href="التوحد داخل الفصل الدراسي.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:6">
+        <img src="images/a1.jpg" alt="العقوبات المهنية للأساتذة" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">العقوبات المهنية للأساتذة</h3>
+          <a href="العقوبات المهنية للأساتذة.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:7">
+        <img src="images/a11.jpg" alt="المتعة في العمل التربوي" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">المتعة في العمل التربوي</h3>
+          <a href="المتعة في العمل التربوي.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:8">
+        <img src="images/a13.jpg" alt="المدرسة الرائدة" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">المدرسة الرائدة</h3>
+          <a href="المدرسة الرائدة.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:9">
+        <img src="images/a15.jpg" alt="النظام التعليمي في فنلندا" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">النظام التعليمي في فنلندا</h3>
+          <a href="النظام التعليمي في فنلندا.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:10">
+        <img src="images/a17.jpg" alt="تجربة سنغافورة في التعليم" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">تجربة سنغافورة في التعليم</h3>
+          <a href="تجربة سنغافورة في التعليم.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:11">
+        <img src="images/a16.jpg" alt="تصنيف الدول الأكثر تطورًا في التعليم" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">تصنيف الدول الأكثر تطورًا في التعليم</h3>
+          <a href="تصنيف الدول الأكثر تطورًا في التعليم.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:12">
+        <img src="images/a4.jpg" alt="دمج الأطفال المصابين بالتوحد" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">دمج الأطفال المصابين بالتوحد</h3>
+          <a href="دمج الأطفال المصابين بالتوحد.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:13">
+        <img src="images/a18.jpg" alt="متطلبات سوق الشغل" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">متطلبات سوق الشغل</h3>
+          <a href="متطلبات سوق الشغل.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:14">
+        <img src="images/a20.jpg" alt="مراحل تطور التعليم في المغرب" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">مراحل تطور التعليم في المغرب</h3>
+          <a href="مراحل تطور التعليم في المغرب.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:15">
+        <img src="images/a21.jpg" alt="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا</h3>
+          <a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+
+      <article class="article-card" style="--i:16">
+        <img src="images/a14.jpg" alt="نحو مدرسة رائدة" class="article-image" loading="lazy">
+        <div class="article-content">
+          <h3 class="article-title">نحو مدرسة رائدة</h3>
+          <a href="نحو مدرسة رائدة.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+
+  <!-- Footer -->
+<footer style="text-align:center; padding: var(--space-md); background: var(--secondary-color); color: var(--text-color);">
+  <p>&copy; 2025 منصة الوثيقة التربوية</p>
+</footer>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mainMenu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
