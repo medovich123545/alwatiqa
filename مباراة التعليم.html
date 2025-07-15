@@ -104,7 +104,7 @@
 
     /* Logo */
     .logo img {
-      height: 60px;
+      height: 210px;
       cursor: pointer;
       transition: transform 0.3s ease;
     }
@@ -217,14 +217,20 @@
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
-      nav.desktop-nav {
-        display: none;
-      }
-      .hamburger {
-        display: flex;
-      }
-    }
+   @media (max-width: 768px) {
+  nav.desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .logo img {
+    height: 110px;
+  }
+}
+
 
     /* محتوى الصفحة */
     main {
