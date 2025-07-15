@@ -1,468 +1,803 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقع الوثيقة التربوية - موارد تعليمية رقمية لأساتذة التعليم الابتدائي</title>
-  <!-- 1) Bannière 300×250 "above the fold" -->
-  <style>
-    /* Simple center wrapper for ads */
-    .ad-center { text-align:center; margin:10px 0; }
-  </style>
-  <meta name="description" content="موقع يوفر وثائق تعليمية وإدارية لأساتذة التعليم الابتدائي بالمغرب، نتائج الامتحان المهني، دلائل الأستاذ والمزيد.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- SEO Meta Tags -->
+  <meta name="title" content="الوثيقة التربوية | وثائق ومقالات تربوية لأساتذة التعليم الابتدائي" />
+  <meta name="description" content="منصة تعليمية مغربية تحتوي على نماذج الوثائق الإدارية والتربوية، مقالات تعليمية، نتائج المباريات، وموارد مهمة لأساتذة التعليم الابتدائي." />
+  <meta name="keywords" content="وثائق تربوية, التعليم الابتدائي, المغرب, مباراة التعليم, الترقية, الحركة الجهوية, مقالات تربوية, موارد الأستاذ, وزارة التربية الوطنية" />
+  <meta name="author" content="موقع الوثيقة التربوية" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="ar-MA">
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.alwatiqa.ma">
+  <meta property="og:title" content="الوثيقة التربوية | منصة تعليمية للأساتذة في المغرب">
+  <meta property="og:description" content="نماذج وثائق ومقالات ونتائج تعليمية لفائدة أساتذة التعليم الابتدائي المغربي.">
+  <meta property="og:image" content="https://www.alwatiqa.ma/images/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="الوثيقة التربوية |  كل ما يحاجه الأستاذ من وثائق ، مقالات ، و مذكرات وزارية">
+  <meta name="twitter:description" content="اكتشف نماذج وثائق تربوية، نتائج، ومقالات تعليمية لجميع أساتذة التعليم الابتدائي .">
+  <meta name="twitter:image" content="https://www.alwatiqa.ma/images/og-image.png">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "موقع الوثيقة التربوية",
+    "url": "https://www.alwatiqa.ma",
+    "logo": "https://www.alwatiqa.ma/images/icon5.png",
+    "description": "منصة تعليمية  شاملة تضم كل ما يحاجه الأستاذ من وثائق تربوية، نتائج الحركات الإنتقالية ، مقالات تربوية ، مذكرات وزارية ، موجهة لأساتذة التعليم الابتدائي.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "MA",
+      "addressLocality": "المغرب"
+    }
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
+  <!-- Google Font Cairo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <title>الوثيقة التربوية</title>
   <style>
     :root {
-      --primary-color: #102a2d;
-      --secondary-color: #0d2023;
-      --accent-color: #ecc94b;
-      --text-color: #e1e1e1;
-      --light-bg: #f4f4f4;
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Cairo', sans-serif;
-      color: var(--text-color);
-      background-color: var(--primary-color);
-      direction: rtl;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    a { text-decoration: none; color: inherit; }
+    --primary-color: #102a2d;
+    --secondary-color: #0d2023;
+    --accent-color: #ecc94b;
+    --text-color: #e1e1e1;
+    --light-bg: #f4f4f4;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --radius: 10px;
+    --transition: 0.3s ease;
+    --header-height: 80px;
+  }
 
-    /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 80px;
-      padding: 0 2rem;
-      background-color: var(--secondary-color);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    .logo img {
-      height: 220px;        /* Desktop */
-      width: auto;
-      object-fit: contain;
-    }
-    @media (max-width: 768px) {
-      .logo img {
-        height: 130px;      /* Mobile */
-      }
-    }
-    header nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-    header nav ul li {
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-    header nav ul li:hover {
-      color: var(--accent-color);
-    }
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    /* Hamburger */
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--primary-color);
+    color: var(--text-color);
+    direction: rtl;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Bloquer scroll quand menu ouvert */
+  body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--secondary-color);
+    height: var(--header-height);
+    padding: 0 var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .logo img {
+    max-height: 150px;
+    object-fit: contain;
+  }
+
+  /* NAVIGATION */
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+  }
+  .nav-list li {
+    position: relative;
+  }
+  .nav-list a,
+  .drop-toggle {
+    font-size: 1rem;
+    padding: 0.5rem var(--space-sm);
+    color: var(--text-color);
+    transition: color var(--transition);
+    cursor: pointer;
+  }
+  .nav-list a:hover,
+  .drop-toggle:hover {
+    color: var(--accent-color);
+  }
+
+/* Suppression du cadre blanc */
+.drop-toggle {
+  background: transparent !important;
+  border: none !important;
+    color: var(--text-color) !important; /* garde le texte en blanc */
+}
+
+.drop-toggle:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+  /* DESKTOP : dropdown moderne */
+@media (min-width: 769px) {
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50vw;
+    max-height: 400px;
+    overflow-y: auto;
+  
+    background-color: #0d20234f;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+
+    gap: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.98) translateY(12px);
+    transition:
+      transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 1200;
+    font-family: 'Cairo', sans-serif;
+
+    /* Scrollbar pour Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(80, 80, 80, 0.6) transparent;
+  }
+
+  /* Scrollbar pour WebKit (Chrome, Edge, Safari) */
+  .dropdown-menu::-webkit-scrollbar {
+    width: 0;
+    transition: width 0.3s ease;
+  }
+
+  .dropdown-menu:hover::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .dropdown-menu::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: rgba(80, 80, 80, 0.6);
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(50, 50, 50, 0.8);
+  }
+
+  /* Hover (affichage) */
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0);
+  }
+
+  .dropdown:hover .drop-toggle::after {
+    transform: translateY(-50%) rotate(-135deg);
+    border-color: #2540A1;
+  }
+
+  /* Titres de sections */
+  .dropdown-menu .group-title {
+    grid-column: 1 / -1;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #222222;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #F0F0F0;
+    border-radius: 8px;
+    font-family: 'Cairo', sans-serif;
+  }
+
+  /* Liens améliorés */
+  .dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background-color: #fff;
+    color: #555555;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    font-family: 'Cairo', sans-serif;
+  }
+
+  .dropdown-menu a:hover,
+  .dropdown-menu a:focus {
+    background-color: #f5f8ff;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+    color: #2540A1;
+    outline: none;
+  }
+
+  /* Flèche du menu */
+  .drop-toggle {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    color: #333333;
+    transition: color 0.2s ease;
+    font-family: 'Cairo', sans-serif;
+  }
+
+  .drop-toggle::after {
+    content: "";
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border: solid #888;
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    display: inline-block;
+    transition: transform 0.25s ease, border-color 0.2s ease;
+    pointer-events: none;
+  }
+}
+
+  /* PANEL RESSOURCES FULLSCREEN */
+  #resourcesPanel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    transform: translateX(100%);
+    transition: transform var(--transition);
+    z-index: 1200;
+    overflow-y: auto;
+    padding: var(--space-md);
+  }
+  #resourcesPanel.open {
+    transform: translateX(0);
+  }
+  .close-panel {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  .resources-list {
+    list-style: none;
+    margin-top: 4rem;
+    padding: 0;
+  }
+  .resources-list li + li {
+    margin-block-start: 1rem;
+  }
+  .resources-list a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text-color);
+    background: rgba(255,255,255,0.05);
+    border-radius: var(--radius);
+    transition: background var(--transition);
+  }
+  .resources-list a:hover {
+    background: var(--accent-color);
+    color: var(--secondary-color);
+  }
+
+  /* HAMBURGER */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    transition: 0.4s;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--secondary-color);
+    border-radius: var(--radius);
+    margin: var(--space-md);
+    padding: var(--space-md);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    align-items: center;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+    color: var(--accent-color);
+  }
+  .search-bar {
+    display: flex;
+    background: var(--light-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-block-end: var(--space-md);
+  }
+  .search-bar input {
+    flex: 1;
+    border: none;
+    padding: 0.75rem 1rem;
+  }
+  .search-bar button {
+    background: var(--accent-color);
+    border: none;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    transition: background var(--transition);
+  }
+  .search-bar button:hover {
+    background: #d4b538;
+  }
+  .hero-img img {
+    width: 100%;
+    border-radius: var(--radius);
+  }
+
+  /* STATS */
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-block-start: var(--space-md);
+  }
+  .stat h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-block-end: var(--space-sm);
+  }
+  .stat p {
+    font-size: 1rem;
+  }
+
+  /* FEATURES */
+  .features {
+  display: grid;
+  grid-template-columns: 1fr; /* Par défaut : 1 colonne */
+  gap: var(--space-md);
+  margin: var(--space-md);
+}
+
+/* Version desktop : 3 colonnes */
+@media (min-width: 900px) {
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+  .feature {
+    background: var(--secondary-color);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    padding: var(--space-md);
+    transition: transform var(--transition);
+  }
+  .feature:hover {
+    transform: translateY(-5px);
+  }
+  .feature-icon {
+    font-size: 2rem;
+    margin-block-end: var(--space-sm);
+  }
+  .feature h3 {
+    color: var(--accent-color);
+    margin-block-end: var(--space-sm);
+  }
+
+
+  /* FOOTER */
+  footer {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: var(--space-md);
+    margin-block-start: var(--space-md);
+  }
+
+  /* RESPONSIVE < 768px */
+  @media (max-width: 768px) {
+  .drop-toggle {
+    font-family: 'Cairo', sans-serif !important;
+  }
     .hamburger {
-      display: none;
+      display: flex;
+    }
+    /* on cache le dropdown desktop sur mobile */
+    .dropdown-menu { display: none !important; }
+
+    .nav-list {
+       background:  #0d2023;
+      position: fixed;
+      top: 0;
+      inset-inline-start: 0;
+      height: 100vh;
+      width: 80vw;
+      max-width: 300px;
+      
       flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
+      padding: var(--space-md);
+      transform: translateX(100%);
+      transition: transform var(--transition);
     }
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: var(--text-color);
-      transition: 0.4s;
+    .nav-list.mobile-active {
+      transform: translateX(0);
     }
-    @media (max-width: 768px) {
-      .hamburger { display: flex; }
-      header nav ul { display: none; }
+    .nav-list li + li {
+      margin-block-start: 1rem;
     }
-
-    /* Mobile menu */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 0; right: 0;
-      width: 70%;
-      height: 100%;
-      background-color: var(--secondary-color);
-      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-      padding: 2rem;
-      z-index: 999;
-    }
-    .mobile-menu.active { display: block; }
-    .mobile-menu ul { list-style: none; }
-    .mobile-menu li {
-      margin-bottom: 1.5rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-
-    /* Hero */
     .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(135deg, var(--secondary-color), #183c40);
-    }
-    .hero-text {
-      max-width: 50%;
-      animation: fadeIn 2s ease-in-out;
-    }
-    .hero-text h1 { font-size: 3.5rem; margin-bottom: .5rem; }
-    .hero-text p { font-size: 1.3rem; line-height: 1.8; }
-    .hero img {
-      max-width: 40%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 768px) {
-      .hero { flex-direction: column; text-align: center; padding: 2rem 1rem; }
-      .hero-text { max-width: 100%; }
-      .hero img { display: none; }
-    }
-
-    /* Services */
-    .services {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 3rem;
-      background-color: var(--light-bg);
-    }
-    .service {
-      background-color: var(--secondary-color);
-      padding: 1.5rem;
-      border-radius: 10px;
-      width: 300px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .service:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-    }
-
-    /* Share section */
-    .share-section {
-      text-align: center;
-      margin: 30px 0;
-    }
-    .share-section p {
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .share-buttons {
-      margin-top: 10px;
-      display: inline-flex;
-      gap: 20px;
-    }
-
-    /* Footer */
-    .footer {
-      background-color: var(--secondary-color);
-      padding: 2rem;
+      grid-template-columns: 1fr;
       text-align: center;
     }
-    .footer p { font-size: 1.2rem; line-height: 1.8; }
+    .hero-img {
+      display: none;
+    }
+    .stats {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+  
+    
+  .stats {
+    display: flex;               /* on reste en flex */
+    flex-direction: row !important;  /* forcer l’horizontal */
+    justify-content: space-around;   /* espacer régulièrement */
+    gap: 1rem;                   /* un petit écart entre les blocs */
+  }
 
-    /* Breaking news */
-    .breaking-news {
-      position: fixed;
-      bottom: 0; right: 0;
-      width: 100%; height: 45px;
-      background-color: #191f3b;
-      display: flex; align-items: center;
-      overflow: hidden; z-index: 10000;
-    }
-    .breaking-track {
+    .hamburger {
       display: flex;
-      animation: scroll-right 50s linear infinite;
-      white-space: nowrap;
     }
-    .breaking-item {
-      padding: 0 1.5rem;
-      color: white;
-      font-weight: bold;
-      border-left: 1px solid rgba(255,255,255,0.2);
+  }
+  
+    /* SEARCH RESULTS GRID */
+    #resultsContainer {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1.5rem; margin:var(--space-md);
     }
-    .breaking-item:hover { background-color: rgba(255,255,255,0.15); }
-    @keyframes scroll-right {
-      0%   { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
+    .result-card {
+      background:#0d2023;
+      border-radius:var(--radius);
+      box-shadow:0 4px 12px rgba(0,0,0,0.4);
+      overflow:hidden; display:flex; flex-direction:column;
+      transition:transform 0.3s var(--transition), box-shadow 0.3s var(--transition);
     }
-    @media (max-width: 768px) {
-      .breaking-item { font-size: .9rem; padding: 0 1rem; }
+    .result-card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 8px 24px rgba(0,0,0,0.6);
+    }
+    .result-card a {
+      font-size:1.1rem; font-weight:600;
+      color:var(--accent-color); padding:1rem;
+      border-bottom:1px solid rgba(255,255,255,0.1);
+      transition:color 0.2s var(--transition);
+    }
+    .result-card a:hover { color:#fff; }
+    .result-desc {
+      flex-grow:1; padding:1rem;
+      font-size:0.95rem; color:#ccc; line-height:1.4;
+    }
+    .result-meta {
+      padding:0.75rem 1rem; background:#122f33;
+      font-size:0.85rem; color:#aaa;
+      border-top:1px solid rgba(255,255,255,0.05);
     }
   </style>
-
-  <meta name="6a97888e-site-verification" content="d64cdf6c1e6784804684b2092c85b3fe">
-  <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
- 
 <body>
-  <!-- Header principal -->
+ 
+  <!-- HEADER -->
   <header>
-    <div class="logo">
-      <img src="images/icon5.png" alt="شعار الموقع">
-    </div>
+    <div class="logo"><img src="images/icon5.png" alt="Logo" /></div>
     <nav>
-      <ul>
-        <li><a href="index.html">الرئيسية</a></li>
+      <ul class="nav-list" id="mainMenu" aria-hidden="true">
+     
+        <li class="dropdown">
+          <button class="drop-toggle" aria-haspopup="true" aria-expanded="false">مقالات</button>
+          <ul class="dropdown-menu">
+            <!-- … tous vos liens … -->
+             <li><a href="البرمجة في التعليم الابتدائي المغربي.html">البرمجة في التعليم الابتدائي المغربي</a></li>
+    <li><a href="التحضير لمباراة التفتيش التربوي.html">التحضير لمباراة التفتيش التربوي</a></li>
+    <li><a href="التلاميذ الخجولين في الفصل.html">التلاميذ الخجولين في الفصل</a></li>
+    <li><a href="التلاميذ كثيري الحركة.html">التلاميذ كثيري الحركة</a></li>
+    <li><a href="التوحد داخل الفصل الدراسي.html">التوحد داخل الفصل الدراسي</a></li>
+    <li><a href="العقوبات المهنية للأساتذة.html">العقوبات المهنية للأساتذة</a></li>
+    <li><a href="المتعة في العمل التربوي .html">المتعة في العمل التربوي</a></li>
+    <li><a href="المدرسة الرائدة.html">المدرسة الرائدة</a></li>
+    <li><a href="النظام التعليمي في فنلندا.html">النظام التعليمي في فنلندا</a></li>
+    <li><a href="تجربة سنغافورة في التعليم.html">تجربة سنغافورة في التعليم</a></li>
+    <li><a href="تصنيف الدول الأكثر تطورًا في التعليم.html">تصنيف الدول الأكثر تطورًا في التعليم</a></li>
+    <li><a href="دمج الأطفال المصابين بالتوحد.html">دمج الأطفال المصابين بالتوحد</a></li>
+    <li><a href="متطلبات سوق الشغل.html">متطلبات سوق الشغل</a></li>
+    <li><a href="مراحل تطور التعليم في المغرب.html">مراحل تطور التعليم في المغرب</a></li>
+    <li><a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html">مقارنة  التعليم في المغرب وفرنسا</a></li>
+    <li><a href="نحو مدرسة رائدة.html">نحو مدرسة رائدة</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">من نحن</a></li>
         <li><a href="services.html">الخدمات</a></li>
         <li><a href="contact.html">اتصل بنا</a></li>
         <li><a href="privacy.html">سياسة الخصوصية</a></li>
       </ul>
     </nav>
-    <div class="hamburger" onclick="toggleMobileMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="hamburger" aria-label="القائمة الرئيسية" role="button" tabindex="0">
+      <div></div><div></div><div></div>
     </div>
   </header>
 
-  <!-- Menu mobile (initialement caché) -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="about.html">من نحن</a></li>
-      <li><a href="services.html">الخدمات</a></li>
-      <li><a href="contact.html">اتصل بنا</a></li>
-      <li><a href="privacy.html">سياسة الخصوصية</a></li>
-    </ul>
-  </div>
-
-  <!-- Section Hero -->
-  <div class="hero">
+  <!-- HERO -->
+  <section class="hero">
     <div class="hero-text">
-      <h1>موقع الوثيقة التربوية</h1>
-      <p>
-        منصة مخصصة لأساتذة التعليم الابتدائي، توفر كل ما يحتاجه أستاذ التعليم الابتدائي من وثائق وأدوات تربوية تسهّل عليهم التخطيط والتنفيذ داخل القسم. تضم المنصة جذاذات الدروس، التخطيطات السنوية والمرحلية، شبكات التقويم، نماذج التقارير، وموارد داعمة تراعي خصوصيات كل مستوى دراسي. بفضل هذا الدعم، يتمكن الأستاذ من تنظيم عمله بكفاءة، توفير وقته، والتركيز أكثر على الجوانب البيداغوجية والتربوية التي تعزز من جودة التعلمات داخل الفصل.
-      </p>
+      <h1>منصة الوثيقة التربوية</h1>
+      <p>كل ما يحتاجه أستاذ التعليم الابتدائي من وثائق تربوية.</p>
+      <form class="search-bar" onsubmit="event.preventDefault(); searchDocs();">
+        <input type="text" id="searchInput" placeholder="اكتب هنا للبحث..." aria-label="بحث" />
+        <button type="submit">ابحث</button>
+      </form>
+      <div class="stats">
+        <div class="stat"><h2>120K+</h2><p>وثيقة متوفرة</p></div>
+        <div class="stat"><h2>15K+</h2><p>أستاذ مسجل</p></div>
+        <div class="stat"><h2>7.1</h2><p>تقييم مستحسن</p></div>
+      </div>
     </div>
-    <img src="images/prof.png" alt="صورة توضيحية">
-  </div>
-
-  <!-- Section Services -->
-  <section class="services">
-    <a href="idariya.html">
-      <div class="service">
-        <h3>وثائق إدارية</h3>
-        <p>كل ما يحتاجه الأستاذ لتنظيم عمله الإداري، من محاضر الاجتماعات، وتوزيع الحصص، إلى تقارير التتبع اليومي.</p>
-      </div>
-    </a>
-    <a href="chakhsiya.html">
-      <div class="service">
-        <h3>وثائق شخصية</h3>
-        <p>نماذج تساعد الأستاذ على تنظيم معلوماته الخاصة، مثل السيرة الذاتية، طلبات الانتقال، والشهادات الإدارية.</p>
-      </div>
-    </a>
-    <a href="mihani.html">
-      <div class="service">
-        <h3>امتحان الكفاءة المهنية</h3>
-        <p>مواضيع الامتحانات السابقة، التصحيحات الرسمية، ونصائح منهجية للاستعداد الجيد وتحقيق النجاح.</p>
-      </div>
-    </a>
-    <a href="choix.html">
-      <div class="service">
-        <h3>المراقبة المستمرة</h3>
-        <p>روابط تحميل الفروض لكل المستويات والمواد، منظمة حسب الأسلاك التعليمية والمراحل الدراسية.</p>
-      </div>
-    </a>
+    <div class="hero-img"><img src="images/prof.png" alt="Teacher illustration" /></div>
   </section>
 
-  <!-- Section Partage -->
-  <div class="share-section">
-    <p>📢 شارك موقعنا عبر :</p>
-    <div class="share-buttons">
-      <!-- WhatsApp -->
-      <a href="https://api.whatsapp.com/send?text=اكتشف%20موقع%20الوثيقة%20التربوية%20:%20https://www.alwatiqa.ma" target="_blank">
-        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="مشاركة عبر واتساب"/>
-      </a>
-      <!-- Twitter -->
-      <a href="https://twitter.com/intent/tweet?text=اكتشف%20موقع%20الوثيقة%20التربوية&url=https://www.alwatiqa.ma" target="_blank">
-        <img src="https://img.icons8.com/color/48/000000/twitter.png" alt="مشاركة عبر تويتر"/>
-      </a>
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.alwatiqa.ma" target="_blank">
-        <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="مشاركة عبر فيسبوك"/>
-      </a>
-    </div>
+  <!-- SEARCH RESULTS -->
+  <main>
+    <div id="resultsContainer"></div>
+  </main>
+ <!-- FEATURES -->
+<section class="features">
+  <!-- 1) الوثائق الشخصية والإدارية -->
+  <a href="idariya.html" class="feature">
+    <div class="feature-icon">📂</div>
+    <h3>وثائق شخصية وإدارية</h3>
+    <p>جميع النماذج الإدارية والشخصية: محاضر الاجتماعات، توزيع الحصص، وتنظيم البيانات الشخصية.</p>
+  </a>
+
+  <!-- 2) مباريات حامل الشهادات -->
+  <a href="مباراة حاملي الشهادات.html" class="feature">
+    <div class="feature-icon">🎓</div>
+    <h3> مباراة حاملي الشهادات </h3>
+   <p> نتائج مباراة الترقية وتغيير الإطار 2025</p>
+  </a>
+
+  <!-- 3) مباريات التعليم -->
+  <a href="مباراة التعليم.html
+" class="feature">
+    <div class="feature-icon">🏫</div>
+    <h3>مباراة التعليم</h3>
+   <p>التسجيل في مباراة التعليم 2026
+</p>
+  </a>
+
+  <!-- 4) نتائج الحركة الجهوية -->
+  <a href="نتائج الحركة الجهوية .html" class="feature">
+    <div class="feature-icon">📊</div>
+    <h3>نتائج الحركة الجهوية</h3>
+    <p>نتائج الحركة الانتقالية الجهويةالخاصة بأسلاك التعليم 2025  </p>
+  </a>
+
+  <!-- 5) الترقية بالاختيار والتصنيف -->
+  <a href="الترقية بالاختيار والتسقيف.html" class="feature">
+    <div class="feature-icon">⬆️</div>
+    <h3>الترقية بالاختيار والتسقيف</h3>
+    <p>نتائج الترقية بالاختيار والتسقيف لجميع الفئات التعليمية </p>
+  </a>
+
+  <!-- 6) مقالات تربوية -->
+  <a href="مقالات.html" class="feature">
+    <div class="feature-icon">📚</div>
+    <h3>مقالات تربوية</h3>
+    <p>مجموعة مختارة من المقالات الحديثة حول أساليب التدريس والتربية الابتكارية.</p>
+  </a>
+</section>
+
+  <!-- RESSOURCES PANEL (MOBILE) -->
+  <div id="resourcesPanel" aria-hidden="true">
+    <button class="close-panel" aria-label="Fermer">&times;</button>
+    <ul class="resources-list">
+        <li><a href="البرمجة في التعليم الابتدائي المغربي.html">البرمجة في التعليم الابتدائي المغربي</a></li>
+    <li><a href="التحضير لمباراة التفتيش التربوي.html">التحضير لمباراة التفتيش التربوي</a></li>
+    <li><a href="التلاميذ الخجولين في الفصل.html">التلاميذ الخجولين في الفصل</a></li>
+    <li><a href="التلاميذ كثيري الحركة.html">التلاميذ كثيري الحركة</a></li>
+    <li><a href="التوحد داخل الفصل الدراسي.html">التوحد داخل الفصل الدراسي</a></li>
+    <li><a href="العقوبات المهنية للأساتذة.html">العقوبات المهنية للأساتذة</a></li>
+    <li><a href="المتعة في العمل التربوي .html">المتعة في العمل التربوي</a></li>
+    <li><a href="المدرسة الرائدة.html">المدرسة الرائدة</a></li>
+    <li><a href="النظام التعليمي في فنلندا.html">النظام التعليمي في فنلندا</a></li>
+    <li><a href="تجربة سنغافورة في التعليم.html">تجربة سنغافورة في التعليم</a></li>
+    <li><a href="تصنيف الدول الأكثر تطورًا في التعليم.html">تصنيف الدول الأكثر تطورًا في التعليم</a></li>
+    <li><a href="دمج الأطفال المصابين بالتوحد.html">دمج الأطفال المصابين بالتوحد</a></li>
+    <li><a href="متطلبات سوق الشغل.html">متطلبات سوق الشغل</a></li>
+    <li><a href="مراحل تطور التعليم في المغرب.html">مراحل تطور التعليم في المغرب</a></li>
+    <li><a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html">مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا</a></li>
+    <li><a href="نحو مدرسة رائدة.html">نحو مدرسة رائدة</a></li>
+    </ul>
   </div>
+  <div id="overlay"></div>
 
-  <!-- Emplacement de l’annonce (ad 160×300) -->
-  <div class="ad-center" id="ad-160x300-footer">
-    <!-- Ici, vous pourrez insérer votre code de bannière ad 160×300 -->
-  </div>
+  <!-- DATA SCRIPTS -->
+  <script src="documents1.js"></script>
+  <script src="dalil1.js"></script>
+<!-- SEARCH ENGINE & INTERACTIONS -->
+<script>
+  const documents = [...documents1, ...dalil1];
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>نحن هنا لدعم عملك. تواصل معنا لمعرفة المزيد عن كيفية مساعدتك في النمو والنجاح.</p>
-  </footer>
+  function searchDocs() {
+    const q = document.getElementById("searchInput").value.trim().toLowerCase();
+    const container = document.getElementById("resultsContainer");
+    container.innerHTML = "";
 
-  <!-- Bande déroulante breaking news -->
-  <div class="breaking-news">
-    <div class="breaking-track">
-      <a href="الترقية بالاختيار والتسقيف.html" class="breaking-item">📚 2025 نتائج الترقية برسم سنة -</a>
-      <a href="نتائج الحركة الإنتقالية.html" class="breaking-item">📚 2025 نتائج الحركة الإنتقالية -</a>
-      <a href="مباراة التعليم.html" class="breaking-item">📚 دليلك الشامل للتسجيل في مباراة التعليم 2026 -</a>
-      <a href="مباراة التعليم الأولي 2025.html" class="breaking-item">📚 جميع المعلومات حول مباراة التعليم الأولي 2025 -</a>
-      <a href="ramdani-berrada-interview.html" class="breaking-item">📚 اللقاء الصحفي الكامل الذي أجراه وزير التربية الوطنية مع الرمضاني على القناة الثانية -</a>
-      <a href="haraka.html" class="breaking-item">📚 📢 انطلاق الحركة الانتقالية الوطنية لهيئة التدريس 2025-2026 -</a>
-      <a href="examen-bac-2025.html" class="breaking-item">📚 امتحان الباكالوريا للموسم الدراسي 2026/2025 -</a>
-      <a href="قرعة الهجرة إلى أمريكا.html" class="breaking-item">📚 نتائج قرعة الهجرة إلى أمريكا -</a>
-      <a href="مباراة حاملي الشهادات.html" class="breaking-item">📚 مباراة حاملي الشهادات - دورة 2025 -</a>
-      <a href="مسالك تكوين المفتشين .html" class="breaking-item">📚 تأجيل مباريات ولوج مسالك تكوين المفتشين التربويين - دورة 2025 -</a>
-      <a href="نتائج الامتحان المهني.html" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025 موجودة هنا جميع الفئات -</a>
-      <a href="مسلك تكوين المفتشين.html" class="breaking-item">📢 إعلان عن إجراء مباريات ولوج مسالك تكوين المفتشين التربويين بمركز تكوين مفتشي التعليم -</a>
-      <a href="مسلك تكوين المستشارين.html" class="breaking-item">⚠️ مباراة ولوج مسلك تكوين المستشارين في التوجيه التربوي ومسلك تكوين المستشارين في التخطيط التربوي -</a>
-      <a href="الإدارة التربوية.html" class="breaking-item">الشروط الجديدة لمباراة الإدارة التربوية حسب النظام الأساسي الجديد -</a>
-      <a href="ولوج مركز التوجيه والتخطيط.html" class="breaking-item">📚 نتائج نهائية مباراة الدخول ولوج مركز التوجيه والتخطيط -</a>
-    </div>
-  </div>
-
-  <!-- JavaScript pour le menu mobile et écoute globale -->
-  <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('active');
+    if (!q) {
+      container.innerHTML = "<p style='color:#ccc; text-align:center;'>الرجاء إدخال كلمة للبحث.</p>";
+      return;
     }
 
-    document.addEventListener('click', function (event) {
-      const menu = document.getElementById('mobileMenu');
-      const hamburger = document.querySelector('.hamburger');
-      if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
-        menu.classList.remove('active');
+    const results = documents.filter(doc =>
+      doc.title.toLowerCase().includes(q) ||
+      doc.description.toLowerCase().includes(q) ||
+      (Array.isArray(doc.keywords) && doc.keywords.some(k => k.toLowerCase().includes(q)))
+    );
+
+    if (results.length === 0) {
+      container.innerHTML = `<p style='color:#ccc; text-align:center;'>لا توجد نتائج لكلمة "<strong>${q}</strong>".</p>`;
+      return;
+    }
+
+    results.forEach(doc => {
+      const card = document.createElement("div");
+      card.className = "result-card";
+      card.innerHTML = `
+        <a href="${doc.url}" target="_blank" rel="noopener">${doc.title}</a>
+        <p class="result-desc">${doc.description}</p>
+        <div class="result-meta">${doc.url}</div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  window.searchDocs = searchDocs;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.querySelector('.hamburger');
+    const nav = document.getElementById('mainMenu');
+    const overlay = document.getElementById('overlay');
+    const resourcesBtn = document.querySelector('.drop-toggle');
+    const resourcesPanel = document.getElementById('resourcesPanel');
+    const closePanelBtn = resourcesPanel.querySelector('.close-panel');
+
+    function toggleMobileMenu() {
+      const open = nav.classList.toggle('mobile-active');
+      document.body.classList.toggle('menu-open', open);
+      nav.setAttribute('aria-hidden', !open);
+      overlay.classList.toggle('active', open);
+    }
+
+    // Ouvre/ferme le menu mobile
+    menuBtn.addEventListener('click', toggleMobileMenu);
+    menuBtn.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMobileMenu();
       }
     });
-  </script>
 
-  <!-- Données structurées JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Event",
-        "name": "نتائج الامتحان المهني 2024-2025",
-        "startDate": "2024-05-01",
-        "endDate": "2025-05-01",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "موقع الوثيقة التربوية",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "MA"
-          }
-        },
-        "organizer": {
-          "@type": "Organization",
-          "name": "وزارة التربية الوطنية",
-          "url": "https://www.men.gov.ma"
-        },
-        "image": "https://alwatiqa.ma/images/events/نتائج_الامتحان_المهني.png",
-        "description": "Découvrez les résultats de l'examen المهني pour toutes les الفئات via موقع الوثيقة التربوية.",
-        "url": "https://alwatiqa.ma/نتائج_الامتحان_المهني.html"
-      },
-      {
-        "@type": "Event",
-        "name": "جديد مباراة الإدارة التربوية 2025",
-        "startDate": "2025-03-15",
-        "endDate": "2025-06-01",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "مركز التكوين الجهوي",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "الرباط",
-            "addressCountry": "MA"
-          }
-        },
-        "organizer": {
-          "@type": "Organization",
-          "name": "وزارة التربية الوطنية",
-          "url": "https://www.men.gov.ma"
-        },
-        "image": "https://alwatiqa.ma/images/events/مباراة_أطر_الإدارة_التربوية.png",
-        "description": "كل جديد بخصوص مباراة ولوج سلك تكوين أطر الإدارة التربوية 2025.",
-        "url": "https://alwatiqa.ma/مباراة_الإدارة_التربوية.html"
-      },
-      {
-        "@type": "Event",
-        "name": "مباراة التفتيش 2025 - مركز تكوين مفتشي التعليم",
-        "startDate": "2025-04-10",
-        "endDate": "2025-07-01",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "مركز تكوين مفتشي التعليم",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "الرباط",
-            "addressCountry": "MA"
-          }
-        },
-        "organizer": {
-          "@type": "Organization",
-          "name": "وزارة التربية الوطنية",
-          "url": "https://www.men.gov.ma"
-        },
-        "image": "https://alwatiqa.ma/images/events/مركز_تكوين_المفتشين.jpg",
-        "description": "مباراة التفتيش 2025: الدخول إلى مركز تكوين مفتشي التعليم لجميع التخصصات.",
-        "url": "https://alwatiqa.ma/مباراة_التفتيش_2025.html"
-      },
-      {
-        "@type": "Event",
-        "name": "إعلان عن مباريات ولوج مسالك تكوين المفتشين التربويين 2025",
-        "startDate": "2025-04-01",
-        "endDate": "2025-07-15",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "مركز تكوين مفتشي التعليم",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "الرباط",
-            "addressCountry": "MA"
-          }
-        },
-        "organizer": {
-          "@type": "Organization",
-          "name": "وزارة التربية الوطنية",
-          "url": "https://www.men.gov.ma"
-        },
-        "image": "https://alwatiqa.ma/images/events/إعلان_عن_مباريات_التكوين_2025.jpg",
-        "description": "إعلان رسمي عن فتح باب الترشيح لمباريات الولوج لمسالك التكوين بمركز تكوين المفتشين التربويين لسنة 2025.",
-        "url": "https://alwatiqa.ma/إعلان_مباريات_التكوين_2025.html"
+    // Overlay : ferme menu mobile ou resourcesPanel
+    overlay.addEventListener('click', () => {
+      if (nav.classList.contains('mobile-active')) toggleMobileMenu();
+      if (resourcesPanel.classList.contains('open')) {
+        resourcesPanel.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        resourcesPanel.setAttribute('aria-hidden', 'true');
       }
-    ]
-  }
-  </script>
-  
+    });
+
+    // Panneau ressources mobile
+    resourcesBtn.addEventListener('click', e => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        resourcesPanel.classList.add('open');
+        document.body.classList.add('menu-open');
+        resourcesPanel.setAttribute('aria-hidden', 'false');
+      }
+    });
+    closePanelBtn.addEventListener('click', () => {
+      resourcesPanel.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      resourcesPanel.setAttribute('aria-hidden', 'true');
+    });
+
+    // Swipe pour fermer resourcesPanel
+    let startX = 0;
+    resourcesPanel.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    });
+    resourcesPanel.addEventListener('touchmove', e => {
+      const delta = startX - e.touches[0].clientX;
+      if (delta < 0) {
+        resourcesPanel.style.transform = `translateX(${100 + (delta / window.innerWidth) * 100}%)`;
+      }
+    });
+    resourcesPanel.addEventListener('touchend', e => {
+      const delta = startX - e.changedTouches[0].clientX;
+      if (delta < -window.innerWidth * 0.3) {
+        resourcesPanel.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        resourcesPanel.setAttribute('aria-hidden', 'true');
+      } else {
+        resourcesPanel.style.transform = '';
+      }
+    });
+
+    // **FERMER LE MENU MOBILE AU CLIC EN DEHORS**
+    document.addEventListener('click', function(e) {
+      const isClickInsideNav = nav.contains(e.target);
+      const isClickOnBtn   = menuBtn.contains(e.target);
+      if (!isClickInsideNav && !isClickOnBtn && nav.classList.contains('mobile-active')) {
+        toggleMobileMenu();
+      }
+    });
+  });
+</script>
+
+<footer>
+  <p>© 2025 موقع الوثيقة التربوية. جميع الحقوق محفوظة.</p>
+</footer>
 </body>
 </html>
