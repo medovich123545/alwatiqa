@@ -5,361 +5,367 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="دليل شامل للأساتذة يتضمن نماذج ووثائق إدارية قابلة للتنزيل، مع شروحات تفصيلية حول كل وثيقة وأهميتها في العمل التربوي." />
   <title>نماذج المستندات الإدارية والشخصية للأستاذ</title>
-  <style>
-    :root {
-      --primary-color: #102a2d;
-      --secondary-color: #0d2023;
-      --accent-color: #ecc94b;
-      --text-color: #e1e1e1;
-      --light-bg: #f4f4f4;
-      --transition: 0.3s ease;
-    }
-  
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-  
-    body {
-      font-family: 'Cairo', sans-serif;
-      background: var(--primary-color);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-  
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-  
-    /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 80px;
-      padding: 0 2rem;
-      background-color: var(--secondary-color);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-  
-    .logo img {
-      height: 300px;
-      width: auto;
-      object-fit: contain;
-      margin-top: 5px;
-      max-width: 100%;
-    }
-  
-    header nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-  
-    header nav ul li {
-      color: #a0c4c8;
-      cursor: pointer;
-      transition: color var(--transition);
-    }
-  
-    header nav ul li:hover {
-      color: var(--text-color);
-    }
-  
-    /* Hero section */
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(135deg, var(--secondary-color), #183c40);
-      color: var(--text-color);
-    }
-  
-    .hero-text {
-      max-width: 50%;
-      animation: fadeIn 2s ease-in-out;
-    }
-  
-    .hero-text h1 {
-      font-size: 3.5rem;
-      margin: 0;
-    }
-  
-    .hero-text p {
-      max-width: 700px;
-      font-size: 1.3rem;
-      margin-top: 1rem;
-      line-height: 1.8;
-    }
-  
-    .hero img {
-      max-width: 40%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-  
-    /* Cards + Services */
-    .services {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 3rem;
-      flex-wrap: wrap;
-      background-color: var(--light-bg);
-    }
-  
-    .service, .doc-card {
-      background-color: var(--secondary-color);
-      padding: 1.5rem;
-      border-radius: 10px;
-      width: 300px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-  
-    .service:hover, .doc-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    }
-  
-    .doc-card h3 {
-      margin-bottom: 0.75rem;
-      font-size: 1.2rem;
-      color: var(--accent-color);
-    }
-  
-    .doc-card p {
-      margin-bottom: 1rem;
-      font-size: 1rem;
-    }
-  
-    .download-link {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: var(--accent-color);
-      color: #000;
-      border-radius: 4px;
-      font-weight: bold;
-      transition: background var(--transition);
-    }
-  
-    .download-link:hover {
-      background: #d4b93a;
-    }
-  
-    /* Sync Button */
-    .sync-button {
-      position: fixed;
-      bottom: 70px;
-      right: 20px;
-      background-color: var(--accent-color);
-      padding: 12px 18px;
-      border-radius: 30px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      color: #000;
-      font-size: 1rem;
-      font-weight: bold;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-  
-    .sync-button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
-  
-    /* Footer */
-    .footer, footer {
-      background-color: var(--secondary-color);
-      color: var(--text-color);
-      padding: 2rem;
-      text-align: center;
-    }
-  
-    .footer p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-    }
-  
-    /* Hamburger */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-    }
-  
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: var(--text-color);
-      transition: var(--transition);
-    }
-  
-    /* Mobile menu */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 70%;
-      height: 100%;
-      background-color: var(--secondary-color);
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
-      padding: 2rem;
-      z-index: 999;
-    }
-  
-    .mobile-menu.active {
-      display: block;
-      animation: slideInMenu 0.3s forwards;
-    }
-  
-    .mobile-menu ul {
-      list-style: none;
-      padding: 0;
-    }
-  
-    .mobile-menu li {
-      margin-bottom: 1.5rem;
-      font-size: 1.2rem;
-      color: var(--text-color);
-      cursor: pointer;
-    }
-  
-    /* Breaking News */
-    .breaking-news {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      height: 45px;
-      background-color: #191f3b;
-      color: white;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      z-index: 9999;
-      font-family: 'Cairo', sans-serif;
-    }
-  
-    .breaking-track {
-      display: flex;
-      animation: scroll-right 20s linear infinite;
-      white-space: nowrap;
-    }
-  
-    .breaking-item {
-      padding: 0 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border-left: 1px solid rgba(255, 255, 255, 0.2);
-      color: white;
-      text-decoration: none;
-    }
-  
-    .breaking-item:first-child {
-      border-left: none;
-    }
-  
-    .breaking-item:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-    }
-  
-    .breaking-news:hover .breaking-track {
-      animation-play-state: paused;
-    }
-  
-    /* Grid Docs */
-    .docs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-  
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  
-    @keyframes slideInMenu {
-      from { transform: translateX(100%); }
-      to { transform: translateX(0); }
-    }
-  
-    @keyframes scroll-right {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-  
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem 1rem;
-      }
-      /* Pause uniquement pendant qu’on reste appuyé */
-  .breaking-news:active .breaking-track {
-    animation-play-state: paused !important;
-  }
-      .hero-text {
-        max-width: 100%;
-      }
-  
-      .hero img {
-        display: none;
-      }
-  
-      .services {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 16px;
-      }
-  
-      .hamburger {
-        display: flex;
-      }
-  
-      header nav ul {
-        display: none;
-      }
-  
-      .logo img {
-        height: 300px;
-        transform: translate(30px, 20px);
-      }
-  
-      .sync-button {
-        right: 16px;
-        padding: 10px 16px;
-      }
-  
-      .hero-text h1 {
-        font-size: 2.5rem;
-      }
-  
-      .hero-text p {
-        font-size: 1rem;
-      }
-  
-      .breaking-item {
-        font-size: 0.9rem;
-        padding: 0 1rem;
-      }
-    }
-  </style>
+<style>
+  :root {
+  --primary-color:   #102a2d;
+  --secondary-color: #0d2023;
+  --accent-color:    #ecc94b;
+  --text-color:      #e1e1e1;
+  --light-bg:        #f4f4f4;
+  --transition:      0.3s ease;
+}
 
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  /* FOOTER */
+  footer {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: var(--space-md);
+    margin-block-start: var(--space-md);
+  }
+body {
+  font-family: 'Cairo', sans-serif;
+  background: var(--primary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ======== HEADER ======== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+.logo img {
+  height: 200px;
+  width: auto;
+}
+
+/* Desktop nav */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav ul li a {
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* Hamburger (mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: var(--text-color);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; right: 0;
+  width: 75%;
+  height: 100%;
+  background: var(--secondary-color);
+  padding: 2rem;
+  z-index: 1100;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform var(--transition);
+}
+.mobile-menu.active {
+  display: block;
+  transform: translateX(0);
+}
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.mobile-menu ul li a {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: color var(--transition);
+}
+.mobile-menu ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* ======== HERO ======== */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--secondary-color), #183c40);
+  color: var(--text-color);
+}
+.hero-text {
+  max-width: 700px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow var(--transition);
+  text-align: center;
+}
+.hero-text:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+.hero-text h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.75rem;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ======== SERVICES & DOC-CARDS ======== */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  flex-wrap: wrap;
+  background-color: var(--light-bg);
+}
+.service, .doc-card {
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.service:hover, .doc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+/* Document grid */
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+/* Main doc-card */
+.doc-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.doc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+/* Image wrapper */
+.card-image-wrapper {
+  width: 100%;
+  max-height: 140px;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.card-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.doc-card:hover .card-image-wrapper {
+  max-height: 1000px;
+}
+/* Card content */
+.card-content {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.doc-card:hover .card-content h3,
+.doc-card:hover .card-content p {
+  display: none;
+}
+.card-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent-color);
+}
+.card-content p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+  line-height: 1.4;
+}
+/* Download link */
+.download-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #536976, #292e49);
+  color: #ffffff;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background var(--transition);
+}
+.download-link:hover {
+  background: linear-gradient(135deg, #3d4a63, #1f2235);
+}
+
+/* ======== SYNC BUTTON ======== */
+.sync-button {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: var(--accent-color);
+  padding: 12px 18px;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.sync-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Keyframes pour le défilement */
+@keyframes scroll-right {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  /* Header */
+  nav { display: none; }
+  .hamburger { display: flex; }
+  .logo img { height: 110px; }
+
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .hero-text { max-width: 100%; }
+  
+  /* Services & grid */
+  .services {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+  .docs-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  /* Doc-cards mobile tweaks */
+  .doc-card {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 0.75rem;
+    transition: none;
+  }
+  .card-image-wrapper { max-height: 100px; }
+  .doc-card:hover .card-image-wrapper { max-height: 500px; }
+  .card-content {
+    padding: 1rem;
+  }
+  .card-content h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .card-content p  { font-size: 0.9rem; margin-bottom: 0.75rem; }
+  .download-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Container global (pour centrer tout le contenu) */
+body > main,
+body > header,
+body > footer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+/* Sur mobile, t’assurer qu’aucun élément n’excède la largeur */
+@media (max-width: 768px) {
+  /* Les sections prennent toujours 100% de la largeur dispo */
+  section, .docs-grid {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Hero text centré et largeur auto */
+  .hero-text {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+
+  /* Supprime tout margin/padding horizontal excessif sur .doc-card */
+  .doc-card {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+</style>
     
 </head>
 <body>
@@ -392,105 +398,233 @@
       </ul>
     </div>
   <main>
-    <section class="hero">
-      <h1>نماذج المستندات الإدارية والشخصية للأستاذ</h1>
-      <p>دليل شامل للأساتذة يتضمن نماذج ووثائق إدارية قابلة للتنزيل، مع شروحات تفصيلية حول كل وثيقة وأهميتها في العمل التربوي.</p>
-    </section>
-    <section class="docs-grid">
-   <!-- البطاقة الشخصية للأستاذ -->
-<div class="doc-card">
-    <h3>البطاقة الشخصية للأستاذ</h3>
-    <p>وثيقة أساسية تتضمن معلومات الأستاذ الإدارية والشخصية، تسهل حفظ السجلات والتواصل.</p>
-    <a href="https://drive.google.com/file/d/1OHRrxkNHay1r4VJEMCn9PK9kfVe5ogQy/view?usp=drive_link" class="download-link" target="_blank">تحميل</a>
-  </div>
+<section class="hero">
+  <div class="hero-text">
+    <h1>نماذج المستندات الإدارية والشخصية للأستاذ</h1>
+  <p>
+  دليل شامل للأساتذة يتضمن نماذج ووثائق إدارية قابلة للتنزيل، مع شروحات تفصيلية حول كل وثيقة وأهميتها في العمل التربوي. 
+
   
-  <!-- إحصائيات التلاميذ -->
+  
+</p>
+
+  </div>
+
+</section>
+
+<section class="docs-grid">
+  <!-- البطاقة الشخصية للأستاذ -->
   <div class="doc-card">
-    <h3>إحصائيات التلاميذ</h3>
-    <p>وثيقة تقدم نظرة دقيقة حول عدد التلاميذ داخل الفصل حسب المستوى الدراسي والجنس، لتخطيط الموارد.</p>
-    <a href="https://docs.google.com/document/d/1jR49De-Tou_P4W2bgV13MpDUqdWLWZ_A/edit" class="download-link" target="_blank">تحميل</a>
-  </div>
-  
-  <!-- لائحة الأيام الوطنية والدولية -->
-  <div class="doc-card">
-    <h3>لائحة الأيام الوطنية والدولية</h3>
-    <p>لائحة تواريخ المناسبات الرسمية للمساعدة في برمجة الأنشطة المدرسية طوال العام.</p>
-    <a href="https://docs.google.com/document/d/12Vu2n73NXI2gCXD-h4Jc2iAuArz1Vh2L/edit" class="download-link" target="_blank">تحميل</a>
-  </div>
-  
-  <!-- ورقة عناوين المراجع المعتمدة -->
-  <div class="doc-card">
-    <h3>ورقة عناوين المراجع المعتمدة</h3>
-    <p>نظرة شاملة على أهم الكتب والمراجع المعتمدة في التدريس لتطوير الرصيد المعرفي.</p>
-    <a href="https://docs.google.com/document/d/1xvlpfUxtkTin3k7RspM-_amPC_79Ovqn/edit" class="download-link" target="_blank">تحميل</a>
-  </div>
-  
-  <!-- محضر تأسيس تعاونية القسم -->
-  <div class="doc-card">
-    <h3>محضر تأسيس تعاونية القسم</h3>
-    <p>وثيقة رسمية لتوثيق إنشاء تعاونية القسم بمشاركة التلاميذ، لتعزيز العمل الجماعي.</p>
-    <a href="https://docs.google.com/document/d/1U9hRBHdb8OKy_uTez7Lwh-STabZROWdY/edit" class="download-link" target="_blank">تحميل</a>
-  </div>
-  
-  <!-- النشيد الوطني المغربي -->
-  <div class="doc-card">
-    <h3>النشيد الوطني المغربي</h3>
-    <p>نسخة من النشيد الوطني لتلقينه للتلاميذ وترديده خلال الأنشطة والمناسبات الرسمية.</p>
-    <a href="https://docs.google.com/document/d/1dlaIg01CnL4sH9I_z589KLYxJThrW2tZ/edit" class="download-link" target="_blank">تحميل</a>
-  </div>
-  
-  <!-- القانون الداخلي للقسم -->
-  <div class="doc-card">
-    <h3>القانون الداخلي للقسم</h3>
-    <p>قوانين وسلوكيات القسم المحددة للحقوق والواجبات لفرض جو من الانضباط والاحترام.</p>
-    <a href="https://docs.google.com/document/d/1zBRcRZVxfMSWqJAt32iOkGyuIm5RNK_h/edit" class="download-link" target="_blank">تحميل</a>
-  </div>
-  
-  <!-- البحث الاجتماعي للتلميذ -->
-  <div class="doc-card">
-    <h3>البحث الاجتماعي للتلميذ</h3>
-    <p>وثيقة لفهم الوضعية الاقتصادية والاجتماعية للتلميذ بهدف تقديم الدعم المناسب.</p>
-    <a href="https://docs.google.com/document/d/14y_VLW8WhIERkcGIaBHbOMdegyxUXN8a/edit" class="download-link" target="_blank">تحميل</a>
-  </div>
-  
-  <!-- جدول اللقاءات التربوية -->
-  <div class="doc-card">
-    <h3>جدول اللقاءات التربوية</h3>
-    <p>جدول لتسجيل مواعيد اللقاءات التربوية، مواضيعها وتوصياتها لتحسين التنسيق الإداري.</p>
-    <a href="https://docs.google.com/document/d/1DjIJGb-H5Rvn3KFXafXST4vj4SydIiam/edit" class="download-link" target="_blank">تحميل</a>
-  </div>
-  
-    </section>
-  </main>
-   <!-- Bande déroulante breaking news -->
-   <div class="breaking-news">
-    <div class="breaking-track">
-      <a href="  
-      مسالك تكوين المفتشين .html" class="breaking-item">📚 تأجيل مباريات ولوج مسالك تكوين المفتشين التربويين - دورة 2025</a>
-      <a href="نتائج الامتحان المهني.html" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025 موجودة هنا جميع الفئات</a>
-      <a href="مسلك تكوين المفتشين.html" class="breaking-item">📢 إعلان عن إجراء مباريات ولوج مسالك تكوين المفتشين التربويين بمركز تكوين مفتشي التعليم</a>
-      <a href="مسلك تكوين المستشارين.html" class="breaking-item">
-        ⚠️ مباراة ولوج مسلك تكوين المستشارين في التوجيه التربوي ومسلك تكوين المستشارين في التخطيط التربوي
-      </a>
-      <a href="الإدارة التربوية.html" class="breaking-item">الشروط الجديدة لمباراة الإدارة التربوية حسب النظام الأساسي الجديد</a>
+    <div class="card-image-wrapper">
+      <img src="images/i2.jpg" alt="صورة تمثل البطاقة الشخصية للأستاذ">
+    </div>
+    <div class="card-content">
+      <h3>البطاقة الشخصية للأستاذ</h3>
+      <p>وثيقة رسمية تحتوي على معلومات هوية الأستاذ اللازمة للإجراءات الإدارية.</p>
+      <a href="https://drive.google.com/file/d/1OHRrxkNHay1r4VJEMCn9PK9kfVe5ogQy/view?usp=drive_link" class="download-link" target="_blank" rel="noopener noreferrer">تحميل</a>
     </div>
   </div>
-  
-  <script>
-    const banner = document.querySelector('.breaking-news');
-    const track  = document.querySelector('.breaking-track');
-  
-    /* Au toucher : on pause */
-    banner.addEventListener('touchstart', () => {
-      track.style.animationPlayState = 'paused';
-    }, { passive: true });
-  
-    /* Quand on relâche : on relance */
-    banner.addEventListener('touchend', () => {
-      track.style.animationPlayState = 'running';
-    });
-  </script>
-  
+
+  <!-- إحصائيات التلاميذ -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i3.png" alt="صورة تمثل إحصائيات التلاميذ">
+    </div>
+    <div class="card-content">
+      <h3>إحصائيات التلاميذ</h3>
+      <p>وثيقة تقدم نظرة دقيقة حول عدد التلاميذ داخل الفصل حسب المستوى الدراسي والجنس، لتخطيط الموارد.</p>
+      <a href="https://docs.google.com/document/d/1jR49De-Tou_P4W2bgV13MpDUqdWLWZ_A/edit" class="download-link" target="_blank" rel="noopener noreferrer">تحميل</a>
+    </div>
+  </div>
+
+  <!-- لائحة الأيام الوطنية والدولية -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i4.jpg" alt="صورة تمثل لائحة الأيام الوطنية والدولية">
+    </div>
+    <div class="card-content">
+      <h3>لائحة الأيام الوطنية والدولية</h3>
+      <p>لائحة تواريخ المناسبات الرسمية للمساعدة في برمجة الأنشطة المدرسية طوال العام.</p>
+      <a href="https://docs.google.com/document/d/12Vu2n73NXI2gCXD-h4Jc2iAuArz1Vh2L/edit" class="download-link" target="_blank" rel="noopener noreferrer">تحميل</a>
+    </div>
+  </div>
+
+  <!-- ورقة عناوين المراجع المعتمدة -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i5.png" alt="صورة تمثل عناوين المراجع المعتمدة">
+    </div>
+    <div class="card-content">
+      <h3>ورقة عناوين المراجع المعتمدة</h3>
+      <p>نظرة شاملة على أهم الكتب والمراجع المعتمدة في التدريس لتطوير الرصيد المعرفي.</p>
+      <a href="https://docs.google.com/document/d/1xvlpfUxtkTin3k7RspM-_amPC_79Ovqn/edit" class="download-link" target="_blank" rel="noopener noreferrer">تحميل</a>
+    </div>
+  </div>
+
+  <!-- محضر تأسيس تعاونية القسم -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i6.png" alt="صورة تمثل تأسيس تعاونية القسم">
+    </div>
+    <div class="card-content">
+      <h3>محضر تأسيس تعاونية القسم</h3>
+      <p>وثيقة رسمية لتوثيق إنشاء تعاونية القسم بمشاركة التلاميذ، لتعزيز العمل الجماعي.</p>
+      <a href="https://docs.google.com/document/d/1U9hRBHdb8OKy_uTez7Lwh-STabZROWdY/edit" class="download-link" target="_blank" rel="noopener noreferrer">تحميل</a>
+    </div>
+  </div>
+
+  <!-- النشيد الوطني المغربي -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i7.png" alt="صورة تمثل النشيد الوطني المغربي">
+    </div>
+    <div class="card-content">
+      <h3>النشيد الوطني المغربي</h3>
+      <p>نسخة من النشيد الوطني لتلقينه للتلاميذ وترديده خلال الأنشطة والمناسبات الرسمية.</p>
+      <a href="https://docs.google.com/document/d/1dlaIg01CnL4sH9I_z589KLYxJThrW2tZ/edit" class="download-link" target="_blank" rel="noopener noreferrer">تحميل</a>
+    </div>
+  </div>
+
+  <!-- القانون الداخلي للقسم -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i8.png" alt="صورة تمثل القانون الداخلي للقسم">
+    </div>
+    <div class="card-content">
+      <h3>القانون الداخلي للقسم</h3>
+      <p>قوانين وسلوكيات القسم المحددة للحقوق والواجبات لفرض جو من الانضباط والاحترام.</p>
+      <a href="https://docs.google.com/document/d/1zBRcRZVxfMSWqJAt32iOkGyuIm5RNK_h/edit" class="download-link" target="_blank" rel="noopener noreferrer">تحميل</a>
+    </div>
+  </div>
+
+  <!-- البحث الاجتماعي للتلميذ -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i9.png" alt="صورة تمثل البحث الاجتماعي للتلميذ">
+    </div>
+    <div class="card-content">
+      <h3>البحث الاجتماعي للتلميذ</h3>
+      <p>وثيقة لفهم الوضعية الاقتصادية والاجتماعية للتلميذ بهدف تقديم الدعم المناسب.</p>
+      <a href="https://docs.google.com/document/d/14y_VLW8WhIERkcGIaBHbOMdegyxUXN8a/edit" class="download-link" target="_blank" rel="noopener noreferrer">تحميل</a>
+    </div>
+  </div>
+
+  <!-- جدول اللقاءات التربوية -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i10.png" alt="صورة تمثل جدول اللقاءات التربوية">
+    </div>
+    <div class="card-content">
+      <h3>جدول اللقاءات التربوية</h3>
+      <p>جدول لتسجيل مواعيد اللقاءات التربوية، مواضيعها وتوصياتها لتحسين التنسيق الإداري.</p>
+      <a href="https://docs.google.com/document/d/1DjIJGb-H5Rvn3KFXafXST4vj4SydIiam/edit" class="download-link" target="_blank" rel="noopener noreferrer">تحميل</a>
+    </div>
+  </div>
+
+  <!-- باقي الوثائق مع الصور -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i11.png" alt="صورة تمثل شهادة أجرة">
+    </div>
+    <div class="card-content">
+      <h3>شهادة أجرة</h3>
+      <p>وثيقة رسمية تُستخدم لإثبات دخل الموظف، وتُطلب غالبًا في المعاملات الإدارية مثل القروض أو طلب المنح.</p>
+      <a href="https://drive.google.com/file/d/1JqKwxIg42n8Yi5SWN_eps4TM3t2ecu3a/view?usp=drive_link" class="download-link" target="_blank" rel="noopener noreferrer">تحميل PDF</a>
+    </div>
+  </div>
+  <!-- استفسار -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i12.png" alt="صورة تمثل نموذج استفسار">
+    </div>
+    <div class="card-content">
+      <h3>استفسار</h3>
+      <p>نموذج يُستخدم للتواصل الرسمي مع الإدارة وطلب توضيحات حول مسائل معينة تتعلق بالعمل.</p>
+      <a href="https://drive.google.com/file/d/1PC1EmYF13s1QtHUOowwK1xBIrJ3sqor8/view?usp=drive_link" class="download-link" target="_blank" rel="noopener noreferrer">تحميل PDF</a>
+    </div>
+  </div>
+  <!-- طلب القن السري لمنظومة مسار -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i13.png" alt="صورة تمثل طلب القن السري لمنظومة مسار">
+    </div>
+    <div class="card-content">
+      <h3>طلب القن السري لمنظومة مسار</h3>
+      <p>استمارة ضرورية لطلب القن السري للدخول إلى منظومة مسار الخاصة بنتائج ومعلومات التلاميذ.</p>
+      <a href="https://drive.google.com/file/d/1922woZ3rqe1zc4Sbrhz6ac25-zJW3jtL/view?usp=drive_link" class="download-link" target="_blank" rel="noopener noreferrer">تحميل PDF</a>
+    </div>
+  </div>
+   <!-- محضر استئناف العمل -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i14.png" alt="صورة تمثل محضر استئناف العمل">
+    </div>
+    <div class="card-content">
+      <h3>محضر استئناف العمل</h3>
+      <p>وثيقة تُستخدم لتأكيد عودة الموظف إلى عمله بعد انتهاء عطلة أو رخصة.</p>
+      <a href="https://drive.google.com/file/d/1Gv5FVyPuWrnwBGOGk2GcJvBPrrbhpQxt/view?usp=drive_link"
+         class="download-link"
+         target="_blank"
+         rel="noopener noreferrer">
+        تحميل PDF
+      </a>
+    </div>
+  </div>
+
+  <!-- رخصة الرضاعة -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i15.png" alt="صورة تمثل رخصة الرضاعة">
+    </div>
+    <div class="card-content">
+      <h3>رخصة الرضاعة</h3>
+      <p>نموذج يُقدم من طرف الموظفات لطلب الاستفادة من رخصة الرضاعة وفقًا للقوانين الجاري بها العمل.</p>
+      <a href="https://drive.google.com/file/d/1-A5u2IU3mw4AeuBQ5H19d-ve5XeZcMJd/view?usp=drive_link"
+         class="download-link"
+         target="_blank"
+         rel="noopener noreferrer">
+        تحميل PDF
+      </a>
+    </div>
+  </div>
+
+  <!-- نموذج الطلب تكليف -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i16.png" alt="صورة تمثل نموذج الطلب تكليف">
+    </div>
+    <div class="card-content">
+      <h3>نموذج الطلب تكليف</h3>
+      <p>وثيقة تُستخدم لتقديم طلب تكليف بمهمة أو عمل مؤقت داخل نفس المؤسسة أو خارجها.</p>
+      <a href="https://drive.google.com/file/d/1UaaurYVK3opVT1LRJ3eURhIULwP9h0AD/view?usp=drive_link"
+         class="download-link"
+         target="_blank"
+         rel="noopener noreferrer">
+        تحميل PDF
+      </a>
+    </div>
+  </div>
+
+  <!-- طلب رخصة الغياب -->
+  <div class="doc-card">
+    <div class="card-image-wrapper">
+      <img src="images/i17.png" alt="صورة تمثل طلب رخصة الغياب">
+    </div>
+    <div class="card-content">
+      <h3>طلب رخصة الغياب</h3>
+      <p>وثيقة رسمية يُقدمها الموظف لطلب إذن بالغياب لأسباب مهنية أو شخصية.</p>
+      <a href="https://drive.google.com/file/d/1bezf7uRPtF3909U_FUvtQK1F2qb26ZKL/view?usp=drive_link"
+         class="download-link"
+         target="_blank"
+         rel="noopener noreferrer">
+        تحميل PDF
+      </a>
+    </div>
+  </div>
+
+</section>
+
+ 
   <script>
     // Toggle mobile menu
     function toggleMobileMenu() {
@@ -509,5 +643,9 @@
         document.querySelector('.mobile-menu').classList.remove('active');
     }
 </script>
+
+<footer>
+  <p>© 2025 موقع الوثيقة التربوية. جميع الحقوق محفوظة.</p>
+</footer>
 </body>
 </html>
