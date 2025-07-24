@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -650,6 +651,13 @@
     <h3>مقالات تربوية</h3>
     <p>مجموعة مختارة من المقالات الحديثة حول أساليب التدريس والتربية الابتكارية.</p>
   </a>
+  
+  <!-- 6) مقالات تربوية -->
+  <a href="دليل_الأستاذ.html" class="feature">
+    <div class="feature-icon">📚</div>
+    <h3> دلائل الأستاذ</h3>
+    <p>جميع دلائل الأستاذ مرتبة حسب المراجع و المستويات</p>
+  </a>
 </section>
 
   <!-- RESSOURCES PANEL (MOBILE) -->
@@ -677,11 +685,23 @@
   <div id="overlay"></div>
 
   <!-- DATA SCRIPTS -->
-  <script src="documents1.js"></script>
+ <script src="documents1.js"></script>
+<script src="dalil1.js"></script>
+<script src="dalil2.js"></script>
+<script src="dalil3.js"></script>
+<script src="dalil4.js"></script>
+<script src="dalil5.js"></script>
+<script src="dalil6.js"></script>
 
 <!-- SEARCH ENGINE & INTERACTIONS -->
 <script>
-  const documents = [...documents1];
+  const documents = [ ...documents1,
+    ...dalil1,
+    ...dalil2,
+    ...dalil3,
+    ...dalil4,
+    ...dalil5,
+    ...dalil6];
 
   function searchDocs() {
     const q = document.getElementById("searchInput").value.trim().toLowerCase();
