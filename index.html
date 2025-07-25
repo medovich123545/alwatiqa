@@ -537,6 +537,56 @@
       font-size:0.85rem; color:#aaa;
       border-top:1px solid rgba(255,255,255,0.05);
     }
+    /* ======== BREAKING NEWS ======== */
+.breaking-news {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #191f3b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 9999;
+  font-family: 'Cairo', sans-serif;
+}
+
+.breaking-track {
+  display: flex;
+  animation: scroll-right 20s linear infinite;
+  white-space: nowrap;
+}
+
+.breaking-item {
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.breaking-item:first-child {
+  border-left: none;
+}
+
+.breaking-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Pause de l’animation au survol de la barre entière */
+.breaking-news:hover .breaking-track {
+  animation-play-state: paused;
+}
+
+/* Keyframes pour le défilement */
+@keyframes scroll-right {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+
   </style>
   
   <!-- Google AdSense automatique -->
@@ -684,6 +734,37 @@
   </div>
   <div id="overlay"></div>
 
+  <!-- Bande déroulante breaking news -->
+<!-- Bande déroulante breaking news -->
+<div class="breaking-news">
+  <div class="breaking-track">
+    <a href="نتائج مباراة المندوبية العامة لإدارة السجون.html" class="breaking-item">📚 نتائج مباراة المندوبية العامة لإدارة السجون</a>
+    <a href="نتائج مباراة وزارة التجهيز والماء 2025.html" class="breaking-item">📚 نتائج مباراة وزارة التجهيز والماء 2025</a>
+    <a href="نتائج مباراة وزارة العدل (المنتدبون القضائيون والمحررون) 2025.html" class="breaking-item">📚 نتائج مباراة وزارة العدل (المنتدبون القضائيون والمحررون) 2025</a>
+    <a href="نتائج مباراة ولوج كليات الطب والصيدلة 2025.html" class="breaking-item">📚 نتائج مباراة ولوج كليات الطب والصيدلة 2025</a>
+    <a href="نتائج مباريات وزارة الصحة (الممرضين والتقنيين) 2025.html" class="breaking-item">📚 نتائج مباريات وزارة الصحة (الممرضين والتقنيين) 2025</a>
+    <a href="مباراة ولوج مدارس العلوم التطبيقية.html" class="breaking-item">⚠️ مباراة ولوج مدارس العلوم التطبيقية</a>
+    <a href="Inspection Générale des Finances 2025.html" class="breaking-item">📢 Inspection Générale des Finances 2025</a>
+  </div>
+</div>
+
+
+  
+  <script>
+    const banner = document.querySelector('.breaking-news');
+    const track  = document.querySelector('.breaking-track');
+  
+    /* Au toucher : on pause */
+    banner.addEventListener('touchstart', () => {
+      track.style.animationPlayState = 'paused';
+    }, { passive: true });
+  
+    /* Quand on relâche : on relance */
+    banner.addEventListener('touchend', () => {
+      track.style.animationPlayState = 'running';
+    });
+  </script>
+  
   <!-- DATA SCRIPTS -->
  <script src="documents1.js"></script>
 <script src="dalil1.js"></script>
@@ -820,8 +901,5 @@
   });
 </script>
 
-<footer>
-  <p>© 2025 موقع الوثيقة التربوية. جميع الحقوق محفوظة.</p>
-</footer>
 </body>
 </html>
