@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>نتائج مباراة المندوبية العامة لإدارة السجون 2025 | alwatiqa.ma</title>
+  <meta name="description" content="صفحة خاصة بنتائج مباراة المندوبية العامة لإدارة السجون وإعادة الإدماج لسنة 2025 مع روابط تحميل النتائج الرسمية حسب الرتبة.">
+  <meta name="keywords" content="نتائج مباراة إدارة السجون 2025، المندوبية العامة، مراقب مربي، ضابط أمن، نتائج مباراة dgapr">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="نتائج مباراة المندوبية العامة لإدارة السجون 2025">
+  <meta property="og:description" content="روابط مباشرة لتحميل نتائج مباراة إدارة السجون وإعادة الإدماج 2025 حسب الرتبة.">
+  <meta property="og:image" content="https://alwatiqa.ma/images/prison2025.jpg">
+  <meta property="og:url" content="https://alwatiqa.ma/ar/نتائج-إدارة-السجون-2025.html">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    :root {
+      --header-bg: #198754; /* vert santé */
+      --link-color: #ffffff;
+      --link-hover: #ffc107;
+      --accent-color: #ffc107;
+      --mobile-bg: #145c32;
+      --bg-light: #fefefe;
+      --text-dark: #222;
+      --font-main: 'Cairo', sans-serif;
+      --header-height: 80px;
+    }
+    body {
+      font-family: var(--font-main), sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      direction: rtl;
+      margin-top: var(--header-height);
+      line-height: 1.6;
+    }
+    a { color: var(--link-color); text-decoration: none; transition: color 0.3s ease; }
+    a:hover { color: var(--link-hover); }
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: var(--header-height);
+      background: var(--header-bg);
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      z-index: 1000;
+    }
+    .logo img.icon5 { height: 150px; }
+    nav.desktop-menu { display: flex; }
+    nav.desktop-menu ul { display: flex; gap: 1rem; list-style: none; }
+    nav.desktop-menu li a {
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    nav.desktop-menu li a.active,
+    nav.desktop-menu li a:hover {
+      background: var(--accent-color);
+      color: #000;
+    }
+    .menu-toggle {
+      background: none;
+      border: 2px solid var(--link-color);
+      color: var(--link-color);
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      display: none;
+    }
+    .menu-toggle:hover {
+      background: var(--link-color);
+      color: #000;
+    }
+    #overlay {
+      position: fixed; top: 0; right: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      z-index: 900;
+    }
+    #overlay.active { display: block; }
+    .mobile-menu {
+      position: fixed;
+      top: 0; right: -100%;
+      width: 80%; height: 100vh;
+      background: var(--mobile-bg);
+      padding: 2rem 1rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 1001;
+      display: none;
+    }
+    .mobile-menu.active {
+      display: block;
+      right: 0;
+    }
+    .mobile-menu .close-btn {
+      position: absolute; top: 1rem; left: 1rem;
+      font-size: 2rem;
+      color: var(--link-color);
+      cursor: pointer;
+    }
+    .mobile-menu ul { list-style: none; margin-top: 3rem; }
+    .mobile-menu li { margin-bottom: 1rem; }
+    .mobile-menu li a {
+      display: block;
+      color: var(--link-color);
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+    .mobile-menu li a:hover,
+    .mobile-menu li a.active {
+      background: var(--accent-color);
+      color: #000;
+    }
+
+    .hero {
+      background: url('images/prison2025.jpg') center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+    .hero-text {
+      position: relative;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.35);
+      border-radius: 8px;
+      z-index: 1;
+    }
+    .hero-text h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-text p {
+      font-size: 1rem;
+    }
+
+    main {
+      padding: 2rem;
+    }
+    article {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    article p, ul, table {
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+    article h2 {
+      color: var(--accent-color);
+      margin: 2rem 0 1rem;
+    }
+    ul { padding-left: 1.5rem; list-style: disc outside; }
+    li { margin-bottom: 0.75rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    th {
+      background: var(--header-bg);
+      color: var(--link-color);
+    }
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+
+    footer {
+      background: var(--mobile-bg);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      nav.desktop-menu { display: none; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="/images/icon5.png" alt="Logo" class="icon5" /></div>
+    <nav class="desktop-menu">
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </header>
+
+  <div id="overlay" onclick="closeMobileMenu()"></div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" id="menu-close">&times;</div>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="services.html">الخدمات</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="privacy.html">سياسة الخصوصية</a></li>
+    </ul>
+  </nav>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>نتائج مباريات المندوبية العامة لإدارة السجون وإعادة الإدماج – 2025</h1>
+  </div>
+</section>
+
+<main>
+  <article>
+    <h2>نتائج مباريات المندوبية العامة لإدارة السجون وإعادة الإدماج – 2025</h2>
+    <p>
+      في إطار تعزيز مواردها البشرية، تعلن المندوبية العامة لإدارة السجون وإعادة الإدماج سنويًا عن مباريات توظيف في مختلف التخصصات والدرجات، حسب الحاجيات المندرجة ضمن قانون المالية السنوي. وفي سنة 2025، أعدّت المندوبية مسابقات لتوظيف آلاف الحراس من درجة «مراقب السجون مساعد» و«مراقب السجون رئيس»، بالإضافة إلى فئة «مراقب سجون مربي». فقد أفادت مصادر إعلامية بأن المندوبية ستجري:
+    </p>
+    <ul>
+      <li>
+        مسابقة 700 منصب لمراقب سجون مساعد من الدرجة الثانية (500 بالرباط و200 بمراكش) – اختبارات يوم <strong>6 يوليوز 2025</strong>  
+        (<a href="https://medias24.com" target="_blank" rel="noopener noreferrer">medias24.com</a>)
+      </li>
+      <li>
+        مسابقة 300 منصب لمراقب سجون رئيس من الدرجة الثانية (200 ذكور و100 إناث) – امتحان يوم <strong>25 ماي 2025</strong>  
+        (<a href="https://alwadifa-maroc.com" target="_blank" rel="noopener noreferrer">alwadifa-maroc.com</a>)
+      </li>
+      <li>
+        مسابقة 274 منصب لمراقب سجون مربي (234 ذكور وإناث و40 ذكور) – اختبارات في فبراير ومارس 2025  
+        (<a href="https://alwadifa-maroc.com" target="_blank" rel="noopener noreferrer">alwadifa-maroc.com</a>)
+      </li>
+    </ul>
+
+    <h2>الفئات المستهدفة والمناصب</h2>
+    <ul>
+      <li>
+        <strong>مراقب السجون مساعد (ذكور)</strong>: 700 منصب (500 بالرباط، 200 بمراكش) – مسابقة 6 يوليوز 2025  
+        (<a href="https://medias24.com" target="_blank" rel="noopener noreferrer">medias24.com</a>)
+      </li>
+      <li>
+        <strong>مراقب السجون رئيس (ذكور وإناث)</strong>: 300 منصب (200 ذكور، 100 إناث) – امتحان 25 ماي 2025  
+        (<a href="https://alwadifa-maroc.com" target="_blank" rel="noopener noreferrer">alwadifa-maroc.com</a>)
+      </li>
+      <li>
+        <strong>مراقب سجون مربي</strong>:
+        <ul>
+          <li>234 منصب (ذكور وإناث) – امتحانات 25 فبراير 2025</li>
+          <li>40 منصب (ذكور) – اختبارات مارس 2025</li>
+        </ul>
+        (<a href="https://alwadifa-maroc.com" target="_blank" rel="noopener noreferrer">alwadifa-maroc.com</a>)
+      </li>
+    </ul>
+
+    <h2>روابط اللوائح النهائية (PDF)</h2>
+    <ul>
+      <li>
+        مباراة 300 مراقب السجون رئيس (ذكور) –  
+        <a href="https://alwadifa-maroc.com/final-list-m150-m220.pdf" target="_blank" rel="noopener noreferrer">اللائحة النهائية (PDF)</a>  
+        |  
+        <a href="https://alwadifa-maroc.com/waiting-list-m150-m220.pdf" target="_blank" rel="noopener noreferrer">لائحة الانتظار (PDF)</a>
+      </li>
+      <li>
+        مباراة 300 مراقب السجون رئيس (إناث) –  
+        <a href="https://alwadifa-maroc.com/final-list-f100.pdf" target="_blank" rel="noopener noreferrer">اللائحة النهائية (PDF)</a>  
+        |  
+        <a href="https://alwadifa-maroc.com/waiting-list-f100.pdf" target="_blank" rel="noopener noreferrer">لائحة الانتظار (PDF)</a>
+      </li>
+      <li>
+        مباراة 234 مراقب سجون مربي (ذكور وإناث) –  
+        <a href="https://alwadifa-maroc.com/final-list-mr234.pdf" target="_blank" rel="noopener noreferrer">اللائحة النهائية (PDF)</a>  
+        |  
+        <a href="https://alwadifa-maroc.com/waiting-list-mr234.pdf" target="_blank" rel="noopener noreferrer">لائحة الانتظار (PDF)</a>
+      </li>
+      <li>
+        مباراة 40 مراقب سجون مربي (ذكور) –  
+        <a href="https://alwadifa-maroc.com/final-list-m40.pdf" target="_blank" rel="noopener noreferrer">اللائحة النهائية (PDF)</a>  
+        |  
+        <a href="https://alwadifa-maroc.com/waiting-list-m40.pdf" target="_blank" rel="noopener noreferrer">لائحة الانتظار (PDF)</a>
+      </li>
+    </ul>
+    <p>
+      يُظهر موقع المندوبية مواعيد استدعاء الناجحين للتكوين والفحص الطبي؛ على سبيل المثال، استدعت المندوبية الناجحين في مسابقة 300 مراقب رئيس (ذكور) للالتحاق بمركز التكوين بإفران يوم <strong>24 يونيو 2025</strong> لإجراء الفحص الطبي واستكمال ملف التوظيف.  
+      (<a href="https://alwadifa-maroc.com" target="_blank" rel="noopener noreferrer">alwadifa-maroc.com</a>)
+    </p>
+
+    <h2>آجال الطعون وتعليمات استكمال التوظيف</h2>
+    <p>
+      حددت المندوبية العامة لإدارة السجون وإعادة الإدماج جدولًا زمنيًا لاستقبال الطعون قبل صدور اللوائح النهائية:
+    </p>
+    <ul>
+      <li>الإعلان المؤقت للمرشحين المقبولين: <strong>25 يونيو 2025</strong></li>
+      <li>فتح أجل الطعن: من 25 إلى <strong>26 يونيو 2025</strong>  
+        (<a href="https://dreamjob.ma" target="_blank" rel="noopener noreferrer">dreamjob.ma</a>)
+      </li>
+      <li>نشر اللوائح النهائية واستدعاء الناجحين رسميًا: <strong>30 يونيو 2025</strong>  
+        (<a href="https://dreamjob.ma" target="_blank" rel="noopener noreferrer">dreamjob.ma</a>)
+      </li>
+    </ul>
+    <p>
+      بعد ذلك، يلتزم الناجحون بإتمام ملفاتهم الإدارية (بطاقة تعريف، نسخ الشهادات، استمارة الالتزام بالخدمة، إلخ)، واجتياز الفحص الطبي والاختبارات الرياضية في التوقيتات المحددة، ويمكن تعويض أي مرشح لم يستوفِ الشروط بمرشح من لائحة الانتظار.  
+    </p>
+
+    <h2>خاتمة</h2>
+    <p>
+      بهذا تكون المندوبية العامة لإدارة السجون وإعادة الإدماج قد أتمت نشر نتائج مباريات توظيف سنة 2025. ندعو جميع الناجحين إلى متابعة بوابة المندوبية والمواقع الرسمية بانتظام لاستكمال إجراءات التعيين، ونتمنى لهم مسيرة مهنية ناجحة في خدمة المصلحة العامة.
+    </p>
+  </article>
+</main>
+
+
+  <footer>
+    <p>© 2025 alwatiqa.ma. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuClose = document.getElementById('menu-close');
+    const overlay = document.getElementById('overlay');
+
+    function openMobileMenu() {
+      mobileMenu.classList.add('active');
+      overlay.classList.add('active');
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('active');
+      overlay.classList.remove('active');
+    }
+
+    menuToggle.addEventListener('click', openMobileMenu);
+    menuClose.addEventListener('click', closeMobileMenu);
+  </script>
+</body>
+</html>
