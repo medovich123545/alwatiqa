@@ -106,6 +106,16 @@
   <!-- Google AdSense automatique -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4972478852308329"
      crossorigin="anonymous"></script>
+  <!-- OneSignal push notifications -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "ac657c4a-0b44-4d53-b0a3-b84c662a114a",
+    });
+  });
+</script>
 </head>
 <body>
   <!-- Header -->
