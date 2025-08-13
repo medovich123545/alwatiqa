@@ -2,185 +2,309 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>المستويات - موقع الوثيقة التربوية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>موارد تعليمية للمستويات الابتدائية : تقويم تشخيصي، استعمال الزمن، مراقبة مستمرة، وتوزيع سنوي</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Meta SEO -->
+  <meta name="description" content="تحميل موارد تعليمية جاهزة للمستويات الابتدائية: تقويم تشخيصي، استعمالات الزمن، توازيع سنوية، وفروض المراقبة المستمرة، بصيغة PDF للطباعة." />
+  <meta name="keywords" content="تقويم تشخيصي, استعمال الزمن, توازيع سنوية, فروض المراقبة المستمرة, ابتدائي, المستوى الأول, المستوى الثاني, المستوى الثالث, المستوى الرابع, المستوى الخامس, المستوى السادس" />
+  <meta name="author" content="موقع الوثيقة التربوية" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="موارد تعليمية للمستويات الابتدائية" />
+  <meta property="og:description" content="تحميل موارد تعليمية جاهزة لجميع مستويات الابتدائي: تقويم تشخيصي، استعمالات الزمن، توازيع سنوية، وفروض المراقبة المستمرة." />
+  <meta property="og:url" content="https://alwatiqa.ma/wathaiq-tarbawiya.html" />
+  <meta property="og:site_name" content="موقع الوثيقة التربوية" />
+  <meta property="og:image" content="https://alwatiqa.ma/images/og-image.jpg" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <style>
+    /* Variables */
     :root {
+      --primary: #102a2d;
+      --secondary: #0d2023;
+      --accent: #ecc94b;
+      --light: #e1e1e1;
+      --bg: #f0f4f6;
+      --radius: 0.75rem;
+      --transition: 0.3s ease;
+      --shadow-dark: rgba(0, 0, 0, 0.12);
+      --shadow-light: rgba(236, 201, 75, 0.3);
       --primary-color: #102a2d;
-      --secondary-color: #0d2023;
-      --accent-color: #ecc94b;
-      --text-color: #e1e1e1;
-      --header-height: 80px;
     }
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body {
-      margin: 0; padding: 0;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
       font-family: 'Cairo', sans-serif;
-      background-color: var(--primary-color);
-      color: var(--text-color);
-      direction: rtl; line-height: 1.6;
-      overflow-x: hidden;
+      background-color: var(--bg);
+      color: var(--primary);
+      line-height: 1.9;
+      padding-top: 80px;
+      scroll-behavior: smooth;
     }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color var(--transition), background-color var(--transition);
+    }
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* Header */
     header {
       position: fixed;
-      top: 0; right: 0; left: 0;
-      height: var(--header-height);
-      background-color: var(--secondary-color);
+      top: 0;
+      left: 0;
+      right: 0;
+     background: linear-gradient(90deg, #0d2023 0%, #102a2d 100%);
+
+      height: 80px;
+      box-shadow: 0 4px 15px var(--shadow-dark);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0 1.5rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      z-index: 1000;
+      z-index: 10000;
+      transition: background-color 0.4s ease;
     }
-    .logo img { height: 210px; width: auto; }
-    nav ul { list-style: none; display: flex; gap: 1rem; margin:0; padding:0; align-items:center; }
-    nav ul li a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight:600;
-      padding:0.3rem 0.8rem;
-      border-radius:5px;
-      transition:background .3s, color .3s;
+    .logo img {
+      height: 200px;
+      filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.2));
+      transition: transform var(--transition);
     }
-    nav ul li a:hover,
-    nav ul li a.active {
-      background-color: var(--accent-color);
-      color: #000;
+    .logo img:hover {
+      transform: scale(1.1);
     }
+
+    /* Nav */
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.3rem;
+    }
+    nav a {
+      color: var(--light);
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      background-color: transparent;
+      box-shadow: inset 0 0 0 0 var(--accent);
+      transition: background-color var(--transition), color var(--transition), box-shadow var(--transition);
+    }
+    nav a:hover,
+    nav a[aria-current="page"] {
+      background-color: var(--accent);
+      color: var(--secondary);
+      box-shadow: inset 0 -3px 0 0 var(--secondary);
+      font-weight: 700;
+      transform: scale(1.05);
+    }
+
+    /* Hamburger */
     .hamburger {
-      display:none;
-      flex-direction:column;
-      justify-content:space-between;
-      width:25px;
-      height:20px;
-      cursor:pointer;
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 6px;
+      width: 32px;
+      height: 24px;
+      justify-content: center;
+      z-index: 10001;
+      user-select: none;
     }
-    .hamburger div {
-      height:3px;
-      background-color: var(--text-color);
-      border-radius:2px;
+    .hamburger span {
+      background: var(--light);
+      height: 3.8px;
+      border-radius: 4px;
+      transition: all 0.35s ease;
+      transform-origin: center;
     }
-    .header-spacer { height: var(--header-height); width:100%; }
-    .mobile-menu {
-      position: fixed;
-      top:0;
-      right:-100%;
-      width:80%;
-      height:100%;
-      background-color: var(--secondary-color);
-      padding:2rem 1.5rem;
-      box-shadow:-3px 0 5px rgba(0,0,0,0.2);
-      transition:right .3s ease-in-out;
-      z-index:1100;
-      overflow-y:auto;
+
+    /* Hamburger open animation */
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      background: var(--accent);
     }
-    .mobile-menu.active { right:0; }
-    .mobile-menu .close-btn {
-      font-size:2.5rem;
-      color: var(--text-color);
-      cursor:pointer;
-      position:absolute;
-      top:1rem;
-      left:1rem;
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(20px);
     }
-    .mobile-menu ul {
-      list-style:none;
-      padding:4rem 0 0 0;
-      margin:0;
-      display:flex;
-      flex-direction:column;
-      gap:1.5rem;
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+      background: var(--accent);
     }
-    .mobile-menu ul li a {
-      color: var(--text-color);
-      font-size:1.3rem;
-      text-decoration:none;
-      font-weight:600;
-      border-radius:5px;
-      padding:0.5rem 0.8rem;
-      display:block;
-      transition:background .3s, color .3s;
-    }
-    .mobile-menu ul li a:hover,
-    .mobile-menu ul li a.active {
-      background-color: var(--accent-color);
-      color:#000;
-    }
-    main {
-      max-width:1100px;
-      margin:2rem auto 3rem;
-      padding:1rem 1.5rem;
-      background: var(--secondary-color);
-      border-radius:12px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
-    .article {
-      margin-bottom:2rem;
-      text-align: justify;
-      line-height:1.8;
-    }
-    .article h2 {
-      font-size:1.8rem;
-      margin-bottom:1rem;
-      text-align:center;
-    }
-    .level-container {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap:20px;
-    }
-    .level {
-      background:#183c40;
-      border:1px solid #a0c4c8;
-      border-radius:10px;
-      padding:20px;
-      text-align:center;
-      box-shadow:0 2px 5px rgba(0,0,0,0.05);
-      transition:transform .2s, box-shadow .3s;
-    }
-    .level:hover {
-      transform: translateY(-5px);
-      box-shadow:0 8px 20px rgba(0,0,0,0.1);
-    }
-    .level .dropdown a {
-      display:block;
-      background:#102a2d;
-      color:#a0c4c8;
-      padding:10px 15px;
-      border-radius:8px;
-      text-decoration:none;
-      font-size:16px;
-      transition:background .3s, color .3s;
-    }
-    .level .dropdown a:hover {
-      background:#0d2023;
-      color:#e1e1e1;
-    }
-    footer {
-      background: var(--secondary-color);
-      text-align:center;
-      padding:1rem;
-      color:var(--text-color);
-      font-size:0.9rem;
-      margin-top:2rem;
-    }
-    @media (max-width:768px) {
-      nav {
-        display: none;
+
+    /* Mobile menu */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 60px;
       }
-      .hamburger {
-        display:flex;
+      header {
+        height: 60px;
+        padding: 0 1rem;
       }
       .logo img {
-        height:120px;
+        height: 105px;
       }
-      main {
-        margin-top:1rem;
-        padding:1rem;
+
+      nav ul {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        background: var(--secondary);
+        height: calc(100vh - 60px);
+        width: 260px;
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.25);
+        border-radius: 0 0 0 var(--radius);
+        z-index: 9999;
       }
+      nav ul.open {
+        transform: translateX(0);
+      }
+      nav a {
+        font-size: 1.25rem;
+        padding: 0.8rem 1.2rem;
+        color: var(--light);
+      }
+      nav a:hover,
+      nav a[aria-current="page"] {
+        background-color: var(--accent);
+        color: var(--secondary);
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* Main */
+    main {
+      max-width: 1100px;
+      margin: 2.5rem auto 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Description section */
+    section[aria-label="وصف الموقع"] article {
+      background: #fff;
+      border-radius: 1.2rem;
+      padding: 2rem 2.5rem;
+      margin-bottom: 3rem;
+      line-height: 2.1;
+      color: #222;
+      box-shadow:
+        0 5px 15px rgba(16, 42, 45, 0.1),
+        inset 0 0 10px #ecc94b22;
+      font-size: 1.15rem;
+      font-weight: 500;
+      transition: box-shadow 0.4s ease;
+      border: 1.5px solid #ecc94b88;
+    }
+    section[aria-label="وصف الموقع"] article:hover {
+      box-shadow:
+        0 8px 25px rgba(16, 42, 45, 0.15),
+        inset 0 0 15px #ecc94b44;
+    }
+
+    /* Title */
+    section[aria-label="وصف الموقع"] h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 0 0 10px #ecc94b55;
+    }
+
+    /* Levels grid */
+    .levels {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Level card */
+    .level {
+      background: #1f4b50;
+      border-radius: var(--radius);
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15);
+      transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background-color 0.35s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+      user-select: none;
+    }
+    .level:hover,
+    .level:focus-within {
+      transform: translateY(-8px);
+      box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+      background-color: #15393c;
+      border-color: var(--accent);
+    }
+    .level h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1.7rem;
+      text-shadow: 0 0 6px #ecc94b88;
+    }
+    .level a {
+      display: block;
+      background: var(--primary);
+      color: #a0c4c8;
+      padding: 0.65rem 0;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      box-shadow: 0 0 10px #00000044;
+      transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.3s ease;
+    }
+    .level a:hover,
+    .level a:focus {
+      background: var(--accent);
+      color: var(--secondary);
+      box-shadow: 0 0 14px #ecc94b88;
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--secondary);
+      color: var(--light);
+      text-align: center;
+      padding: 1.4rem 1rem;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+      box-shadow: inset 0 1px 10px #00000080;
+      user-select: none;
     }
   </style>
   
@@ -189,118 +313,158 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
+
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">الرئيسية</a></li>
+    <div class="logo">
+      <a href="index.html"><img src="images/icon5.png" alt="شعار موقع الوثيقة التربوية" loading="lazy"></a>
+    </div>
+
+    <nav aria-label="القائمة الرئيسية">
+      <ul id="nav-links">
+        <li><a href="index.html" >الرئيسية</a></li>
         <li><a href="about.html">من نحن</a></li>
         <li><a href="services.html">الخدمات</a></li>
         <li><a href="contact.html">اتصل بنا</a></li>
         <li><a href="privacy.html">سياسة الخصوصية</a></li>
       </ul>
+
+      <div class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
-    <div class="logo"><img src="images/icon5.png" alt="شعار الموقع"></div>
-    <div class="hamburger" onclick="toggleMobileMenu()"><div></div><div></div><div></div></div>
   </header>
-  <div class="header-spacer"></div>
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" onclick="toggleMobileMenu()">×</span>
-    <ul>
-      <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="about.html">من نحن</a></li>
-      <li><a href="services.html">الخدمات</a></li>
-      <li><a href="contact.html">اتصل بنا</a></li>
-      <li><a href="privacy.html">سياسة الخصوصية</a></li>
-    </ul>
-  </div>
+
   <main>
-    <article class="article">
-       <h2>التقويم التشخيصي</h2>
-    <p>التقويم التشخيصي هو شكل من أشكال التقويم التربوي المبكِّر يُنفّذ قبل بدء عملية التعليم أو في بدايتها بهدف تحديد مستوى المتعلم ومعرفته السابقة. يعرفه بعض المتخصصين بأنه «إجراء يهدف إلى اكتشاف مدى استعداد المتعلم لتعلم خبرة جديدة أو مقرر دراسي معين، وتحديد وضعية الانطلاق في التعلم». كما أنه يتيح تحديد مستوى الطلاب ومهاراتهم وقدراتهم وميولهم التحصيلية بدقة. بعبارة أخرى، يعمل التقويم التشخيصي على رسم صورة أولية عن مكتسبات الطالب السابقة ونقاط قوته وضعفه قبل البدء في أي موضوع جديد.</p>
-    <h3>أهداف التقويم التشخيصي ودوره</h3>
-    <p>يتصل التقويم التشخيصي ارتباطًا وثيقًا بالأهداف التعليمية، فهو يهدف أساسًا إلى كشف نقاط القوة والضعف في تحصيل المتعلمين. ومن أهم أهدافه تحديد أسباب صعوبات التعلم التي يواجهها التلميذ حتى يتسنى معالجتها في الخطط التعليمية اللاحقة. وعلاوة على ذلك، يساعد التقويم التشخيصي المعلم في تصميم خطط تدريسية علاجية تتناسب مع احتياجات كل طالب؛ فهو يشير إلى الخبرات السابقة التي ينبغي بناؤها والنقاط التي تحتاج إلى دعم إضافي. على سبيل المثال، يوضح التقويم التشخيصي للمعلم مدى فاعلية أساليبه التدريسية الحالية، ويسهم في تعديل طرق الشرح والأنشطة بما يناسب مستوى الطلاب. كما أنه يحفز الطلاب على التعلم من خلال إشعارهم بنقاط تقدمهم الأولية وبداية نجاحاتهم التعليمية.</p>
-    <ul>
-      <li>تحديد خبرات الطلاب السابقة ومعرفة مدى استعدادهم لاكتساب تعلمات جديدة.</li>
-      <li>كشف أي نقص أو خلل في التعلمات السابقة لدى الطلاب (وضع صورة واضحة عن معارفهم ومهاراتهم).</li>
-      <li>تشخيص صعوبات التعلم والمعيقات الفردية لدى المتعلمين، بغرض اقتراح خطط علاجية موجهة.</li>
-      <li>إثارة دافعية المتعلمين للتعلم من خلال البدء من مستوياتهم وقدراتهم الحقيقية.</li>
-      <li>توجيه التخطيط التربوي (مثل اختيار الاستراتيجيات والوسائل المناسبة، وتخصيص الوقت الكافي لكل محتوى) انطلاقًا من نتائج التقويم.</li>
-    </ul>
-    <h3>مراحل التقويم التشخيصي البيداغوجية</h3>
-    <p>ينفذ التقويم التشخيصي في مراحل حرجة من المنهاج التعليمي لضمان انطلاق تعلم متين. من المراحل الشائعة:</p>
-    <ol>
-      <li>قبل بداية السنة الدراسية أو الوحدة التعليمية: حيث يُجرى اختبار أو نشاط تشخيصي عام يقيس المكتسبات الأساسية للمتعلم من سنوات دراسية سابقة.</li>
-      <li>بداية كل حصة أو درس جديد: يقوم المعلم بطرح أسئلة أو نشاط قصير للتأكد من تحقيق أهداف الدرس السابق واستثمار معارف الطلاب السابقة في الدرس التالي.</li>
-      <li>عند انتقال الطالب إلى مستوى أعلى أو مرحلة جديدة: يجرى تقويم قبلي لتحديد الفجوات التعليمية التي ظهرت مع نهاية المستوى السابق، وبالتالي توجيه المعلّم نحو التركيز على تلك الفجوات في بداية المرحلة الجديدة.</li>
-    </ol>
-    <h3>أنواع التقويم التشخيصي</h3>
-    <p>لا يقتصر التقويم التشخيصي على اختبار ورقي واحد، بل يشتمل على عدة أدوات وأساليب جمع معلومات شاملة عن التلاميذ. ومن أهمها:</p>
-    <ul>
-      <li>الاختبارات التشخيصية: سواءٌ كانت كتابية أو إلكترونية...</li>
-      <li>الاستبانات: أوراق أو استبيانات تُوزَّع لجمع معلومات عن اتجاهات التلاميذ وميولهم...</li>
-      <li>الملاحظة الصفية: رصد سلوك الطلاب أثناء الأنشطة الصفية...</li>
-      <li>المقابلات الشخصية: حوارات فردية أو جماعية مع المتعلم أو أولياء أمورهم.</li>
-      <li>سجلات إنجاز الطالب (Portfolio) وملفه الدراسي: مراجعة أعمال سابقة ونتائج تقييمات ماضية.</li>
-    </ul>
-    <h3>توظيف نتائج التقويم التشخيصي في التخطيط التعلمي</h3>
-    <p>بعد جمع البيانات، يقوم المعلم بإعداد تقرير تشخيصي مفصّل يتضمن مستوى كل تلميذ والمهارات التي يحتاج فيها إلى دعم. بناءً على ذلك:</p>
-    <ul>
-      <li>إعداد خطة دعم علاجية تعالج التعثرات المحددة.</li>
-      <li>ضبط استراتيجية التدريس بناءً على نتائج الاختبارات.</li>
-      <li>استخدام التغذية الراجعة الفورية لتحفيز الطلاب.</li>
-    </ul>
-   
-  </article>
-<section class="level-container">
-  <div class="level">
-    <div class="dropdown">
-      <a href="تقويم-تشخيصي-المستوى-الأول.html">تقويم تشخيصي - المستوى الأول</a>
-    </div>
-  </div>
-  <div class="level">
-    <div class="dropdown">
-      <a href="تقويم-تشخيصي-المستوى-الثاني.html">تقويم تشخيصي - المستوى الثاني</a>
-    </div>
-  </div>
-  <div class="level">
-    <div class="dropdown">
-      <a href="تقويم-تشخيصي-المستوى-الثالث.html">تقويم تشخيصي - المستوى الثالث</a>
-    </div>
-  </div>
-  <div class="level">
-    <div class="dropdown">
-      <a href="تقويم-تشخيصي-المستوى-الرابع.html">تقويم تشخيصي - المستوى الرابع</a>
-    </div>
-  </div>
-  <div class="level">
-    <div class="dropdown">
-      <a href="تقويم-تشخيصي-المستوى-الخامس.html">تقويم تشخيصي - المستوى الخامس</a>
-    </div>
-  </div>
-  <div class="level">
-    <div class="dropdown">
-      <a href="تقويم-تشخيصي-المستوى-السادس.html">تقويم تشخيصي - المستوى السادس</a>
-    </div>
-  </div>
-</section>
+    <section aria-label="وصف الموقع">
+   <article>
+  <h2>أفضل الموارد التعليمية للمستويات الابتدائية في المغرب</h2>
 
+  <p>
+    يعد <strong>موقع الوثيقة التربوية</strong> منصة تعليمية رائدة موجهة للأساتذة، أولياء الأمور، وكل المهتمين
+    بقطاع التعليم الابتدائي بالمغرب. نسعى من خلاله إلى توفير مكتبة شاملة من الوثائق والموارد التربوية
+    التي تغطي جميع المستويات من <strong>المستوى الأول</strong> إلى <strong>المستوى السادس</strong>.
+  </p>
+
+  <p>
+    يضم الموقع <strong>تقويمات تشخيصية</strong> دقيقة تساعد على تقييم المستوى الفعلي للتلاميذ مع بداية كل
+    موسم دراسي، و<strong>استعمالات زمن</strong> منظمة لتخطيط الحصص الدراسية بكفاءة، بالإضافة إلى
+    <strong>توازيع سنوية</strong> وشهرية تسهّل عملية توزيع الدروس على مدار العام.
+  </p>
+
+  <p>
+    كما نوفر <strong>فروض المراقبة المستمرة</strong> بمختلف أنواعها، مصممة وفق المعايير التربوية المعتمدة،
+    لمساعدة الأساتذة على متابعة تطور أداء المتعلمين وضمان تقدمهم بشكل منتظم. جميع الملفات متاحة
+    بصيغة <strong>PDF عالية الجودة</strong>، مما يسهل طباعتها واستخدامها مباشرة داخل الفصول الدراسية.
+  </p>
+
+  <p>
+    إضافة إلى ذلك، تجدون في موقعنا <strong>مذكرات دروس</strong> مفصلة، و<strong>أنشطة تعليمية تفاعلية</strong>،
+    و<strong>جداول حصص</strong> جاهزة، وغيرها من الوثائق التي تلبي احتياجات العملية التعليمية
+    وتساعد على تحقيق أفضل النتائج في التعليم الابتدائي.
+  </p>
+
+  <p>
+    نحن ملتزمون بتحديث المحتوى باستمرار لضمان مواكبته للتطورات التربوية، وهدفنا الأسمى هو
+    <strong>دعم الأساتذة</strong> وتمكينهم من أدوات تعليمية فعّالة، مع تحسين تجربة التعلم
+    لدى التلاميذ. لأي استفسار أو اقتراح، يمكنكم التواصل معنا عبر صفحة
+    <a href="contact.html">اتصل بنا</a>.
+  </p>
+</article>
+
+    </section>
+
+   <section class="levels" aria-label="موارد المستويات الابتدائية">
+      <!-- المستوى الأول -->
+      <article class="level" aria-labelledby="level1">
+        <h3 id="level1">المستوى الأول</h3>
+        <a href="تقويم-تشخيصي-المستوى-الأول.html" title="تحميل التقويم التشخيصي للمستوى الأول">تقويم تشخيصي</a>
+        <a href="استعمال-الزمن-المستوى-الأول-ابتدائي.html" title="تحميل استعمال الزمن للمستوى الأول">استعمالات الزمن</a>
+        <a href="توزيع-سنوي-المستوى-الأول-ابتدائي.html" title="تحميل التوزيع السنوي للمستوى الأول">توازيع سنوية</a>
+        <a href="فروض-المستوى-الأول-ابتدائي.html" title="تحميل فروض المراقبة المستمرة للمستوى الأول">مراقبة مستمرة</a>
+      </article>
+
+      <!-- المستوى الثاني -->
+      <article class="level" aria-labelledby="level2">
+        <h3 id="level2">المستوى الثاني</h3>
+        <a href="تقويم-تشخيصي-المستوى-الثاني.html" title="تحميل التقويم التشخيصي للمستوى الثاني">تقويم تشخيصي</a>
+        <a href="استعمال-الزمن-المستوى-الثاني-ابتدائي.html" title="تحميل استعمال الزمن للمستوى الثاني">استعمالات الزمن</a>
+        <a href="توزيع-سنوي-المستوى-الثاني-ابتدائي.html" title="تحميل التوزيع السنوي للمستوى الثاني">توازيع سنوية</a>
+        <a href="فروض-المستوى-الثاني-ابتدائي.html" title="تحميل فروض المراقبة المستمرة للمستوى الثاني">مراقبة مستمرة</a>
+      </article>
+
+      <!-- المستوى الثالث -->
+      <article class="level" aria-labelledby="level3">
+        <h3 id="level3">المستوى الثالث</h3>
+        <a href="تقويم-تشخيصي-المستوى-الثالث.html" title="تحميل التقويم التشخيصي للمستوى الثالث">تقويم تشخيصي</a>
+        <a href="استعمال-الزمن-المستوى-الثالث-ابتدائي.html" title="تحميل استعمال الزمن للمستوى الثالث">استعمالات الزمن</a>
+        <a href="توزيع-سنوي-المستوى-الثالث-ابتدائي.html" title="تحميل التوزيع السنوي للمستوى الثالث">توازيع سنوية</a>
+        <a href="فروض-المستوى-الثالث-ابتدائي.html" title="تحميل فروض المراقبة المستمرة للمستوى الثالث">مراقبة مستمرة</a>
+      </article>
+
+      <!-- المستوى الرابع -->
+      <article class="level" aria-labelledby="level4">
+        <h3 id="level4">المستوى الرابع</h3>
+        <a href="تقويم-تشخيصي-المستوى-الرابع.html" title="تحميل التقويم التشخيصي للمستوى الرابع">تقويم تشخيصي</a>
+        <a href="استعمال-الزمن-المستوى-الرابع-ابتدائي.html" title="تحميل استعمال الزمن للمستوى الرابع">استعمالات الزمن</a>
+        <a href="توزيع-سنوي-المستوى-الرابع-ابتدائي.html" title="تحميل التوزيع السنوي للمستوى الرابع">توازيع سنوية</a>
+        <a href="فروض-المستوى-الرابع-ابتدائي.html" title="تحميل فروض المراقبة المستمرة للمستوى الرابع">مراقبة مستمرة</a>
+      </article>
+
+      <!-- المستوى الخامس -->
+      <article class="level" aria-labelledby="level5">
+        <h3 id="level5">المستوى الخامس</h3>
+        <a href="تقويم-تشخيصي-المستوى-الخامس.html" title="تحميل التقويم التشخيصي للمستوى الخامس">تقويم تشخيصي</a>
+        <a href="استعمال-الزمن-المستوى-الخامس-ابتدائي.html" title="تحميل استعمال الزمن للمستوى الخامس">استعمالات الزمن</a>
+        <a href="توزيع-سنوي-المستوى-الخامس-ابتدائي.html" title="تحميل التوزيع السنوي للمستوى الخامس">توازيع سنوية</a>
+        <a href="فروض-المستوى-الخامس-ابتدائي.html" title="تحميل فروض المراقبة المستمرة للمستوى الخامس">مراقبة مستمرة</a>
+      </article>
+
+      <!-- المستوى السادس -->
+      <article class="level" aria-labelledby="level6">
+        <h3 id="level6">المستوى السادس</h3>
+        <a href="تقويم-تشخيصي-المستوى-السادس.html" title="تحميل التقويم التشخيصي للمستوى السادس">تقويم تشخيصي</a>
+        <a href="استعمال-الزمن-المستوى-السادس-ابتدائي.html" title="تحميل استعمال الزمن للمستوى السادس">استعمالات الزمن</a>
+        <a href="توزيع-سنوي-المستوى-السادس-ابتدائي.html" title="تحميل التوزيع السنوي للمستوى السادس">توازيع سنوية</a>
+        <a href="فروض-المستوى-السادس-ابتدائي.html" title="تحميل فروض المراقبة المستمرة للمستوى السادس">مراقبة مستمرة</a>
+      </article>
+    </section>
   </main>
-
   <footer>
-   <p>جميع الحقوق © 2025 – موقع الوثيقة التربوية.</p>
+    جميع الحقوق محفوظة © 2025 | موقع الوثيقة التربوية
   </footer>
 
   <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('active');
-    }
-    document.addEventListener("DOMContentLoaded", () => {
-      const currentPage = window.location.pathname.split("/").pop();
-      document.querySelectorAll("nav ul li a, .mobile-menu ul li a").forEach(link => {
-        link.classList.toggle('active', link.getAttribute("href") === currentPage);
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    // Toggle menu
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Keyboard accessibility
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+      }
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
       });
     });
   </script>
+
 </body>
 </html>
