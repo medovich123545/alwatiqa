@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مباراة التعليم 2026 -  كيفية التسجيل في مباراة التعليم 2026 | وزارة التربية الوطنية والتعليم الأولي والرياضة  </title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- SEO Meta Tags -->
   <meta name="description" content="كيفية التسجيل في مباراة التعليم 2026: شروط الترشيح، الوثائق المطلوبة، المواعيد، وطريقة التسجيل عبر بوابة التوظيف الرسمية." />
@@ -211,36 +212,122 @@ nav.desktop-nav li a.active {
   font-size: 1.1rem;
   color: var(--secondary-color);
 }
-
 /* Main Article */
 article.main-article {
-  background: #fff;
-  padding: var(--padding-md);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  color: var(--primary-color);
-  line-height: 2;
-  margin-bottom: var(--space-lg);
-  transition: transform var(--transition), box-shadow var(--transition);
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+ 
+   font-family: 'Cairo', 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+article.main-article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(to right, #00a7b3, #ffd54f);
+}
+
 article.main-article:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
-article.main-article h1 { font-size: 2rem; margin-bottom: var(--padding-sm); color: var(--accent-color); }
-article.main-article h2 {
+
+/* Main Title */
+article.main-article h1 {
+  font-size: 2rem;
+  color: #102a2d;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+article.main-article h1::before {
+  content: "📚";
   font-size: 1.5rem;
-  color: var(--secondary-color);
-  margin: var(--padding-md) 0 var(--padding-sm);
-  border-left: 4px solid var(--accent-color);
-  padding-left: var(--padding-sm);
 }
-article.main-article ul, article.main-article ol {
-  margin-bottom: var(--padding-md);
-  padding-right: var(--padding-md);
+
+/* Subtitles */
+article.main-article h2 {
+  font-size: 1.4rem;
+  color: #0d2023;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  border-right: 4px solid #ffd54f;
+  padding-right: 0.6rem;
+  font-weight: 700; /* عناوين بخط عريض */
+  letter-spacing: 0.5px; /* مسافة طفيفة بين الحروف */
 }
-article.main-article ul li::marker { color: var(--accent-color); font-weight: bold; }
-article.main-article ol li { margin-bottom: var(--padding-sm); }
+
+/* Paragraphs */
+article.main-article p {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+
+/* Lists */
+article.main-article ul,
+article.main-article ol {
+  margin: 1rem 0;
+  padding-right: 1.5rem;
+}
+
+article.main-article li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+  font-weight: 400; /* نصوص عادية */
+  letter-spacing: 0.2px;
+}
+
+article.main-article li::marker {
+  color: #00a7b3;
+  font-weight: bold;
+}
+
+/* Blockquotes */
+article.main-article blockquote {
+  background: #f9f9f9;
+  border-right: 4px solid #00a7b3;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #555;
+  border-radius: 0.5rem;
+}
+
+/* Links */
+article.main-article a {
+  color: #00a7b3;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+article.main-article a:hover {
+  color: #007b84;
+}
+
+/* Images */
+article.main-article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
 /* Buttons */
 .btn-primary {
@@ -348,13 +435,58 @@ footer {
   .section-title { font-size: 2rem; }
   .cards-container { padding: 0 var(--padding-sm); }
 }
+
+/* ========================================================================
+   Teasers & Gallery
+========================================================================= */
+.article-teasers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2rem; margin-bottom: 4rem;
+}
+.teaser-card {
+  background: var(--clr-bg);
+  padding: 2rem; border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex; flex-direction: column;
+  justify-content: space-between; overflow: hidden;
+}
+.teaser-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+}
+.teaser-card h3 a {
+  font-family: var(--font-heading);
+  font-size: 1.4rem; color: var(--header-bg);
+  transition: color 0.3s;
+}
+.teaser-card h3 a:hover {
+  color: var(--clr-primary);
+}
+.read-more {
+  display: inline-flex; align-items: center;
+  gap: 0.3rem; margin-top: auto;
+  font-weight: 600; font-size: 0.95rem;
+  color: var(--link-hover); transition: color 0.3s;
+}
+.read-more::after {
+  content: '→'; transition: transform 0.3s;
+}
+.read-more:hover::after {
+  transform: translateX(4px);
+}
+
 </style>
    
   <!-- Google AdSense automatique -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4972478852308329"
      crossorigin="anonymous"></script>
   <script async src="https://fundingchoicesmessages.google.com/i/pub-4972478852308329?ers=1"></script><script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
-<!-- OneSignal push notifications -->
+
+
+
+  <!-- OneSignal push notifications -->
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -410,7 +542,7 @@ footer {
   
   
     <section class="intro">
-      <h1 class="section-title">بوابة المقالات التربوية   </h1>
+      <h1 class="section-title">بوابة  مباراة التعليم 2026   </h1>
       <p class="intro-text">مرحبًا بك في منصة الوثيقة التربوية، الفضاء الرقمي الذي نهدف من خلاله إلى تقاسم مقالات علمية ومعرفية متخصصة في المجالين التربوي والتعليمي، والتي تسلط الضوء على قضايا التربية المعاصرة، وتواكب مستجدات التعليم، وتُسهم في إثراء المحتوى العربي التربوي، دعمًا للمعلمين، والباحثين، والمهتمين بالشأن التربوي والتعليمي في العالم العربي.
         
     <!-- AdSense In-Article Ad Placement -->
@@ -453,13 +585,41 @@ footer {
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
     <h2>الوثائق المطلوبة ضمن ملف الترشيح</h2>
+      <!-- Teaser cards -->
+     
+<section class="article-teasers" aria-label="مقالات حديثة" dir="rtl">
+ 
+  <div class="teaser-card">
+    <h3><a href="تصنيف الدول الأكثر تطورًا في التعليم.html">  تصنيف الدول الأكثر تطورًا في التعليم: أفضل 10 نظم حول العالم</a></h3>
+    
+    <a href="تصنيف الدول الأكثر تطورًا في التعليم.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+   <div class="teaser-card">
+    <h3><a href="تجربة سنغافورة في التعليم.html">تجربة سنغافورة في التعليم: تفصيل معمق لعوامل النجاح</a></h3>
+   
+    <a href="تجربة سنغافورة في التعليم.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+</section>
     <ol>
       <li>وصل التسجيل الإلكتروني (Reçu) الذي يتم تحميله مباشرة بعد تعبئة الاستمارة الإلكترونية عبر البوابة، وهو بمثابة إثبات على إتمام عملية الترشيح بنجاح.</li>
       <li>نسخ مطابقة للأصل من الشهادات الجامعية المحصل عليها، بما في ذلك شهادة الإجازة وشهادة البكالوريا، مصحوبة بكشف النقاط لكل سنة دراسية.</li>
       <li>نسخة مصادق عليها من البطاقة الوطنية للتعريف الإلكترونية (CNIE) سارية المفعول.</li>
       <li>رخصة رسمية للمشاركة في المباراة بالنسبة للموظفين أو العاملين في القطاع العمومي، يتم تسليمها من طرف الإدارة التي ينتمون إليها، إن وُجد.</li>
     </ol>
-
+     
+<section class="article-teasers" aria-label="مقالات حديثة" dir="rtl">
+ 
+  <div class="teaser-card">
+    <h3><a href="نتائج مباريات وزارة الصحة (الممرضين والتقنيين) 2025.html">   مستجدات مباريات وزارة الصحة (الممرضين والتقنيين) ، تاريخ التسجيل ، الشروط ، و النتائج الأولية</a></h3>
+    
+    <a href="نتائج مباريات وزارة الصحة (الممرضين والتقنيين) 2025.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+   <div class="teaser-card">
+    <h3><a href="نتائج مباراة وزارة العدل (المنتدبون القضائيون والمحررون) 2025.html">" مباراة وزارة العدل (المنتدبون القضائيون والمحررون) 2025</a></h3>
+   
+    <a href="نتائج مباراة وزارة العدل (المنتدبون القضائيون والمحررون) 2025.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+</section>
     <h2>الخطوات التفصيلية للتسجيل عبر البوابة الإلكترونية</h2>
     <ol>
       <li><strong>الولوج وإنشاء حساب جديد:</strong> يجب أولًا زيارة إحدى البوابتين الرسميتين: <a href="https://tawdif.men.gov.ma" target="_blank" rel="noopener">tawdif.men.gov.ma</a> أو <a href="https://wolouj.men.gov.ma" target="_blank" rel="noopener">wolouj.men.gov.ma</a>، ثم ملء البيانات الخاصة لإنشاء حساب شخصي جديد.</li>
@@ -475,6 +635,20 @@ footer {
     <p>وفي هذا السياق، يُنصح جميع المهتمين بمهنة التدريس في القطاع العمومي المغربي بضرورة المتابعة الحثيثة للمواقع الرسمية التالية:  
     <a href="https://tawdif.men.gov.ma" target="_blank" rel="noopener">tawdif.men.gov.ma</a> (بوابة التوظيف)  
     و<a href="https://men.gov.ma" target="_blank" rel="noopener">men.gov.ma</a> (البوابة العامة للوزارة)، وذلك للاطلاع أولًا بأول على كافة التحديثات والإعلانات الجديدة المتعلقة بمباراة التعليم برسم موسم 2025-2026.</p>
+         
+<section class="article-teasers" aria-label="مقالات حديثة" dir="rtl">
+ 
+  <div class="teaser-card">
+    <h3><a href="choix.html">   كل ما يحتاجه الأستاذ من وثائق إدارية وتربوية</a></h3>
+    
+    <a href="choix.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+   <div class="teaser-card">
+    <h3><a href="دليل_الأستاذ.html" >" دلائل الأستاذ لجميع المستويات مرتبة بطريقة احترافي</a></h3>
+   
+    <a href="دليل_الأستاذ.html"  class="read-more">اقرأ المزيد ←</a>
+  </div>
+</section>
   </article>
 </main>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4972478852308329"
