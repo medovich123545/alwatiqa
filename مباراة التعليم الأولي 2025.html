@@ -221,6 +221,48 @@
       color: var(--accent-color);
       animation: fadeInUp 1s ease 0.5s both;
     }
+    
+/* ========================================================================
+   Teasers & Gallery
+========================================================================= */
+.article-teasers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2rem; margin-bottom: 4rem;
+}
+.teaser-card {
+  background: var(--clr-bg);
+  padding: 2rem; border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex; flex-direction: column;
+  justify-content: space-between; overflow: hidden;
+}
+.teaser-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+}
+.teaser-card h3 a {
+  font-family: var(--font-heading);
+  font-size: 1.4rem; color: var(--header-bg);
+  transition: color 0.3s;
+}
+.teaser-card h3 a:hover {
+  color: var(--clr-primary);
+}
+.read-more {
+  display: inline-flex; align-items: center;
+  gap: 0.3rem; margin-top: auto;
+  font-weight: 600; font-size: 0.95rem;
+  color: var(--link-hover); transition: color 0.3s;
+}
+.read-more::after {
+  content: '→'; transition: transform 0.3s;
+}
+.read-more:hover::after {
+  transform: translateX(4px);
+}
+
   </style>
   
   <!-- Google AdSense automatique -->
@@ -266,12 +308,42 @@
     <div class="hero-content">
       <h1>نتائج التعليم الأولي 2025</h1>
       <p>استكشف لوائح الناجحين حسب الأكاديمية والنيابة</p>
+      <!-- Teaser cards -->
+<section class="article-teasers" aria-label="مقالات تعليمية" dir="rtl">
+
+  <div class="teaser-card">
+    <h3><a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html">صفحة مقارنة بين النظام التعليمي المغربي والفرنسي</a></h3>
+    <a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+  <div class="teaser-card">
+    <h3><a href="مقالات.html">صفحة تحتوي على مقالات متنوعة في المجال التربوي</a></h3>
+    <a href="مقالات.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+</section>
+
       <a href="#results" class="cta-button">تحميل النتائج</a>
     </div>
   </section>
   <main>
     <article class="card" id="results">
       <h2>تحميل لوائح الناجحين حسب الأكاديمية</h2>
+      <!-- Teaser cards -->
+<section class="article-teasers" aria-label="مقالات تعليمية" dir="rtl">
+
+  <div class="teaser-card">
+    <h3><a href="choix.html">صفحة اختيار الخيارات أو الاختيارات المتاحة</a></h3>
+    <a href="choix.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+  <div class="teaser-card">
+    <h3><a href="idariya.html">صفحة الإدارة المدرسية أو التسيير الإداري</a></h3>
+    <a href="idariya.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+</section>
+
       <p>للاطلاع على النتائج الرسمية، يرجى اختيار الأكاديمية من الروابط التالية وتسجيل رمز طفلك ومسار في البوابة الإلكترونية للوزارة:</p>
       <ul>
         <li><a href="https://moutamadris.men.gov.ma/#fes-meknes" target="_blank">أكاديمية فاس–مكناس</a></li>
