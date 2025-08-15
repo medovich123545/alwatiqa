@@ -121,6 +121,48 @@
     .btn-download:hover { background:#d4a72e; }
 
     footer { text-align:center; padding:var(--padding-md); background:var(--primary-color); color:#fff; margin-top:var(--padding-md); }
+  
+/* ========================================================================
+   Teasers & Gallery
+========================================================================= */
+.article-teasers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2rem; margin-bottom: 4rem;
+}
+.teaser-card {
+  background: var(--clr-bg);
+  padding: 2rem; border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex; flex-direction: column;
+  justify-content: space-between; overflow: hidden;
+}
+.teaser-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+}
+.teaser-card h3 a {
+  font-family: var(--font-heading);
+  font-size: 1.4rem; color: var(--header-bg);
+  transition: color 0.3s;
+}
+.teaser-card h3 a:hover {
+  color: var(--clr-primary);
+}
+.read-more {
+  display: inline-flex; align-items: center;
+  gap: 0.3rem; margin-top: auto;
+  font-weight: 600; font-size: 0.95rem;
+  color: var(--link-hover); transition: color 0.3s;
+}
+.read-more::after {
+  content: '→'; transition: transform 0.3s;
+}
+.read-more:hover::after {
+  transform: translateX(4px);
+}
+
   </style>
    
   <!-- Google AdSense automatique -->
@@ -225,6 +267,21 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<!-- Teaser cards -->
+<section class="article-teasers" aria-label="مقالات تعليمية" dir="rtl">
+
+  <div class="teaser-card">
+    <h3><a href="تقويم-تشخيصي-المستوى-الثالث.html">(تحميل) تقويم تشخيصي للمستوى الثالث</a></h3>
+    <a href="تقويم-تشخيصي-المستوى-الثالث.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+  <div class="teaser-card">
+    <h3><a href="تقويم-تشخيصي-المستوى-الرابع.html">(تحميل) تقويم تشخيصي للمستوى الرابع</a></h3>
+    <a href="تقويم-تشخيصي-المستوى-الرابع.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+</section>
+
       <h2>تحميل النتائج حسب الأكاديميات</h2>
 <div style="overflow-x:auto;">
   <table class="results-table">
@@ -261,6 +318,21 @@
         <td><a href="https://web.facebook.com/share/p/1JjTqr1nDW/" target="_blank"><button class="btn-download">تحميل</button></a></td>
         <td><a href="https://web.facebook.com/share/p/1JjTqr1nDW/" target="_blank"><button class="btn-download">تحميل</button></a></td>
       </tr>
+      <!-- Teaser cards -->
+<section class="article-teasers" aria-label="مقالات تعليمية" dir="rtl">
+
+  <div class="teaser-card">
+    <h3><a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html"> مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.</a></h3>
+    <a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+  <div class="teaser-card">
+    <h3><a href="مقالات.html">   مقالات متنوعة في المجال التربوي</a></h3>
+    <a href="مقالات.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+</section>
+
       <tr>
         <td>سوس ماسة</td>
         <td><a href="https://www.facebook.com/share/p/1AJJD9nMEu/" target="_blank"><button class="btn-download">تحميل</button></a></td>
@@ -311,6 +383,35 @@
       </tr>
     </tbody>
   </table>
+  <!-- Teaser cards -->
+<section class="article-teasers" aria-label="مقالات تعليمية" dir="rtl">
+
+  <div class="teaser-card">
+    <h3><a href="choix.html">    كل ما يحتاجه الأستاذ من وثائق تربوية ( توازيع سنوية ،  جذاذات ، دلائل ...)  </a></h3>
+    <a href="choix.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+  <div class="teaser-card">
+    <h3><a href="idariya.html">كل ما يحتاجه الأستاذ من وثائق إدارية (طلب رخصة ، استئناف عمل ...)</a></h3>
+    <a href="idariya.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+</section>
+<!-- Teaser cards -->
+<section class="article-teasers" aria-label="دلائل الأستاذ" dir="rtl">
+
+  <div class="teaser-card">
+    <h3><a href="دليل-الأستاذ-المستوى-الثاني-ابتدائي.html">دليل الأستاذ للمستوى الثاني ابتدائي (تحميل)</a></h3>
+    <a href="دليل-الأستاذ-المستوى-الثاني-ابتدائي.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+  <div class="teaser-card">
+    <h3><a href="دليل-الأستاذ-المستوى-الخامس-ابتدائي.html">دليل الأستاذ للمستوى الخامس ابتدائي (تحميل)</a></h3>
+    <a href="دليل-الأستاذ-المستوى-الخامس-ابتدائي.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+</section>
+
 </div>
 
 
