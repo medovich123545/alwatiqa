@@ -125,6 +125,48 @@
     .btn-download:hover { background:#d4a72e; }
 
     footer { text-align:center; padding:var(--padding-md); background:var(--primary-color); color:#fff; margin-top:var(--padding-md); }
+  
+/* ========================================================================
+   Teasers & Gallery
+========================================================================= */
+.article-teasers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2rem; margin-bottom: 4rem;
+}
+.teaser-card {
+  background: var(--clr-bg);
+  padding: 2rem; border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex; flex-direction: column;
+  justify-content: space-between; overflow: hidden;
+}
+.teaser-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+}
+.teaser-card h3 a {
+  font-family: var(--font-heading);
+  font-size: 1.4rem; color: var(--header-bg);
+  transition: color 0.3s;
+}
+.teaser-card h3 a:hover {
+  color: var(--clr-primary);
+}
+.read-more {
+  display: inline-flex; align-items: center;
+  gap: 0.3rem; margin-top: auto;
+  font-weight: 600; font-size: 0.95rem;
+  color: var(--link-hover); transition: color 0.3s;
+}
+.read-more::after {
+  content: '→'; transition: transform 0.3s;
+}
+.read-more:hover::after {
+  transform: translateX(4px);
+}
+
   </style>
    
   <!-- Google AdSense automatique -->
@@ -236,6 +278,21 @@
       </script>
 
       <h2>تحميل اللوائح حسب الأكاديميات الجهوية</h2>
+      <!-- Teaser cards -->
+<section class="article-teasers" aria-label="مقالات تعليمية" dir="rtl">
+
+  <div class="teaser-card">
+    <h3><a href="مباراة حاملي الشهادات.html">صفحة حول مباريات التعليم لحاملي الشهادات</a></h3>
+    <a href="مباراة حاملي الشهادات.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+  <div class="teaser-card">
+    <h3><a href="متطلبات سوق الشغل.html">صفحة توضح متطلبات سوق الشغل والمهارات المطلوبة</a></h3>
+    <a href="متطلبات سوق الشغل.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+</section>
+
       <div style="overflow-x:auto;">
         <table class="results-table">
           <thead>
@@ -292,6 +349,20 @@
           </tbody>
         </table>
       </div>
+<!-- Teaser cards -->
+<section class="article-teasers" aria-label="مقالات تعليمية" dir="rtl">
+
+  <div class="teaser-card">
+    <h3><a href="متطلبات سوق الشغل.html">صفحة توضح متطلبات سوق الشغل والمهارات المطلوبة</a></h3>
+    <a href="متطلبات سوق الشغل.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+  <div class="teaser-card">
+    <h3><a href="مراحل تطور التعليم في المغرب.html">صفحة تاريخية حول مراحل تطور التعليم بالمغرب</a></h3>
+    <a href="مراحل تطور التعليم في المغرب.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+</section>
 
       <h2>ملاحظات هامة</h2>
       <ol>
@@ -301,6 +372,21 @@
       </ol>
     </section>
   </article>
+  <!-- Teaser cards -->
+<section class="article-teasers" aria-label="مقالات تعليمية" dir="rtl">
+
+  <div class="teaser-card">
+    <h3><a href="دليل_الأستاذ.html">صفحة عامة تحتوي على دليل الأستاذ لجميع المستويات</a></h3>
+    <a href="دليل_الأستاذ.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+  <div class="teaser-card">
+    <h3><a href="دمج الأطفال المصابين بالتوحد.html">صفحة حول استراتيجيات دمج الأطفال المصابين بالتوحد في الفصل</a></h3>
+    <a href="دمج الأطفال المصابين بالتوحد.html" class="read-more">اقرأ المزيد ←</a>
+  </div>
+
+</section>
+
 </main>
 
   </main>
