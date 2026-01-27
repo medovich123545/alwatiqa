@@ -1,14 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- SEO Meta Tags -->
   <meta name="title" content="الوثيقة التربوية | وثائق ومقالات تربوية لأساتذة التعليم الابتدائي" />
-  <meta name="description" content="منصة تعليمية مغربية تحتوي على نماذج الوثائق الإدارية والتربوية، مقالات تعليمية، نتائج المباريات، وموارد مهمة لأساتذة التعليم الابتدائي." />
-  <meta name="keywords" content="وثائق تربوية, التعليم الابتدائي, المغرب, مباراة التعليم, الترقية, الحركة الجهوية, مقالات تربوية, موارد الأستاذ, وزارة التربية الوطنية" />
+  <meta name="description"
+    content="منصة تعليمية مغربية تحتوي على نماذج الوثائق الإدارية والتربوية، مقالات تعليمية، نتائج المباريات، وموارد مهمة لأساتذة التعليم الابتدائي." />
+  <meta name="keywords"
+    content="وثائق تربوية, التعليم الابتدائي, المغرب, مباراة التعليم, الترقية, الحركة الجهوية, مقالات تربوية, موارد الأستاذ, وزارة التربية الوطنية" />
   <meta name="author" content="موقع الوثيقة التربوية" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="ar-MA">
@@ -23,7 +25,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="الوثيقة التربوية |  كل ما يحاجه الأستاذ من وثائق ، مقالات ، و مذكرات وزارية">
-  <meta name="twitter:description" content="اكتشف نماذج وثائق تربوية، نتائج، ومقالات تعليمية لجميع أساتذة التعليم الابتدائي .">
+  <meta name="twitter:description"
+    content="اكتشف نماذج وثائق تربوية، نتائج، ومقالات تعليمية لجميع أساتذة التعليم الابتدائي .">
   <meta name="twitter:image" content="https://www.alwatiqa.ma/images/og-image.png">
 
   <!-- Structured Data JSON-LD -->
@@ -53,584 +56,711 @@
   <title>الوثيقة التربوية</title>
   <style>
     :root {
-    --primary-color: #102a2d;
-    --secondary-color: #0d2023;
-    --accent-color: #ecc94b;
-    --text-color: #e1e1e1;
-    --light-bg: #f4f4f4;
-    --space-sm: 1rem;
-    --space-md: 2rem;
-    --radius: 10px;
-    --transition: 0.3s ease;
-    --header-height: 80px;
-  }
-
-  *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Cairo', sans-serif;
-    background: var(--primary-color);
-    color: var(--text-color);
-    direction: rtl;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  /* Bloquer scroll quand menu ouvert */
-  body.menu-open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-  }
-
-  /* HEADER */
-  header {
-    background: var(--secondary-color);
-    height: var(--header-height);
-    padding: 0 var(--space-md);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
-  .logo img {
-    max-height: 150px;
-    object-fit: contain;
-  }
-
-  /* NAVIGATION */
-  .nav-list {
-    list-style: none;
-    display: flex;
-    gap: var(--space-md);
-    align-items: center;
-  }
-  .nav-list li {
-    position: relative;
-  }
-  .nav-list a,
-  .drop-toggle {
-    font-size: 1rem;
-    padding: 0.5rem var(--space-sm);
-    color: var(--text-color);
-    transition: color var(--transition);
-    cursor: pointer;
-  }
-  .nav-list a:hover,
-  .drop-toggle:hover {
-    color: var(--accent-color);
-  }
-
-/* Suppression du cadre blanc */
-.drop-toggle {
-  background: transparent !important;
-  border: none !important;
-    color: var(--text-color) !important; /* garde le texte en blanc */
-}
-
-.drop-toggle:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-  /* DESKTOP : dropdown moderne */
-@media (min-width: 769px) {
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 50vw;
-    max-height: 400px;
-    overflow-y: auto;
-  
-    background-color: #0d20234f;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    border-radius: 16px;
-    padding: 2rem 2.5rem;
-    display: grid;
- grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-
-    gap: 2rem;
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0.98) translateY(12px);
-    transition:
-      transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-      opacity 0.3s ease,
-      visibility 0.3s ease;
-    z-index: 1200;
-    font-family: 'Cairo', sans-serif;
-
-    /* Scrollbar pour Firefox */
-    scrollbar-width: thin;
-    scrollbar-color: rgba(80, 80, 80, 0.6) transparent;
-  }
-
-  /* Scrollbar pour WebKit (Chrome, Edge, Safari) */
-  .dropdown-menu::-webkit-scrollbar {
-    width: 0;
-    transition: width 0.3s ease;
-  }
-
-  .dropdown-menu:hover::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  .dropdown-menu::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .dropdown-menu::-webkit-scrollbar-thumb {
-    background-color: rgba(80, 80, 80, 0.6);
-    border-radius: 8px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    transition: background-color 0.3s ease;
-  }
-
-  .dropdown-menu::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(50, 50, 50, 0.8);
-  }
-
-  /* Hover (affichage) */
-  .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1) translateY(0);
-  }
-
-  .dropdown:hover .drop-toggle::after {
-    transform: translateY(-50%) rotate(-135deg);
-    border-color: #2540A1;
-  }
-
-  /* Titres de sections */
-  .dropdown-menu .group-title {
-    grid-column: 1 / -1;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: #222222;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #F0F0F0;
-    border-radius: 8px;
-    font-family: 'Cairo', sans-serif;
-  }
-
-  /* Liens améliorés */
-  .dropdown-menu a {
-    display: block;
-    padding: 0.75rem 1rem;
-    background-color: #fff;
-    color: #555555;
-    font-weight: 500;
-    font-size: 0.95rem;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.25s ease;
-    white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    font-family: 'Cairo', sans-serif;
-  }
-
-  .dropdown-menu a:hover,
-  .dropdown-menu a:focus {
-    background-color: #f5f8ff;
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
-    color: #2540A1;
-    outline: none;
-  }
-
-  /* Flèche du menu */
-  .drop-toggle {
-    position: relative;
-    cursor: pointer;
-    user-select: none;
-    font-weight: 600;
-    color: #333333;
-    transition: color 0.2s ease;
-    font-family: 'Cairo', sans-serif;
-  }
-
-  .drop-toggle::after {
-    content: "";
-    position: absolute;
-    right: -16px;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-    border: solid #888;
-    border-width: 0 2px 2px 0;
-    padding: 5px;
-    display: inline-block;
-    transition: transform 0.25s ease, border-color 0.2s ease;
-    pointer-events: none;
-  }
-}
-
-  /* PANEL RESSOURCES FULLSCREEN */
-  #resourcesPanel {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--secondary-color);
-    transform: translateX(100%);
-    transition: transform var(--transition);
-    z-index: 1200;
-    overflow-y: auto;
-    padding: var(--space-md);
-  }
-  #resourcesPanel.open {
-    transform: translateX(0);
-  }
-  .close-panel {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: none;
-    border: none;
-    font-size: 2.5rem;
-    color: var(--text-color);
-    cursor: pointer;
-  }
-  .resources-list {
-    list-style: none;
-    margin-top: 4rem;
-    padding: 0;
-  }
-  .resources-list li + li {
-    margin-block-start: 1rem;
-  }
-  .resources-list a {
-    display: block;
-    padding: 0.75rem 1rem;
-    color: var(--text-color);
-    background: rgba(255,255,255,0.05);
-    border-radius: var(--radius);
-    transition: background var(--transition);
-  }
-  .resources-list a:hover {
-    background: var(--accent-color);
-    color: var(--secondary-color);
-  }
-
-  /* HAMBURGER */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 1100;
-  }
-  .hamburger div {
-    width: 25px;
-    height: 3px;
-    background: var(--text-color);
-    transition: 0.4s;
-  }
-
-  /* HERO */
-  .hero {
-    background: var(--secondary-color);
-    border-radius: var(--radius);
-    margin: var(--space-md);
-    padding: var(--space-md);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-md);
-    align-items: center;
-  }
-  .hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: var(--space-sm);
-    color: var(--accent-color);
-  }
-  .search-bar {
-    display: flex;
-    background: var(--light-bg);
-    border-radius: var(--radius);
-    overflow: hidden;
-    margin-block-end: var(--space-md);
-  }
-  .search-bar input {
-    flex: 1;
-    border: none;
-    padding: 0.75rem 1rem;
-  }
-  .search-bar button {
-    background: var(--accent-color);
-    border: none;
-    padding: 0 1.5rem;
-    cursor: pointer;
-    transition: background var(--transition);
-  }
-  .search-bar button:hover {
-    background: #d4b538;
-  }
-  .hero-img img {
-    width: 100%;
-    border-radius: var(--radius);
-  }
-
-  /* STATS */
-  .stats {
-    display: flex;
-    justify-content: space-around;
-    margin-block-start: var(--space-md);
-  }
-  .stat h2 {
-    font-size: 2rem;
-    color: var(--accent-color);
-    margin-block-end: var(--space-sm);
-  }
-  .stat p {
-    font-size: 1rem;
-  }
-
-  /* FEATURES */
-  .features {
-  display: grid;
-  grid-template-columns: 1fr; /* Par défaut : 1 colonne */
-  gap: var(--space-md);
-  margin: var(--space-md);
-}
-
-/* Version desktop : 3 colonnes */
-@media (min-width: 900px) {
-  .features {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-  .feature {
-    background: var(--secondary-color);
-    border-radius: var(--radius);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    text-align: center;
-    padding: var(--space-md);
-    transition: transform var(--transition);
-  }
-  .feature:hover {
-    transform: translateY(-5px);
-  }
-  .feature-icon {
-    font-size: 2rem;
-    margin-block-end: var(--space-sm);
-  }
-  .feature h3 {
-    color: var(--accent-color);
-    margin-block-end: var(--space-sm);
-  }
-
-
-  /* FOOTER */
-  footer {
-    background: var(--secondary-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: var(--space-md);
-    margin-block-start: var(--space-md);
-  }
-
-  /* RESPONSIVE < 768px */
-  @media (max-width: 768px) {
-  .drop-toggle {
-    font-family: 'Cairo', sans-serif !important;
-  }
-    .hamburger {
-      display: flex;
+      --primary-color: #102a2d;
+      --secondary-color: #0d2023;
+      --accent-color: #ecc94b;
+      --text-color: #e1e1e1;
+      --light-bg: #f4f4f4;
+      --space-sm: 1rem;
+      --space-md: 2rem;
+      --radius: 10px;
+      --transition: 0.3s ease;
+      --header-height: 80px;
     }
-    /* on cache le dropdown desktop sur mobile */
-    .dropdown-menu { display: none !important; }
 
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: var(--primary-color);
+      color: var(--text-color);
+      direction: rtl;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Bloquer scroll quand menu ouvert */
+    body.menu-open {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--secondary-color);
+      height: var(--header-height);
+      padding: 0 var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo img {
+      max-height: 150px;
+      object-fit: contain;
+    }
+
+    /* NAVIGATION */
     .nav-list {
-       background:  #0d2023;
+      list-style: none;
+      display: flex;
+      gap: var(--space-md);
+      align-items: center;
+    }
+
+    .nav-list li {
+      position: relative;
+    }
+
+    .nav-list a,
+    .drop-toggle {
+      font-size: 1rem;
+      padding: 0.5rem var(--space-sm);
+      color: var(--text-color);
+      transition: color var(--transition);
+      cursor: pointer;
+    }
+
+    .nav-list a:hover,
+    .drop-toggle:hover {
+      color: var(--accent-color);
+    }
+
+    /* Suppression du cadre blanc */
+    .drop-toggle {
+      background: transparent !important;
+      border: none !important;
+      color: var(--text-color) !important;
+      /* garde le texte en blanc */
+    }
+
+    .drop-toggle:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    /* DESKTOP : dropdown moderne */
+    @media (min-width: 769px) {
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 50vw;
+        max-height: 400px;
+        overflow-y: auto;
+
+        background-color: #0d20234f;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 16px;
+        padding: 2rem 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+
+        gap: 2rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.98) translateY(12px);
+        transition:
+          transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 0.3s ease,
+          visibility 0.3s ease;
+        z-index: 1200;
+        font-family: 'Cairo', sans-serif;
+
+        /* Scrollbar pour Firefox */
+        scrollbar-width: thin;
+        scrollbar-color: rgba(80, 80, 80, 0.6) transparent;
+      }
+
+      /* Scrollbar pour WebKit (Chrome, Edge, Safari) */
+      .dropdown-menu::-webkit-scrollbar {
+        width: 0;
+        transition: width 0.3s ease;
+      }
+
+      .dropdown-menu:hover::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .dropdown-menu::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .dropdown-menu::-webkit-scrollbar-thumb {
+        background-color: rgba(80, 80, 80, 0.6);
+        border-radius: 8px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-menu::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(50, 50, 50, 0.8);
+      }
+
+      /* Hover (affichage) */
+      .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1) translateY(0);
+      }
+
+      .dropdown:hover .drop-toggle::after {
+        transform: translateY(-50%) rotate(-135deg);
+        border-color: #2540A1;
+      }
+
+      /* Titres de sections */
+      .dropdown-menu .group-title {
+        grid-column: 1 / -1;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #222222;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #F0F0F0;
+        border-radius: 8px;
+        font-family: 'Cairo', sans-serif;
+      }
+
+      /* Liens améliorés */
+      .dropdown-menu a {
+        display: block;
+        padding: 0.75rem 1rem;
+        background-color: #fff;
+        color: #555555;
+        font-weight: 500;
+        font-size: 0.95rem;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        white-space: nowrap;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        font-family: 'Cairo', sans-serif;
+      }
+
+      .dropdown-menu a:hover,
+      .dropdown-menu a:focus {
+        background-color: #f5f8ff;
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+        color: #2540A1;
+        outline: none;
+      }
+
+      /* Flèche du menu */
+      .drop-toggle {
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        font-weight: 600;
+        color: #333333;
+        transition: color 0.2s ease;
+        font-family: 'Cairo', sans-serif;
+      }
+
+      .drop-toggle::after {
+        content: "";
+        position: absolute;
+        right: -16px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        border: solid #888;
+        border-width: 0 2px 2px 0;
+        padding: 5px;
+        display: inline-block;
+        transition: transform 0.25s ease, border-color 0.2s ease;
+        pointer-events: none;
+      }
+    }
+
+    /* PANEL RESSOURCES FULLSCREEN */
+    #resourcesPanel {
       position: fixed;
       top: 0;
-      inset-inline-start: 0;
-      height: 100vh;
-      width: 80vw;
-      max-width: 300px;
-      
-      flex-direction: column;
-      padding: var(--space-md);
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--secondary-color);
       transform: translateX(100%);
       transition: transform var(--transition);
+      z-index: 1200;
+      overflow-y: auto;
+      padding: var(--space-md);
     }
-    .nav-list.mobile-active {
+
+    #resourcesPanel.open {
       transform: translateX(0);
     }
-    .nav-list li + li {
+
+    .close-panel {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: none;
+      border: none;
+      font-size: 2.5rem;
+      color: var(--text-color);
+      cursor: pointer;
+    }
+
+    .resources-list {
+      list-style: none;
+      margin-top: 4rem;
+      padding: 0;
+    }
+
+    .resources-list li+li {
       margin-block-start: 1rem;
     }
-    .hero {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-    .hero-img {
-      display: none;
-    }
-    .stats {
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-  
-    
-  .stats {
-    display: flex;               /* on reste en flex */
-    flex-direction: row !important;  /* forcer l’horizontal */
-    justify-content: space-around;   /* espacer régulièrement */
-    gap: 1rem;                   /* un petit écart entre les blocs */
-  }
 
-    .hamburger {
-      display: flex;
+    .resources-list a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: var(--text-color);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      transition: background var(--transition);
     }
-  }
-  
+
+    .resources-list a:hover {
+      background: var(--accent-color);
+      color: var(--secondary-color);
+    }
+
+    /* HAMBURGER */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: var(--text-color);
+      transition: 0.4s;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--secondary-color);
+      border-radius: var(--radius);
+      margin: var(--space-md);
+      padding: var(--space-md);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-sm);
+      color: var(--accent-color);
+    }
+
+    .search-bar {
+      display: flex;
+      background: var(--light-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-block-end: var(--space-md);
+    }
+
+    .search-bar input {
+      flex: 1;
+      border: none;
+      padding: 0.75rem 1rem;
+    }
+
+    .search-bar button {
+      background: var(--accent-color);
+      border: none;
+      padding: 0 1.5rem;
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+
+    .search-bar button:hover {
+      background: #d4b538;
+    }
+
+    .hero-img img {
+      width: 100%;
+      border-radius: var(--radius);
+    }
+
+    /* STATS */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-block-start: var(--space-md);
+    }
+
+    .stat h2 {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-block-end: var(--space-sm);
+    }
+
+    .stat p {
+      font-size: 1rem;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: 1fr;
+      /* Par défaut : 1 colonne */
+      gap: var(--space-md);
+      margin: var(--space-md);
+    }
+
+    /* Version desktop : 3 colonnes */
+    @media (min-width: 900px) {
+      .features {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .feature {
+      background: var(--secondary-color);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      padding: var(--space-md);
+      transition: transform var(--transition);
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-block-end: var(--space-sm);
+    }
+
+    .feature h3 {
+      color: var(--accent-color);
+      margin-block-end: var(--space-sm);
+    }
+
+
+    /* FOOTER */
+    footer {
+      background: var(--secondary-color);
+      color: var(--text-color);
+      text-align: center;
+      padding: var(--space-md);
+      margin-block-start: var(--space-md);
+    }
+
+    /* RESPONSIVE < 768px */
+    @media (max-width: 768px) {
+      .drop-toggle {
+        font-family: 'Cairo', sans-serif !important;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      /* on cache le dropdown desktop sur mobile */
+      .dropdown-menu {
+        display: none !important;
+      }
+
+      .nav-list {
+        background: #0d2023;
+        position: fixed;
+        top: 0;
+        inset-inline-start: 0;
+        height: 100vh;
+        width: 80vw;
+        max-width: 300px;
+
+        flex-direction: column;
+        padding: var(--space-md);
+        transform: translateX(100%);
+        transition: transform var(--transition);
+      }
+
+      .nav-list.mobile-active {
+        transform: translateX(0);
+      }
+
+      .nav-list li+li {
+        margin-block-start: 1rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-img {
+        display: none;
+      }
+
+      .stats {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+
+
+      .stats {
+        display: flex;
+        /* on reste en flex */
+        flex-direction: row !important;
+        /* forcer l’horizontal */
+        justify-content: space-around;
+        /* espacer régulièrement */
+        gap: 1rem;
+        /* un petit écart entre les blocs */
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
     /* SEARCH RESULTS GRID */
     #resultsContainer {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:1.5rem; margin:var(--space-md);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: var(--space-md);
     }
+
     .result-card {
-      background:#0d2023;
-      border-radius:var(--radius);
-      box-shadow:0 4px 12px rgba(0,0,0,0.4);
-      overflow:hidden; display:flex; flex-direction:column;
-      transition:transform 0.3s var(--transition), box-shadow 0.3s var(--transition);
+      background: #0d2023;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s var(--transition), box-shadow 0.3s var(--transition);
     }
+
     .result-card:hover {
-      transform:translateY(-5px);
-      box-shadow:0 8px 24px rgba(0,0,0,0.6);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
     }
+
     .result-card a {
-      font-size:1.1rem; font-weight:600;
-      color:var(--accent-color); padding:1rem;
-      border-bottom:1px solid rgba(255,255,255,0.1);
-      transition:color 0.2s var(--transition);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: color 0.2s var(--transition);
     }
-    .result-card a:hover { color:#fff; }
+
+    .result-card a:hover {
+      color: #fff;
+    }
+
     .result-desc {
-      flex-grow:1; padding:1rem;
-      font-size:0.95rem; color:#ccc; line-height:1.4;
+      flex-grow: 1;
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: #ccc;
+      line-height: 1.4;
     }
+
     .result-meta {
-      padding:0.75rem 1rem; background:#122f33;
-      font-size:0.85rem; color:#aaa;
-      border-top:1px solid rgba(255,255,255,0.05);
+      padding: 0.75rem 1rem;
+      background: #122f33;
+      font-size: 0.85rem;
+      color: #aaa;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
+
     /* ======== BREAKING NEWS ======== */
-.breaking-news {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 45px;
-  background-color: #191f3b;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  z-index: 9999;
-  font-family: 'Cairo', sans-serif;
-}
+    .breaking-news {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 45px;
+      background-color: #191f3b;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      z-index: 9999;
+      font-family: 'Cairo', sans-serif;
+    }
 
-.breaking-track {
-  display: flex;
-  animation: scroll-right 20s linear infinite;
-  white-space: nowrap;
-}
+    .breaking-track {
+      display: flex;
+      animation: scroll-right 50s linear infinite;
+      white-space: nowrap;
+    }
 
-.breaking-item {
-  padding: 0 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-}
+    .breaking-item {
+      padding: 0 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-.breaking-item:first-child {
-  border-left: none;
-}
+    .breaking-item:first-child {
+      border-left: none;
+    }
 
-.breaking-item:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
+    .breaking-item:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
 
-/* Pause de l’animation au survol de la barre entière */
-.breaking-news:hover .breaking-track {
-  animation-play-state: paused;
-}
+    /* Pause de l’animation au survol de la barre entière */
+    .breaking-news:hover .breaking-track {
+      animation-play-state: paused;
+    }
 
-/* Keyframes pour le défilement */
-@keyframes scroll-right {
-  0%   { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
+    /* Keyframes pour le défilement */
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(-100%);
+      }
 
+      100% {
+        transform: translateX(100%);
+      }
+    }
 
+    .features {
+      padding: 40px 20px;
+      background: #f5f5f5;
+      /* adapte à ton thème */
+    }
+
+    .features .products-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    /* Carte produit */
+    .features .product-card {
+      width: 220px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Image */
+    .features .product-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Bouton */
+    .features .product-card a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #ff9900;
+      color: #000;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* Mobile = column */
+    @media (max-width: 768px) {
+      .features .products-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .features .product-card {
+        width: 90%;
+        max-width: 300px;
+      }
+    }
+
+    .features-text {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333;
+      /* adapte à ton thème */
+      margin-top: 27px;
+      line-height: 1.8;
+      direction: rtl;
+      /* pour le texte arabe */
+    }
   </style>
-  
+
   <!-- Google AdSense automatique -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4972478852308329"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <!-- OneSignal push notifications -->
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "ac657c4a-0b44-4d53-b0a3-b84c662a114a",
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function (OneSignal) {
+      await OneSignal.init({
+        appId: "ac657c4a-0b44-4d53-b0a3-b84c662a114a",
+      });
     });
-  });
-</script>
+  </script>
 </head>
+
 <body>
- 
+
   <!-- HEADER -->
   <header>
     <div class="logo"><img src="images/icon5.png" alt="Logo" /></div>
     <nav>
       <ul class="nav-list" id="mainMenu" aria-hidden="true">
-     
+
         <li class="dropdown">
           <button class="drop-toggle" aria-haspopup="true" aria-expanded="false">مقالات</button>
           <ul class="dropdown-menu">
             <!-- … tous vos liens … -->
-             <li><a href="البرمجة في التعليم الابتدائي المغربي.html">البرمجة في التعليم الابتدائي المغربي</a></li>
-    <li><a href="التحضير لمباراة التفتيش التربوي.html">التحضير لمباراة التفتيش التربوي</a></li>
-    <li><a href="التلاميذ الخجولين في الفصل.html">التلاميذ الخجولين في الفصل</a></li>
-    <li><a href="التلاميذ كثيري الحركة.html">التلاميذ كثيري الحركة</a></li>
-    <li><a href="التوحد داخل الفصل الدراسي.html">التوحد داخل الفصل الدراسي</a></li>
-    <li><a href="العقوبات المهنية للأساتذة.html">العقوبات المهنية للأساتذة</a></li>
-    <li><a href="المتعة في العمل التربوي .html">المتعة في العمل التربوي</a></li>
-    <li><a href="المدرسة الرائدة.html">المدرسة الرائدة</a></li>
-    <li><a href="النظام التعليمي في فنلندا.html">النظام التعليمي في فنلندا</a></li>
-    <li><a href="تجربة سنغافورة في التعليم.html">تجربة سنغافورة في التعليم</a></li>
-    <li><a href="تصنيف الدول الأكثر تطورًا في التعليم.html">تصنيف الدول الأكثر تطورًا في التعليم</a></li>
-    <li><a href="دمج الأطفال المصابين بالتوحد.html">دمج الأطفال المصابين بالتوحد</a></li>
-    <li><a href="متطلبات سوق الشغل.html">متطلبات سوق الشغل</a></li>
-    <li><a href="مراحل تطور التعليم في المغرب.html">مراحل تطور التعليم في المغرب</a></li>
-    <li><a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html">مقارنة  التعليم في المغرب وفرنسا</a></li>
-    <li><a href="نحو مدرسة رائدة.html">نحو مدرسة رائدة</a></li>
+            <li><a href="البرمجة في التعليم الابتدائي المغربي.html">البرمجة في التعليم الابتدائي المغربي</a></li>
+            <li><a href="التحضير لمباراة التفتيش التربوي.html">التحضير لمباراة التفتيش التربوي</a></li>
+            <li><a href="التلاميذ الخجولين في الفصل.html">التلاميذ الخجولين في الفصل</a></li>
+            <li><a href="التلاميذ كثيري الحركة.html">التلاميذ كثيري الحركة</a></li>
+            <li><a href="التوحد داخل الفصل الدراسي.html">التوحد داخل الفصل الدراسي</a></li>
+            <li><a href="العقوبات المهنية للأساتذة.html">العقوبات المهنية للأساتذة</a></li>
+            <li><a href="المتعة في العمل التربوي .html">المتعة في العمل التربوي</a></li>
+            <li><a href="المدرسة الرائدة.html">المدرسة الرائدة</a></li>
+            <li><a href="النظام التعليمي في فنلندا.html">النظام التعليمي في فنلندا</a></li>
+            <li><a href="تجربة سنغافورة في التعليم.html">تجربة سنغافورة في التعليم</a></li>
+            <li><a href="تصنيف الدول الأكثر تطورًا في التعليم.html">تصنيف الدول الأكثر تطورًا في التعليم</a></li>
+            <li><a href="دمج الأطفال المصابين بالتوحد.html">دمج الأطفال المصابين بالتوحد</a></li>
+            <li><a href="متطلبات سوق الشغل.html">متطلبات سوق الشغل</a></li>
+            <li><a href="مراحل تطور التعليم في المغرب.html">مراحل تطور التعليم في المغرب</a></li>
+            <li><a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html">مقارنة التعليم في المغرب وفرنسا</a>
+            </li>
+            <li><a href="نحو مدرسة رائدة.html">نحو مدرسة رائدة</a></li>
           </ul>
         </li>
         <li><a href="about.html">من نحن</a></li>
@@ -640,7 +770,9 @@
       </ul>
     </nav>
     <div class="hamburger" aria-label="القائمة الرئيسية" role="button" tabindex="0">
-      <div></div><div></div><div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </header>
 
@@ -654,9 +786,18 @@
         <button type="submit">ابحث</button>
       </form>
       <div class="stats">
-        <div class="stat"><h2>96K+</h2><p>وثيقة متوفرة</p></div>
-        <div class="stat"><h2>15K+</h2><p>أستاذ مسجل</p></div>
-        <div class="stat"><h2>7.1</h2><p>تقييم مستحسن</p></div>
+        <div class="stat">
+          <h2>96K+</h2>
+          <p>وثيقة متوفرة</p>
+        </div>
+        <div class="stat">
+          <h2>15K+</h2>
+          <p>أستاذ مسجل</p>
+        </div>
+        <div class="stat">
+          <h2>7.1</h2>
+          <p>تقييم مستحسن</p>
+        </div>
       </div>
     </div>
     <div class="hero-img"><img src="images/prof.png" alt="Teacher illustration" /></div>
@@ -666,161 +807,230 @@
   <main>
     <div id="resultsContainer"></div>
   </main>
- <!-- FEATURES -->
-<section class="features">
-  <h3>منتج موصى به للأستاذ</h3>
-  <p>أداة مفيدة لتحسين العمل داخل الفصل وتنظيم مهام الأستاذ.</p>
+  <!-- FEATURES -->
+  <section class="features">
 
-  <a href="https://amzn.to/4qhj0JH"
-     target="_blank"
-     rel="nofollow sponsored noopener"
-     style="
-       display:inline-block;
-       margin-top:12px;
-       background:#ecc94b;
-       color:#102a2d;
-       padding:10px 16px;
-       border-radius:8px;
-       font-weight:700;
-     ">
-     مشاهدة المنتج على Amazon
-  </a>
+    <!-- Texte en bas de la row -->
+    <p class="features-text">
+      بعد النجاح الكبير الذي عرفته روايات الكاتب السعودي أسامة المسلم في أوساط الشباب المغربي، والتي استطاعت أن تجمع بين
+      الإثارة الأدبية والرسائل الهادفة و الخيال، إليكم باقة من أروع أعماله الأدبية.
+    </p>
 
-  <!-- 1) الوثائق الشخصية والإدارية -->
-  <a href="idariya.html" class="feature">
-    <div class="feature-icon">📂</div>
-    <h3>وثائق شخصية وإدارية</h3>
-    <p>جميع النماذج الإدارية والشخصية: محاضر الاجتماعات، توزيع الحصص، وتنظيم البيانات الشخصية.</p>
-  </a>
+    <div class="products-row">
 
-  <!-- 2) مباريات حامل الشهادات -->
-  <a href="مباراة حاملي الشهادات.html" class="feature">
-    <div class="feature-icon">🎓</div>
-    <h3> مباراة حاملي الشهادات </h3>
-   <p> نتائج مباراة الترقية وتغيير الإطار 2025</p>
-  </a>
+      <div class="product-card">
+        <img src="images/p1.jpg" alt="">
 
-  <!-- 3) مباريات التعليم -->
-  <a href="مباراة التعليم.html
+
+        <a href="https://amzn.to/4q5xKeu" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/p2.jpg" alt="">
+
+        <a href="https://amzn.to/3Maba6p" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/p3.jpg" alt="Produit 3">
+
+        <a href="https://amzn.to/49U3VHx" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+
+
+    </div>
+
+    <!-- 1) الوثائق الشخصية والإدارية -->
+    <a href="idariya.html" class="feature">
+      <div class="feature-icon">📂</div>
+      <h3>وثائق شخصية وإدارية</h3>
+      <p>جميع النماذج الإدارية والشخصية: محاضر الاجتماعات، توزيع الحصص، وتنظيم البيانات الشخصية.</p>
+    </a>
+
+    <!-- 2) مباريات حامل الشهادات -->
+    <a href="مباراة حاملي الشهادات.html" class="feature">
+      <div class="feature-icon">🎓</div>
+      <h3> مباراة حاملي الشهادات </h3>
+      <p> نتائج مباراة الترقية وتغيير الإطار 2025</p>
+    </a>
+
+    <!-- 3) مباريات التعليم -->
+    <a href="مباراة التعليم.html
 " class="feature">
-    <div class="feature-icon">🏫</div>
-    <h3>مباراة التعليم</h3>
-   <p>التسجيل في مباراة التعليم 2026
-</p>
-  </a>
+      <div class="feature-icon">🏫</div>
+      <h3>مباراة التعليم</h3>
+      <p>التسجيل في مباراة التعليم 2026
+      </p>
+    </a>
 
-  <!-- 4) نتائج الحركة الجهوية -->
-  <a href="نتائج الحركة الجهوية.html" class="feature">
-    <div class="feature-icon">📊</div>
-    <h3>نتائج الحركة الجهوية</h3>
-    <p>نتائج الحركة الانتقالية الجهويةالخاصة بأسلاك التعليم 2025  </p>
-  </a>
+    <!-- 4) نتائج الحركة الجهوية -->
+    <a href="نتائج الحركة الجهوية.html" class="feature">
+      <div class="feature-icon">📊</div>
+      <h3>نتائج الحركة الجهوية</h3>
+      <p>نتائج الحركة الانتقالية الجهويةالخاصة بأسلاك التعليم 2025 </p>
+    </a>
 
-  <!-- 5) الترقية بالاختيار والتصنيف -->
-  <a href="الترقية بالاختيار والتسقيف.html" class="feature">
-    <div class="feature-icon">⬆️</div>
-    <h3>الترقية بالاختيار والتسقيف</h3>
-    <p>نتائج الترقية بالاختيار والتسقيف لجميع الفئات التعليمية </p>
-  </a>
+    <!-- 5) الترقية بالاختيار والتصنيف -->
+    <a href="الترقية بالاختيار والتسقيف.html" class="feature">
+      <div class="feature-icon">⬆️</div>
+      <h3>الترقية بالاختيار والتسقيف</h3>
+      <p>نتائج الترقية بالاختيار والتسقيف لجميع الفئات التعليمية </p>
+    </a>
 
-  <!-- 6) مقالات تربوية -->
-  <a href="مقالات.html" class="feature">
-    <div class="feature-icon">📚</div>
-    <h3>مقالات تربوية</h3>
-    <p>مجموعة مختارة من المقالات الحديثة حول أساليب التدريس والتربية الابتكارية.</p>
-  </a>
-  
-  <!-- 6) مقالات تربوية -->
-  <a href="دليل_الأستاذ.html" class="feature">
-    <div class="feature-icon">📚</div>
-    <h3> دلائل الأستاذ</h3>
-    <p>جميع دلائل الأستاذ مرتبة حسب المراجع و المستويات</p>
-  </a>
-  <!-- 6) مقالات تربوية -->
-<a href="الوثائق-التربوية-للأستاذ.html" class="feature">
-  <div class="feature-icon">📚</div>
-  <h3>   وثائق تربوية </h3>
-<p>كل ما يحتاجه الأستاذ من وثائق تربوية جاهزة و منظمة</p>
+    <!-- 6) مقالات تربوية -->
+    <a href="مقالات.html" class="feature">
+      <div class="feature-icon">📚</div>
+      <h3>مقالات تربوية</h3>
+      <p>مجموعة مختارة من المقالات الحديثة حول أساليب التدريس والتربية الابتكارية.</p>
+    </a>
 
-</a>
+    <!-- 6) مقالات تربوية -->
+    <a href="دليل_الأستاذ.html" class="feature">
+      <div class="feature-icon">📚</div>
+      <h3> دلائل الأستاذ</h3>
+      <p>جميع دلائل الأستاذ مرتبة حسب المراجع و المستويات</p>
+    </a>
+    <!-- 6) مقالات تربوية -->
+    <a href="الوثائق-التربوية-للأستاذ.html" class="feature">
+      <div class="feature-icon">📚</div>
+      <h3> وثائق تربوية </h3>
+      <p>كل ما يحتاجه الأستاذ من وثائق تربوية جاهزة و منظمة</p>
 
-</section>
+    </a>
+
+    <div class="products-row">
+
+      <div class="product-card">
+        <img src="images/j1.jpg" alt="">
+
+
+        <a href="https://amzn.to/4t3pEpo" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/j4.jpg" alt="">
+
+        <a href="https://amzn.to/3Z28RVR" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/j3.jpg" alt="Produit 3">
+
+        <a href="https://amzn.to/4qIL1dS" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+
+    </div>
+
+
+  </section>
 
   <!-- RESSOURCES PANEL (MOBILE) -->
   <div id="resourcesPanel" aria-hidden="true">
     <button class="close-panel" aria-label="Fermer">&times;</button>
     <ul class="resources-list">
-        <li><a href="البرمجة في التعليم الابتدائي المغربي.html">البرمجة في التعليم الابتدائي المغربي</a></li>
-    <li><a href="التحضير لمباراة التفتيش التربوي.html">التحضير لمباراة التفتيش التربوي</a></li>
-    <li><a href="التلاميذ الخجولين في الفصل.html">التلاميذ الخجولين في الفصل</a></li>
-    <li><a href="التلاميذ كثيري الحركة.html">التلاميذ كثيري الحركة</a></li>
-    <li><a href="التوحد داخل الفصل الدراسي.html">التوحد داخل الفصل الدراسي</a></li>
-    <li><a href="العقوبات المهنية للأساتذة.html">العقوبات المهنية للأساتذة</a></li>
-    <li><a href="المتعة في العمل التربوي .html">المتعة في العمل التربوي</a></li>
-    <li><a href="المدرسة الرائدة.html">المدرسة الرائدة</a></li>
-    <li><a href="النظام التعليمي في فنلندا.html">النظام التعليمي في فنلندا</a></li>
-    <li><a href="تجربة سنغافورة في التعليم.html">تجربة سنغافورة في التعليم</a></li>
-    <li><a href="تصنيف الدول الأكثر تطورًا في التعليم.html">تصنيف الدول الأكثر تطورًا في التعليم</a></li>
-    <li><a href="دمج الأطفال المصابين بالتوحد.html">دمج الأطفال المصابين بالتوحد</a></li>
-    <li><a href="متطلبات سوق الشغل.html">متطلبات سوق الشغل</a></li>
-    <li><a href="مراحل تطور التعليم في المغرب.html">مراحل تطور التعليم في المغرب</a></li>
-    <li><a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html">مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا</a></li>
-    <li><a href="نحو مدرسة رائدة.html">نحو مدرسة رائدة</a></li>
+      <li><a href="البرمجة في التعليم الابتدائي المغربي.html">البرمجة في التعليم الابتدائي المغربي</a></li>
+      <li><a href="التحضير لمباراة التفتيش التربوي.html">التحضير لمباراة التفتيش التربوي</a></li>
+      <li><a href="التلاميذ الخجولين في الفصل.html">التلاميذ الخجولين في الفصل</a></li>
+      <li><a href="التلاميذ كثيري الحركة.html">التلاميذ كثيري الحركة</a></li>
+      <li><a href="التوحد داخل الفصل الدراسي.html">التوحد داخل الفصل الدراسي</a></li>
+      <li><a href="العقوبات المهنية للأساتذة.html">العقوبات المهنية للأساتذة</a></li>
+      <li><a href="المتعة في العمل التربوي .html">المتعة في العمل التربوي</a></li>
+      <li><a href="المدرسة الرائدة.html">المدرسة الرائدة</a></li>
+      <li><a href="النظام التعليمي في فنلندا.html">النظام التعليمي في فنلندا</a></li>
+      <li><a href="تجربة سنغافورة في التعليم.html">تجربة سنغافورة في التعليم</a></li>
+      <li><a href="تصنيف الدول الأكثر تطورًا في التعليم.html">تصنيف الدول الأكثر تطورًا في التعليم</a></li>
+      <li><a href="دمج الأطفال المصابين بالتوحد.html">دمج الأطفال المصابين بالتوحد</a></li>
+      <li><a href="متطلبات سوق الشغل.html">متطلبات سوق الشغل</a></li>
+      <li><a href="مراحل تطور التعليم في المغرب.html">مراحل تطور التعليم في المغرب</a></li>
+      <li><a href="مقارنة شاملة بين النظامين التعليميين في المغرب وفرنسا.html">مقارنة شاملة بين النظامين التعليميين في
+          المغرب وفرنسا</a></li>
+      <li><a href="نحو مدرسة رائدة.html">نحو مدرسة رائدة</a></li>
     </ul>
   </div>
   <div id="overlay"></div>
 
-  <!-- Bande déroulante breaking news -->
-<!-- Bande déroulante breaking news -->
-<div class="breaking-news">
-  <div class="breaking-track">
-         <a href="توظيف-أساتذة-مساعدين.html" class="breaking-item">📚  توظيف الأساتذة المساعدين 2025 </a>
-    <a href="نتائج-مباراة-ولوج-مسلك-تكوين-المستشارين-في-التوجيه-التربوي-و-التخطيط-التربوي.html" class="breaking-item">📚   نتائج-مباراة-ولوج-مسلك-تكوين-المستشارين-في-التوجيه-التربوي-و-التخطيط-التربوي</a>
-     <a href="مسار-متمدرس.html" class="breaking-item">📚     الولوج إلى موقع مسار في حالة تعذر الموقع الرسمي , و كيفية الاطلاع على نقاط التلاميذ</a>
-     <a href="لوائح-الناجحين-مركز-تكوين-المفتشين-2025.html" class="breaking-item">📚   اكتشف لوائح الناجحين في امتحان ولوج مركز تكوين مفتشي التعليم الابتدائي والثانوي التأهيلي والمصالح المادية والمالية دورة 2025، مع رابط تحميل اللوائح الرسمية.</a>
-     <a href="التعيينات-الجديدة-فوج-2025.html" class="breaking-item">📚  لوائح أسماء المعينين الجدد فوج 2025 حسب الأكاديميات الجهوية للتربية والتكوين، لجميع الأسلاك التعليمية.  </a>
-    <a href="نتائج مباراة المندوبية العامة لإدارة السجون.html" class="breaking-item">📚 نتائج مباراة المندوبية العامة لإدارة السجون</a>
-      <a href="الحركة-الانتقالية-الإقليمية.html" class="breaking-item">📚 مذكرة الحركة الانتقالية الإقليمية طنجة أصيلة </a>
-    <a href="نتائج مباراة وزارة التجهيز والماء 2025.html" class="breaking-item">📚 نتائج مباراة وزارة التجهيز والماء 2025</a>
-    <a href="تعيينات-خريجي-مركز-تكوين-مفتشي-التعليم-2025.html" class="breaking-item">📚 نتائج تعيينات خريجي مركز تكوين مفتشي التعليم الابتدائي والثانوي التأهيلي والمصالح المادية والمالية لسنة 2025</a>
-   
-    <a href="نتائج مباراة ولوج كليات الطب والصيدلة 2025.html" class="breaking-item">📚 نتائج مباراة ولوج كليات الطب والصيدلة 2025</a>
- <a href="نتائج الحركة الإنتقالية.html" class="breaking-item">📚  نتائج الحركة الإنتقالية 2025</a>
-     <a href=" خدمة_تبليغ.html" class="breaking-item">📚    Tabligh Notifrh 2026:  معرفة الوضعية المالية عبر خدمة تبليغ  </a>
- <a href="تاريخ-الدخول-المدرسي-2026-2025.html" class="breaking-item">📚     موعد الدخول المدرسي 2025-2026 بالمغرب: كل ما يجب معرفته </a>
-     <a href="مسار-الأساتذة.html  " class="breaking-item">📚 Google Authenticator  تعرف على كيفية تسجيل الدخول إلى منصة مسار  أستاذ بعد التحديث الجديد باستخدام التحقق الثنائي عبر    </a>
+
+
   </div>
-</div>
+
+  <!-- Bande déroulante breaking news -->
+  <!-- Bande déroulante breaking news -->
+  <div class="breaking-news">
+    <div class="breaking-track">
+      <a href="توظيف-أساتذة-مساعدين.html" class="breaking-item">📚 توظيف الأساتذة المساعدين 2025 </a>
+      <a href="نتائج-مباراة-ولوج-مسلك-تكوين-المستشارين-في-التوجيه-التربوي-و-التخطيط-التربوي.html"
+        class="breaking-item">📚 نتائج-مباراة-ولوج-مسلك-تكوين-المستشارين-في-التوجيه-التربوي-و-التخطيط-التربوي</a>
+      <a href="مسار-متمدرس.html" class="breaking-item">📚 الولوج إلى موقع مسار في حالة تعذر الموقع الرسمي , و كيفية
+        الاطلاع على نقاط التلاميذ</a>
+      <a href="لوائح-الناجحين-مركز-تكوين-المفتشين-2025.html" class="breaking-item">📚 اكتشف لوائح الناجحين في امتحان
+        ولوج مركز تكوين مفتشي التعليم الابتدائي والثانوي التأهيلي والمصالح المادية والمالية دورة 2025، مع رابط تحميل
+        اللوائح الرسمية.</a>
+      <a href="التعيينات-الجديدة-فوج-2025.html" class="breaking-item">📚 لوائح أسماء المعينين الجدد فوج 2025 حسب
+        الأكاديميات الجهوية للتربية والتكوين، لجميع الأسلاك التعليمية. </a>
+      <a href="نتائج مباراة المندوبية العامة لإدارة السجون.html" class="breaking-item">📚 نتائج مباراة المندوبية العامة
+        لإدارة السجون</a>
+      <a href="الحركة-الانتقالية-الإقليمية.html" class="breaking-item">📚 مذكرة الحركة الانتقالية الإقليمية طنجة أصيلة
+      </a>
+      <a href="نتائج مباراة وزارة التجهيز والماء 2025.html" class="breaking-item">📚 نتائج مباراة وزارة التجهيز والماء
+        2025</a>
+      <a href="تعيينات-خريجي-مركز-تكوين-مفتشي-التعليم-2025.html" class="breaking-item">📚 نتائج تعيينات خريجي مركز تكوين
+        مفتشي التعليم الابتدائي والثانوي التأهيلي والمصالح المادية والمالية لسنة 2025</a>
+
+      <a href="نتائج مباراة ولوج كليات الطب والصيدلة 2025.html" class="breaking-item">📚 نتائج مباراة ولوج كليات الطب
+        والصيدلة 2025</a>
+      <a href="نتائج الحركة الإنتقالية.html" class="breaking-item">📚 نتائج الحركة الإنتقالية 2025</a>
+      <a href=" خدمة_تبليغ.html" class="breaking-item">📚 Tabligh Notifrh 2026: معرفة الوضعية المالية عبر خدمة تبليغ
+      </a>
+      <a href="تاريخ-الدخول-المدرسي-2026-2025.html" class="breaking-item">📚 موعد الدخول المدرسي 2025-2026 بالمغرب: كل
+        ما يجب معرفته </a>
+      <a href="مسار-الأساتذة.html  " class="breaking-item">📚 Google Authenticator تعرف على كيفية تسجيل الدخول إلى منصة
+        مسار أستاذ بعد التحديث الجديد باستخدام التحقق الثنائي عبر </a>
+    </div>
+  </div>
 
 
-  
+
   <script>
     const banner = document.querySelector('.breaking-news');
-    const track  = document.querySelector('.breaking-track');
-  
+    const track = document.querySelector('.breaking-track');
+
     /* Au toucher : on pause */
     banner.addEventListener('touchstart', () => {
       track.style.animationPlayState = 'paused';
     }, { passive: true });
-  
+
     /* Quand on relâche : on relance */
     banner.addEventListener('touchend', () => {
       track.style.animationPlayState = 'running';
     });
   </script>
-  
-  <!-- DATA SCRIPTS -->
- <script src="documents1.js"></script>
-<script src="dalil1.js"></script>
-<script src="dalil2.js"></script>
-<script src="dalil3.js"></script>
-<script src="dalil4.js"></script>
-<script src="dalil5.js"></script>
-<script src="dalil6.js"></script>
 
-<!-- SEARCH ENGINE & INTERACTIONS -->
-<script>
-  const documents = [ ...documents1,
+  <!-- DATA SCRIPTS -->
+  <script src="documents1.js"></script>
+  <script src="dalil1.js"></script>
+  <script src="dalil2.js"></script>
+  <script src="dalil3.js"></script>
+  <script src="dalil4.js"></script>
+  <script src="dalil5.js"></script>
+  <script src="dalil6.js"></script>
+
+  <!-- SEARCH ENGINE & INTERACTIONS -->
+  <script>
+    const documents = [...documents1,
     ...dalil1,
     ...dalil2,
     ...dalil3,
@@ -828,133 +1038,123 @@
     ...dalil5,
     ...dalil6];
 
-  function searchDocs() {
-    const q = document.getElementById("searchInput").value.trim().toLowerCase();
-    const container = document.getElementById("resultsContainer");
-    container.innerHTML = "";
+    function searchDocs() {
+      const q = document.getElementById("searchInput").value.trim().toLowerCase();
+      const container = document.getElementById("resultsContainer");
+      container.innerHTML = "";
 
-    if (!q) {
-      container.innerHTML = "<p style='color:#ccc; text-align:center;'>الرجاء إدخال كلمة للبحث.</p>";
-      return;
-    }
+      if (!q) {
+        container.innerHTML = "<p style='color:#ccc; text-align:center;'>الرجاء إدخال كلمة للبحث.</p>";
+        return;
+      }
 
-    const results = documents.filter(doc =>
-      doc.title.toLowerCase().includes(q) ||
-      doc.description.toLowerCase().includes(q) ||
-      (Array.isArray(doc.keywords) && doc.keywords.some(k => k.toLowerCase().includes(q)))
-    );
+      const results = documents.filter(doc =>
+        doc.title.toLowerCase().includes(q) ||
+        doc.description.toLowerCase().includes(q) ||
+        (Array.isArray(doc.keywords) && doc.keywords.some(k => k.toLowerCase().includes(q)))
+      );
 
-    if (results.length === 0) {
-      container.innerHTML = `<p style='color:#ccc; text-align:center;'>لا توجد نتائج لكلمة "<strong>${q}</strong>".</p>`;
-      return;
-    }
+      if (results.length === 0) {
+        container.innerHTML = `<p style='color:#ccc; text-align:center;'>لا توجد نتائج لكلمة "<strong>${q}</strong>".</p>`;
+        return;
+      }
 
-    results.forEach(doc => {
-      const card = document.createElement("div");
-      card.className = "result-card";
-      card.innerHTML = `
+      results.forEach(doc => {
+        const card = document.createElement("div");
+        card.className = "result-card";
+        card.innerHTML = `
         <a href="${doc.url}" target="_blank" rel="noopener">${doc.title}</a>
         <p class="result-desc">${doc.description}</p>
         <div class="result-meta">${doc.url}</div>
       `;
-      container.appendChild(card);
-    });
-  }
-
-  window.searchDocs = searchDocs;
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.querySelector('.hamburger');
-    const nav = document.getElementById('mainMenu');
-    const overlay = document.getElementById('overlay');
-    const resourcesBtn = document.querySelector('.drop-toggle');
-    const resourcesPanel = document.getElementById('resourcesPanel');
-    const closePanelBtn = resourcesPanel.querySelector('.close-panel');
-
-    function toggleMobileMenu() {
-      const open = nav.classList.toggle('mobile-active');
-      document.body.classList.toggle('menu-open', open);
-      nav.setAttribute('aria-hidden', !open);
-      overlay.classList.toggle('active', open);
+        container.appendChild(card);
+      });
     }
 
-    // Ouvre/ferme le menu mobile
-    menuBtn.addEventListener('click', toggleMobileMenu);
-    menuBtn.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleMobileMenu();
-      }
-    });
+    window.searchDocs = searchDocs;
 
-    // Overlay : ferme menu mobile ou resourcesPanel
-    overlay.addEventListener('click', () => {
-      if (nav.classList.contains('mobile-active')) toggleMobileMenu();
-      if (resourcesPanel.classList.contains('open')) {
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.querySelector('.hamburger');
+      const nav = document.getElementById('mainMenu');
+      const overlay = document.getElementById('overlay');
+      const resourcesBtn = document.querySelector('.drop-toggle');
+      const resourcesPanel = document.getElementById('resourcesPanel');
+      const closePanelBtn = resourcesPanel.querySelector('.close-panel');
+
+      function toggleMobileMenu() {
+        const open = nav.classList.toggle('mobile-active');
+        document.body.classList.toggle('menu-open', open);
+        nav.setAttribute('aria-hidden', !open);
+        overlay.classList.toggle('active', open);
+      }
+
+      // Ouvre/ferme le menu mobile
+      menuBtn.addEventListener('click', toggleMobileMenu);
+      menuBtn.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleMobileMenu();
+        }
+      });
+
+      // Overlay : ferme menu mobile ou resourcesPanel
+      overlay.addEventListener('click', () => {
+        if (nav.classList.contains('mobile-active')) toggleMobileMenu();
+        if (resourcesPanel.classList.contains('open')) {
+          resourcesPanel.classList.remove('open');
+          document.body.classList.remove('menu-open');
+          resourcesPanel.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // Panneau ressources mobile
+      resourcesBtn.addEventListener('click', e => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          resourcesPanel.classList.add('open');
+          document.body.classList.add('menu-open');
+          resourcesPanel.setAttribute('aria-hidden', 'false');
+        }
+      });
+      closePanelBtn.addEventListener('click', () => {
         resourcesPanel.classList.remove('open');
         document.body.classList.remove('menu-open');
         resourcesPanel.setAttribute('aria-hidden', 'true');
-      }
-    });
+      });
 
-    // Panneau ressources mobile
-    resourcesBtn.addEventListener('click', e => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        resourcesPanel.classList.add('open');
-        document.body.classList.add('menu-open');
-        resourcesPanel.setAttribute('aria-hidden', 'false');
-      }
-    });
-    closePanelBtn.addEventListener('click', () => {
-      resourcesPanel.classList.remove('open');
-      document.body.classList.remove('menu-open');
-      resourcesPanel.setAttribute('aria-hidden', 'true');
-    });
+      // Swipe pour fermer resourcesPanel
+      let startX = 0;
+      resourcesPanel.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+      });
+      resourcesPanel.addEventListener('touchmove', e => {
+        const delta = startX - e.touches[0].clientX;
+        if (delta < 0) {
+          resourcesPanel.style.transform = `translateX(${100 + (delta / window.innerWidth) * 100}%)`;
+        }
+      });
+      resourcesPanel.addEventListener('touchend', e => {
+        const delta = startX - e.changedTouches[0].clientX;
+        if (delta < -window.innerWidth * 0.3) {
+          resourcesPanel.classList.remove('open');
+          document.body.classList.remove('menu-open');
+          resourcesPanel.setAttribute('aria-hidden', 'true');
+        } else {
+          resourcesPanel.style.transform = '';
+        }
+      });
 
-    // Swipe pour fermer resourcesPanel
-    let startX = 0;
-    resourcesPanel.addEventListener('touchstart', e => {
-      startX = e.touches[0].clientX;
+      // **FERMER LE MENU MOBILE AU CLIC EN DEHORS**
+      document.addEventListener('click', function (e) {
+        const isClickInsideNav = nav.contains(e.target);
+        const isClickOnBtn = menuBtn.contains(e.target);
+        if (!isClickInsideNav && !isClickOnBtn && nav.classList.contains('mobile-active')) {
+          toggleMobileMenu();
+        }
+      });
     });
-    resourcesPanel.addEventListener('touchmove', e => {
-      const delta = startX - e.touches[0].clientX;
-      if (delta < 0) {
-        resourcesPanel.style.transform = `translateX(${100 + (delta / window.innerWidth) * 100}%)`;
-      }
-    });
-    resourcesPanel.addEventListener('touchend', e => {
-      const delta = startX - e.changedTouches[0].clientX;
-      if (delta < -window.innerWidth * 0.3) {
-        resourcesPanel.classList.remove('open');
-        document.body.classList.remove('menu-open');
-        resourcesPanel.setAttribute('aria-hidden', 'true');
-      } else {
-        resourcesPanel.style.transform = '';
-      }
-    });
-
-    // **FERMER LE MENU MOBILE AU CLIC EN DEHORS**
-    document.addEventListener('click', function(e) {
-      const isClickInsideNav = nav.contains(e.target);
-      const isClickOnBtn   = menuBtn.contains(e.target);
-      if (!isClickInsideNav && !isClickOnBtn && nav.classList.contains('mobile-active')) {
-        toggleMobileMenu();
-      }
-    });
-  });
-</script>
+  </script>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
