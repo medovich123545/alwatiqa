@@ -223,6 +223,82 @@
       .hero h1 { font-size: 1.8rem; }
       main { padding: 1rem; }
     }
+     /* SECTION */
+.features {
+  padding: 40px 20px;
+  background: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* ===== DESKTOP PAR DÉFAUT ===== */
+.features .products-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Carte produit desktop */
+.features .product-card {
+  width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Image */
+.features .product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bouton */
+.features .product-card a {
+  display: inline-block;
+  margin-top: 12px;
+  background: #ff9900;
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Texte */
+.features-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 27px;
+  line-height: 1.8;
+  direction: rtl;
+}
+
+/* Protection AdSense */
+.features iframe,
+.features ins {
+  max-width: 100% !important;
+  overflow: hidden;
+}
+
+/* ===== MOBILE UNIQUEMENT ===== */
+@media (max-width: 768px) {
+
+  .features .products-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features .product-card {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+  }
+
+}
   </style>
 
   <script>
@@ -241,23 +317,21 @@
       });
     });
  </script>
-  
-  <!-- Google AdSense automatique -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4972478852308329"
-     crossorigin="anonymous"></script>
-  <!-- OneSignal push notifications -->
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "ac657c4a-0b44-4d53-b0a3-b84c662a114a",
-    });
-  });
-</script>
 </head>
 <body>
   <header>
+    
+  <!-- Bloc d'annonce principal -->
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-client="ca-pub-4972478852308329"
+       data-ad-slot="5941864803"
+       data-ad-format="autorelaxed"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
     <nav>
       <ul>
         <li><a href="index.html">الرئيسية</a></li>
@@ -296,6 +370,45 @@
 </section>
 
 <main>
+       <!-- FEATURES -->
+  <section class="features">
+
+    <!-- Texte en bas de la row -->
+    <p class="features-text">
+      بعد النجاح الكبير الذي عرفته روايات الكاتب السعودي أسامة المسلم في أوساط الشباب المغربي، والتي استطاعت أن تجمع بين
+      الإثارة الأدبية والرسائل الهادفة و الخيال، إليكم باقة من أروع أعماله الأدبية.
+    </p>
+
+    <div class="products-row">
+
+      <div class="product-card">
+        <img src="images/p1.jpg" alt="">
+
+
+        <a href="https://amzn.to/4q5xKeu" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/p2.jpg" alt="">
+
+        <a href="https://amzn.to/3Maba6p" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/p3.jpg" alt="Produit 3">
+
+        <a href="https://amzn.to/49U3VHx" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+
+
+    </div>
   <article itemscope itemtype="https://schema.org/Article">
     <section itemprop="articleBody" style="padding: 2rem; background-color: #f9f9f9; color: #222; line-height: 1.8;">
 
@@ -349,6 +462,36 @@
       <p style="margin-top: 2rem;">📥 لمتابعة آخر المستجدات بخصوص الترقية ومواعيد الإعلان الرسمي عن النتائج، يُرجى زيارة الموقع الرسمي لوزارة التربية الوطنية والتعليم الأولي والرياضة أو صفحات الأكاديميات الجهوية المعنية.</p>
 
     </section>
+ <div class="products-row">
+
+      <div class="product-card">
+        <img src="images/j1.jpg" alt="">
+
+
+        <a href="https://amzn.to/4t3pEpo" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/j4.jpg" alt="">
+
+        <a href="https://amzn.to/3Z28RVR" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/j3.jpg" alt="Produit 3">
+
+        <a href="https://amzn.to/4qIL1dS" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+
+    </div>
+
 
     <footer style="background-color: #0d2023; color: #e1e1e1; text-align: center; padding: 1rem; margin-top: 3rem;">
       <p>© 2025 وزارة التربية الوطنية والتعليم الأولي والرياضة. جميع الحقوق محفوظة.</p>
