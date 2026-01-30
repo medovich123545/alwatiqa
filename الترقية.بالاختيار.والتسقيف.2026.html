@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>نتائج الترقية بالاختيار والتسقيف برسم سنة 2026 | وزارة التربية الوطنية</title>
+
+  <meta name="description" content="تُعد الترقية بالاختيار والتسقيف من المحطات المهنية الأساسية في المسار المهني للأستاذ، ويُعتمد فيها على عدة معايير أهمها النقطة الإدارية والأقدمية والاستحقاق المهني.">
+
+  <meta name="keywords" content="نتائج الترقية 2026، الترقية بالاختيار، الترقية بالتسقيف، وزارة التربية الوطنية، نتائج الترقية من الدرجة الثانية، نتائج الترقية من الدرجة الأولى">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="نتائج الترقية 2026">
+  <meta property="og:description" content="الإعلان الرسمي عن نتائج الترقية برسم سنة 2026 لجميع الفئات التعليمية.">
+  <meta property="og:image" content="https://www.men.gov.ma/images/logo_men.png">
+  <meta property="og:url" content="https://www.men.gov.ma/Ar/Pages/Publication.aspx?IDPublication=Promotion2026">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+  <style>
+    /* Réinitialisation globale */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+
+    :root {
+      --primary-color: #102a2d;
+      --secondary-color: #0d2023;
+      --accent-color: #ecc94b;
+      --text-color: #e1e1e1;
+      --base-font-size: 16px;
+      --header-height: 80px;
+    }
+
+    html { font-size: var(--base-font-size); }
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      direction: rtl;
+      line-height: 1.6;
+    }
+
+    /* En-tête fixe */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--secondary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      height: var(--header-height);
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Spacer pour le contenu */
+    .header-spacer { height: var(--header-height); }
+
+    .logo {
+      order: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 250px;
+      width: auto;
+      max-width: 100%;
+    }
+
+    nav {
+      order: 2;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: var(--text-color);
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      transition: background 0.3s;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+
+    .hamburger {
+      order: 3;
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      margin: 4px 0;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      height: 100%;
+      background-color: var(--secondary-color);
+      padding: 1.5rem;
+      z-index: 1001;
+      transition: right 0.3s ease-in-out;
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .mobile-menu .close-btn {
+      font-size: 2rem;
+      color: var(--text-color);
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      padding: 4rem 0 0 0;
+      margin: 0;
+    }
+
+    .mobile-menu ul li {
+      margin-bottom: 1rem;
+    }
+
+    .mobile-menu ul li a {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      padding: 0.5rem 0.8rem;
+      display: block;
+      border-radius: 3px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .mobile-menu ul li a:hover,
+    .mobile-menu ul li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+
+    /* Hero */
+    .hero {
+      background: #e0e0e0 url('images/hero.jpg') center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 2rem;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(16, 42, 45, 0.5);
+    }
+
+    .hero .hero-text {
+      position: relative;
+      z-index: 1;
+      max-width: 90%;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+    }
+
+    .hero h1 { font-size: 2rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; }
+
+    main {
+      padding: 2rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2 { color: var(--accent-color); }
+    ul { padding-right: 20px; }
+    ul li { margin-bottom: 10px; }
+
+    footer {
+      background-color: var(--secondary-color);
+      text-align: center;
+      padding: 1rem;
+      color: var(--text-color);
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 0 1rem; height: 60px; }
+      .logo img { height: 150px; }
+      nav ul { display: none; }
+      .hamburger { display: flex; }
+      .hero { height: auto; padding: 1rem; }
+      .hero h1 { font-size: 1.8rem; }
+      main { padding: 1rem; }
+    }
+    /* SECTION */
+.features {
+  padding: 40px 20px;
+  background: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* ===== DESKTOP PAR DÉFAUT ===== */
+.features .products-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Carte produit desktop */
+.features .product-card {
+  width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Image */
+.features .product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bouton */
+.features .product-card a {
+  display: inline-block;
+  margin-top: 12px;
+  background: #ff9900;
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Texte */
+.features-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 27px;
+  line-height: 1.8;
+  direction: rtl;
+}
+
+/* Protection AdSense */
+.features iframe,
+.features ins {
+  max-width: 100% !important;
+  overflow: hidden;
+}
+
+/* ===== MOBILE UNIQUEMENT ===== */
+@media (max-width: 768px) {
+
+  .features .products-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features .product-card {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+  }
+
+}
+
+  </style>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('active');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentPath = window.location.pathname.split('/').pop();
+      const menuLinks = document.querySelectorAll("nav ul li a, .mobile-menu ul li a");
+      menuLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
+ </script>
+</head>
+<body>
+  <header>
+    
+  <!-- Bloc d'annonce principal -->
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-client="ca-pub-4972478852308329"
+       data-ad-slot="5941864803"
+       data-ad-format="autorelaxed"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <img src="images/icon5.png" alt="شعار الموقع">
+    </div>
+    <div class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="قائمة التنقل">
+
+      <div></div><div></div><div></div>
+    </div>
+</header>
+
+<div class="header-spacer"></div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <span class="close-btn" onclick="toggleMobileMenu()">×</span>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="about.html">من نحن</a></li>
+    <li><a href="services.html">الخدمات</a></li>
+    <li><a href="contact.html">اتصل بنا</a></li>
+    <li><a href="privacy.html">سياسة الخصوصية</a></li>
+  </ul>
+</div>
+<section class="hero">
+  <div class="hero-text">
+    <h1>نتائج الترقية بالاختيار والتسقيف برسم سنة 2026</h1>
+    <p>أعلنت وزارة التربية الوطنية والتعليم الأولي والرياضة بشكل رسمي عن نتائج الترقية برسم سنة 2026، والتي تشمل مختلف الفئات التعليمية عبر الأكاديميات الجهوية. تهدف هذه الترقية إلى تحفيز الموارد البشرية وتحقيق العدالة المهنية داخل المنظومة التربوية.</p>
+  </div>
+</section>
+
+
+<main>
+     <!-- FEATURES -->
+  <section class="features">
+
+    <!-- Texte en bas de la row -->
+    <p class="features-text">
+      بعد النجاح الكبير الذي عرفته روايات الكاتب السعودي أسامة المسلم في أوساط الشباب المغربي، والتي استطاعت أن تجمع بين
+      الإثارة الأدبية والرسائل الهادفة و الخيال، إليكم باقة من أروع أعماله الأدبية.
+    </p>
+
+    <div class="products-row">
+
+      <div class="product-card">
+        <img src="images/p1.jpg" alt="">
+
+
+        <a href="https://amzn.to/4q5xKeu" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/p2.jpg" alt="">
+
+        <a href="https://amzn.to/3Maba6p" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/p3.jpg" alt="Produit 3">
+
+        <a href="https://amzn.to/49U3VHx" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+
+
+    </div>
+
+  <article itemscope itemtype="https://schema.org/Article">
+    <section itemprop="articleBody" style="padding: 2rem; background-color: #f9f9f9; color: #222; line-height: 1.8;">
+
+      <p style="margin-bottom: 1.5rem;">📌 <strong>لأي استفسار بخصوص نتائج الترقية أو تقديم طعن، يُرجى التوجه إلى المديريات الإقليمية أو مصالح الموارد البشرية التابعة للمؤسسات التعليمية.</strong></p>
+
+      <p style="margin-bottom: 1.5rem;">
+        تُعد <strong>الترقية بالاختيار والتسقيف</strong> من المحطات الأساسية في تطوير المسار المهني للأطر التربوية. يتم اعتماد معايير دقيقة تشمل <strong>النقطة الإدارية، الأقدمية في الدرجة، والتميز في الأداء المهني</strong>، وذلك وفق مقتضيات النظام الأساسي الخاص بموظفي وزارة التربية الوطنية.
+      </p>
+
+      <h2 style="color: #102a2d; margin-top: 2rem;">نتائج الترقية حسب الأكاديميات الجهوية للتربية والتكوين (2025)</h2>
+
+      <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+        <li style="margin-bottom: 1rem;">📄 جهة طنجة تطوان الحسيمة:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة الشرق:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة فاس مكناس:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة الرباط سلا القنيطرة:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة بني ملال خنيفرة:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة الدار البيضاء سطات:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة مراكش آسفي:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة درعة تافيلالت:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة سوس ماسة:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة كلميم واد نون:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة العيون الساقية الحمراء:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+        <li style="margin-bottom: 1rem;">📄 جهة الداخلة وادي الذهب:
+          <a href="#" onclick="return false;" style="color: gray; cursor: not-allowed; font-weight: bold;">النتائج غير متوفرة بعد</a>
+        </li>
+      </ul>
+
+      <p style="margin-top: 2rem;">📥 لمتابعة آخر المستجدات بخصوص الترقية ومواعيد الإعلان الرسمي عن النتائج، يُرجى زيارة الموقع الرسمي لوزارة التربية الوطنية والتعليم الأولي والرياضة أو صفحات الأكاديميات الجهوية المعنية.</p>
+
+    </section>
+     <div class="products-row">
+
+      <div class="product-card">
+        <img src="images/j1.jpg" alt="">
+
+
+        <a href="https://amzn.to/4t3pEpo" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/j4.jpg" alt="">
+
+        <a href="https://amzn.to/3Z28RVR" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/j3.jpg" alt="Produit 3">
+
+        <a href="https://amzn.to/4qIL1dS" target="_blank" rel="">
+          رابط أمازون
+        </a>
+      </div>
+
+
+    </div>
+
+
+
+    <footer style="background-color: #0d2023; color: #e1e1e1; text-align: center; padding: 1rem; margin-top: 3rem;">
+      <p>© 2026 وزارة التربية الوطنية والتعليم الأولي والرياضة. جميع الحقوق محفوظة.</p>
+    </footer>
+  </article>
+</main>
